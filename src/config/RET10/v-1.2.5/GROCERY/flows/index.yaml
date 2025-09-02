@@ -108,6 +108,8 @@ flows:
                 name: "Full catalog refresh (search by fulfillment end location)"
               - code: "025"
                 name: "BNP demand signals"
+        meta-data: 
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/search"
       - key: on_search
         type: on_search
         unsolicited: false
@@ -116,6 +118,8 @@ flows:
         expect: false
         label: full catalog
         description: BPP returns the full catalog refresh
+        meta-data: 
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_search"
   - id: Discovery_Flow_incremental_catalog
     description: "Retail 1.2.5 (Discovery Flow Incremental Catalog)"
     sequence:
@@ -126,6 +130,8 @@ flows:
         owner: BAP
         expect: true
         description: Bap begins search for incremental changes
+        meta-data: 
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/search"
       - key: on_search_inc
         type: on_search
         unsolicited: true
@@ -133,12 +139,16 @@ flows:
         owner: BPP
         expect: false
         description: BPP returns the incremental changes
+        meta-data: 
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_search"
       - key: on_search_inc_close
         type: on_search
         unsolicited: true
         pair: null
         owner: BPP
         expect: false
+        meta-data: 
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_search"
       - key: on_search_inc_open
         type: on_search
         unsolicited: true
@@ -146,6 +156,8 @@ flows:
         owner: BPP
         expect: false
         description: BPP returns the incremental changes
+        meta-data: 
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_search"
       - key: search_inc
         type: search
         unsolicited: false
@@ -153,6 +165,8 @@ flows:
         owner: BAP
         expect: false
         description: Bap stops search for incremental changes
+        meta-data: 
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/search"
   - id: Delivery_Flow
     description: Retail 1.2.5 (Delivery)
     sequence: &base_line_flow
@@ -166,6 +180,9 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
+
       - key: on_select
         type: on_select
         unsolicited: false
@@ -175,6 +192,9 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
+
       - key: init
         type: init
         unsolicited: false
@@ -182,6 +202,9 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
+
       - key: on_init
         type: on_init
         unsolicited: false
@@ -189,6 +212,9 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
+
       - key: confirm
         type: confirm
         unsolicited: false
@@ -196,6 +222,9 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
+
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -203,6 +232,9 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
+
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -210,6 +242,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -217,6 +252,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_agent_assigned
         type: on_status
         unsolicited: true
@@ -224,6 +262,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - agent assigned
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_picked
         type: on_status
         unsolicited: true
@@ -231,6 +272,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: track
         type: track
         unsolicited: false
@@ -238,6 +282,9 @@ flows:
         owner: BAP
         expect: false
         description: BAP request to track the order
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/track"
+
       - key: on_track
         type: on_track
         unsolicited: false
@@ -245,6 +292,9 @@ flows:
         owner: BPP
         expect: false
         description: BPP sends the tracking information
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_track"
+
       - key: on_status_out_for_delivery
         type: on_status
         unsolicited: true
@@ -252,6 +302,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order out for delivery
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_order_delivered
         type: on_status
         unsolicited: true
@@ -259,6 +312,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
   - id: Out_Of_Stock_Flow
     description: Retail 1.2.5 (Out Of Stock)
     sequence:
@@ -272,6 +327,9 @@ flows:
         owner: BAP
         expect: true
         description: BAP may add unavailable or out-of-stock items to the cart
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
+
       - key: on_select_out_of_stock
         type: on_select
         unsolicited: false
@@ -279,6 +337,9 @@ flows:
         owner: BPP
         expect: false
         description: BPP returns item breakup when item is out of stock
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
+
       - key: select
         type: select
         unsolicited: false
@@ -288,23 +349,31 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
-        description: BAP select the item
+        description: BAP selects the item
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
+
       - key: on_select
         type: on_select
         unsolicited: false
         pair: null
         owner: BPP
         expect: false
-        description:
-          BPP returns item breakup when item is in stock and offer applied
-          (if any)
+        description: >
+          BPP returns item breakup when item is in stock and offer applied (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
+
       - key: init
         type: init
         unsolicited: false
         pair: on_init
         owner: BAP
         expect: false
-        description: Buyer initiate the product and send the updated fulfillment id
+        description: Buyer initiates the product and sends the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
+
       - key: on_init
         type: on_init
         unsolicited: false
@@ -312,6 +381,9 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
+
       - key: confirm
         type: confirm
         unsolicited: false
@@ -319,13 +391,19 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
+
       - key: on_confirm
         type: on_confirm
         unsolicited: false
         pair: null
         owner: BPP
         expect: false
-        description: Seller Accepts confirmation
+        description: Seller accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
+
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -333,6 +411,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -340,6 +421,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_agent_assigned
         type: on_status
         unsolicited: true
@@ -347,6 +431,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - agent assigned
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_picked
         type: on_status
         unsolicited: true
@@ -354,6 +441,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_out_for_delivery
         type: on_status
         unsolicited: true
@@ -361,6 +451,9 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order out for delivery
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: on_status_order_delivered
         type: on_status
         unsolicited: true
@@ -368,13 +461,19 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
+
       - key: track
         type: track
         unsolicited: false
         pair: on_track
         owner: BAP
         expect: false
-        description: BAP request to track the order
+        description: BAP requests to track the order
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/track"
+
       - key: on_track
         type: on_track
         unsolicited: false
@@ -382,6 +481,8 @@ flows:
         owner: BPP
         expect: false
         description: BPP sends the tracking information
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_track"
   - id: Cancellation_Flow
     description: Retail 1.2.5 (Cancellation)
     sequence:
@@ -395,6 +496,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select
         type: on_select
         unsolicited: false
@@ -404,6 +507,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init
         type: init
         unsolicited: false
@@ -411,6 +516,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init
         type: on_init
         unsolicited: false
@@ -418,6 +525,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm
         type: confirm
         unsolicited: false
@@ -425,6 +534,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -432,6 +543,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: cancel
         type: cancel
         unsolicited: false
@@ -439,6 +552,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer cancels product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/cancel"
       - key: on_cancel
         type: on_cancel
         unsolicited: false
@@ -446,6 +561,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts cancellation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_cancel"
   - id: RTO_And_Part_Cancellation_Flow
     description: Retail 1.2.5 (RTO and Part Cancellation)
     sequence:
@@ -459,6 +576,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select
         type: on_select
         unsolicited: false
@@ -468,6 +587,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init
         type: init
         unsolicited: false
@@ -475,6 +596,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init
         type: on_init
         unsolicited: false
@@ -482,6 +605,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm
         type: confirm
         unsolicited: false
@@ -489,6 +614,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -496,6 +623,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_update_part_cancel
         type: on_update
         unsolicited: true
@@ -503,6 +632,8 @@ flows:
         owner: BPP
         expect: false
         description: Part cancellation request
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_update"
       - key: update_settlement_trail
         type: update
         unsolicited: false
@@ -510,6 +641,8 @@ flows:
         owner: BAP
         expect: false
         description: settlement trail update
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/update"
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -517,6 +650,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_agent_assigned
         type: on_status
         unsolicited: true
@@ -524,6 +659,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - agent assigned
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_picked
         type: on_status
         unsolicited: true
@@ -531,6 +668,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_out_for_delivery
         type: on_status
         unsolicited: true
@@ -538,6 +677,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order out for delivery
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_cancel_rto
         type: on_cancel
         unsolicited: true
@@ -545,6 +686,8 @@ flows:
         owner: BPP
         expect: false
         description: RTO initiated
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_cancel"
       - key: on_status_rto_delivered
         type: on_status
         unsolicited: true
@@ -552,6 +695,8 @@ flows:
         owner: BPP
         expect: false
         description: RTO delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
   - id: Return_Flow
     description: Retail 1.2.5 (Return)
     sequence:
@@ -565,6 +710,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select
         type: on_select
         unsolicited: false
@@ -574,6 +721,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init
         type: init
         unsolicited: false
@@ -581,6 +730,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init
         type: on_init
         unsolicited: false
@@ -588,6 +739,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm
         type: confirm
         unsolicited: false
@@ -595,6 +748,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -602,6 +757,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -609,6 +766,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -616,6 +775,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_agent_assigned
         type: on_status
         unsolicited: true
@@ -623,6 +784,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - agent assigned
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_picked
         type: on_status
         unsolicited: true
@@ -630,6 +793,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_out_for_delivery
         type: on_status
         unsolicited: true
@@ -637,6 +802,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order out for delivery
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_order_delivered
         type: on_status
         unsolicited: true
@@ -644,6 +811,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: update_return
         type: update
         unsolicited: false
@@ -651,6 +820,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer updates product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/update"
       - key: on_update_return_init
         type: on_update
         unsolicited: false
@@ -658,6 +829,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts update request
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_update"
       - key: on_update_return_approved
         type: on_update
         unsolicited: true
@@ -665,6 +838,8 @@ flows:
         owner: BPP
         expect: false
         description: Update request approved
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_update"
       - key: on_update_return_picked
         type: on_update
         unsolicited: true
@@ -672,6 +847,8 @@ flows:
         owner: BPP
         expect: false
         description: Update request picked
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_update"
       - key: update_settlement_trail
         type: update
         unsolicited: false
@@ -679,6 +856,8 @@ flows:
         owner: BAP
         expect: false
         description: settlement trail update
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/update"
       - key: on_update_return_delivered
         type: on_update
         unsolicited: true
@@ -686,6 +865,8 @@ flows:
         owner: BPP
         expect: false
         description: Update request delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_update"
   - id: Cash_On_Delivery_Flow
     description: Retail 1.2.5 (Cash On Delivery)
     sequence:
@@ -699,6 +880,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select
         type: on_select
         unsolicited: false
@@ -708,6 +891,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init_cod
         type: init
         unsolicited: false
@@ -715,6 +900,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init_cod
         type: on_init
         unsolicited: false
@@ -722,6 +909,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm_cod
         type: confirm
         unsolicited: false
@@ -729,6 +918,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm_cod
         type: on_confirm
         unsolicited: false
@@ -736,6 +927,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -743,6 +936,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -750,6 +945,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_agent_assigned
         type: on_status
         unsolicited: true
@@ -757,6 +954,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - agent assigned
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_picked
         type: on_status
         unsolicited: true
@@ -764,6 +963,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: track
         type: track
         unsolicited: false
@@ -771,6 +972,8 @@ flows:
         owner: BAP
         expect: false
         description: BAP request to track the order
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/track"
       - key: on_track
         type: on_track
         unsolicited: false
@@ -778,6 +981,8 @@ flows:
         owner: BPP
         expect: false
         description: BPP sends the tracking information
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_track"
       - key: on_status_out_for_delivery
         type: on_status
         unsolicited: true
@@ -785,6 +990,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order out for delivery
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_order_delivered_cod
         type: on_status
         unsolicited: true
@@ -792,6 +999,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
   - id: Self_Pickup_Flow
     description: Retail 1.2.5 (Self Pickup)
     sequence:
@@ -805,6 +1014,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select_self_pickup
         type: on_select
         unsolicited: false
@@ -814,6 +1025,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init_self_pickup
         type: init
         unsolicited: false
@@ -821,6 +1034,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init_self_pickup
         type: on_init
         unsolicited: false
@@ -828,6 +1043,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm
         type: confirm
         unsolicited: false
@@ -835,6 +1052,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -842,6 +1061,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -849,6 +1070,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_self_pick_packed
         type: on_status
         unsolicited: true
@@ -856,6 +1079,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_self_pick_picked
         type: on_status
         unsolicited: true
@@ -863,6 +1088,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order self pickup complete
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
   - id: Slotted_Delivery_Flow
     description: Retail 1.2.5 (Slotted Delivery)
     sequence:
@@ -876,6 +1103,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select_slotted_delivery
         type: on_select
         unsolicited: false
@@ -885,6 +1114,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init_slotted_delivery
         type: init
         unsolicited: false
@@ -892,6 +1123,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init_slotted_delivery
         type: on_init
         unsolicited: false
@@ -899,6 +1132,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm
         type: confirm
         unsolicited: false
@@ -906,6 +1141,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -913,6 +1150,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -920,6 +1159,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -927,6 +1168,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_agent_assigned
         type: on_status
         unsolicited: true
@@ -934,6 +1177,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - agent assigned
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_picked
         type: on_status
         unsolicited: true
@@ -941,6 +1186,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_out_for_delivery
         type: on_status
         unsolicited: true
@@ -948,6 +1195,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order out for delivery
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_order_delivered
         type: on_status
         unsolicited: true
@@ -955,6 +1204,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
   - id: Buyer_Delivery_Flow
     description: Retail 1.2.5 (Buyer Delivery Flow)
     sequence:
@@ -968,6 +1219,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select_buyer_delivery
         type: on_select
         unsolicited: false
@@ -977,6 +1230,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init_buyer_delivery
         type: init
         unsolicited: false
@@ -984,6 +1239,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init_buyer_delivery
         type: on_init
         unsolicited: false
@@ -991,6 +1248,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm
         type: confirm
         unsolicited: false
@@ -998,6 +1257,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -1005,6 +1266,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -1012,6 +1275,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -1019,6 +1284,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_ready_to_ship
         type: on_status
         unsolicited: true
@@ -1026,6 +1293,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order ready to ship
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: update_picked_up
         type: update
         unsolicited: false
@@ -1033,6 +1302,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer updates order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/update"
       - key: update_delivered
         type: update
         unsolicited: true
@@ -1040,6 +1311,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer updates order delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/update"
   - id: Buyer_Instructions_And_Delivery_Update_Flow
     description: Retail 1.2.5 (Buyer Instructions)
     sequence:
@@ -1053,6 +1326,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1062,6 +1337,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init
         type: init
         unsolicited: false
@@ -1069,6 +1346,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init
         type: on_init
         unsolicited: false
@@ -1076,6 +1355,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm
         type: confirm
         unsolicited: false
@@ -1083,6 +1364,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -1090,6 +1373,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -1097,6 +1382,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: update_buyer_instructions
         type: update
         unsolicited: false
@@ -1104,6 +1391,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer updates instructions
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/update"
       - key: on_update_buyer_instructions
         type: on_update
         unsolicited: false
@@ -1111,6 +1400,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts update request
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_update"
       - key: update_delivery_address
         type: update
         unsolicited: false
@@ -1118,6 +1409,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer updates delivery address
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/update"
       - key: on_update_delivery_address
         type: on_update
         unsolicited: false
@@ -1125,6 +1418,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts update request
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_update"
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -1132,6 +1427,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_agent_assigned
         type: on_status
         unsolicited: true
@@ -1139,6 +1436,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - agent assigned
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_picked
         type: on_status
         unsolicited: true
@@ -1146,6 +1445,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_update_delivery_auth
         type: on_update
         unsolicited: true
@@ -1153,6 +1454,8 @@ flows:
         owner: BPP
         expect: false
         description: Update delivery authorization
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_update"
       - key: on_status_out_for_delivery
         type: on_status
         unsolicited: true
@@ -1160,6 +1463,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order out for delivery
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_order_delivered
         type: on_status
         unsolicited: true
@@ -1167,6 +1472,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order delivered
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
   - id: Multi_Option_Fulfillment_Flow
     description: Retail 1.2.5 (Multi Option Fulfillment)
     sequence:
@@ -1180,6 +1487,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select_multi_fulfillment
         type: on_select
         unsolicited: false
@@ -1189,6 +1498,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init_multi_fulfillment
         type: init
         unsolicited: false
@@ -1196,6 +1507,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init_multi_fulfillment
         type: on_init
         unsolicited: false
@@ -1203,6 +1516,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm_multi_fulfillment
         type: confirm
         unsolicited: false
@@ -1210,6 +1525,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -1217,6 +1534,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -1224,6 +1543,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       # - key: on_status_packed
       #   type: on_status
       #   unsolicited: true
@@ -1272,6 +1593,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1281,6 +1604,8 @@ flows:
         description:
           BPP returns item breakup when item is in stock and offer applied
           (if any)
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init
         type: init
         unsolicited: false
@@ -1288,6 +1613,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer initiate the product and send the updated fulfillment id
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init
         type: on_init
         unsolicited: false
@@ -1295,6 +1622,8 @@ flows:
         owner: BPP
         expect: false
         description: Respond to init
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm
         type: confirm
         unsolicited: false
@@ -1302,6 +1631,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer confirms product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm
         type: on_confirm
         unsolicited: false
@@ -1309,6 +1640,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
       - key: on_status_accepted
         type: on_status
         unsolicited: true
@@ -1316,6 +1649,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order accepted
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_packed
         type: on_status
         unsolicited: true
@@ -1323,6 +1658,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order packed
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_agent_assigned
         type: on_status
         unsolicited: true
@@ -1330,6 +1667,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - agent assigned
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_picked
         type: on_status
         unsolicited: true
@@ -1337,6 +1676,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order picked up
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: on_status_out_for_delivery
         type: on_status
         unsolicited: true
@@ -1344,6 +1685,8 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order out for delivery
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_status"
       - key: cancel
         type: cancel
         unsolicited: false
@@ -1351,6 +1694,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer cancels product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/cancel"
       - key: cancel_force
         type: cancel
         unsolicited: true
@@ -1358,6 +1703,8 @@ flows:
         owner: BAP
         expect: false
         description: Buyer force cancels product
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/cancel"
       - key: on_cancel_force
         type: on_cancel
         unsolicited: false
@@ -1365,6 +1712,8 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts force cancellation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_cancel"
   - id: Commercial_Model_For_BNP/SNP_Flow
     description: Retail 1.2.5 (Commercial model)
     sequence:
@@ -1378,6 +1727,8 @@ flows:
         input:
           - name: grocery_select
             type: ret10_grocery_select
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/select"
       - key: on_select_commercial_model
         type: on_select
         unsolicited: false
@@ -1385,6 +1736,8 @@ flows:
         owner: BPP
         expect: false
         description: BPP returns quote with channel margin as convenience fee (misc quote line item type) for selected items
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_select"
       - key: init_commercial_model
         type: init
         unsolicited: false
@@ -1410,6 +1763,8 @@ flows:
               - code: "I3_npf_2"
                 name: "np_fee 2 for I3"
             description: BNP selects np_fees option (channel margin) per item
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/init"
       - key: on_init_commercial_model
         type: on_init
         unsolicited: false
@@ -1417,6 +1772,8 @@ flows:
         owner: BPP
         expect: false
         description: BPP responds with updated quote, including selected channel margin option as convenience fee
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_init"
       - key: confirm_commercial_model
         type: confirm
         unsolicited: false
@@ -1424,6 +1781,8 @@ flows:
         owner: BAP
         expect: true
         description: BAP confirms the order, including payment details for COD if applicable
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/confirm"
       - key: on_confirm_commercial_model
         type: on_confirm
         unsolicited: false
@@ -1431,3 +1790,5 @@ flows:
         owner: BPP
         expect: false
         description: BPP accepts order confirmation
+        meta-data:
+          $ref: "src/config/RET10/v-1.2.5/GROCERY/flows/meta-data.yaml#/on_confirm"
