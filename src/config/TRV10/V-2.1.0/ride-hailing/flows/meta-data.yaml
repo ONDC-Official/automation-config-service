@@ -1,0 +1,474 @@
+search:
+  - path: "$.context.message_id"
+    description:
+      code: MESSAGE_ID
+      name: Message ID
+      short_desc: Unique identifier for the message
+
+  - path: "$.context.transaction_id"
+    description:
+      code: TRANSACTION_ID
+      name: Transaction ID
+      short_desc: Unique identifier for the transaction
+
+  - path: "$.message.intent.fulfillment.stops[?(@.type=='START')].location.gps"
+    description:
+      code: START_LOCATION
+      name: Start Location GPS
+      short_desc: GPS coordinates for start location
+
+  - path: "$.message.intent.fulfillment.stops[?(@.type=='INTERMEDIATE_STOP')].location.gps"
+    description:
+      code: INTERMEDIATE_LOCATION
+      name: Intermediate Location GPS
+      short_desc: GPS coordinates for intermediate stop
+
+  - path: "$.message.intent.fulfillment.stops[?(@.type=='END')].location.gps"
+    description:
+      code: END_LOCATION
+      name: End Location GPS
+      short_desc: GPS coordinates for end location
+
+  - path: "$.message.intent.payment.collected_by"
+    description:
+      code: PAYMENT_COLLECTED_BY
+      name: Payment Collected By
+      short_desc: Who collected the payment
+
+  - path: "$.message.intent.fulfillment.stops[*]"
+    description:
+      code: STOPS
+      name: All Stops
+      short_desc: List of all fulfillment stops
+
+  - path: "$.message.intent.payment.collected_by"
+    description:
+      code: COLLECTED_BY
+      name: Collected By
+      short_desc: Collector of payment
+
+  - path: "$.context.location.country.code"
+    description:
+      code: COUNTRY_CODE
+      name: Country Code
+      short_desc: Country code for the transaction
+
+  - path: "$.context.location.city.code"
+    description:
+      code: CITY_CODE
+      name: City Code
+      short_desc: City code for the transaction
+
+
+on_search:
+  - path: "$.message.catalog.providers[*].fulfillments[*]"
+    description:
+      code: FULFILLMENTS
+      name: Fulfillments
+      short_desc: List of all fulfillments from providers
+
+  - path: "$.message.catalog.providers[*].categories[*]"
+    description:
+      code: CATEGORIES
+      name: Categories
+      short_desc: List of categories from providers
+
+  - path: "$.message.catalog.providers[*].id"
+    description:
+      code: PROVIDER_ID
+      name: Provider ID
+      short_desc: Unique identifier for provider
+
+  - path: "$.message.catalog.providers[*].fulfillments[*].id"
+    description:
+      code: FULFILLMENT_IDS
+      name: Fulfillment IDs
+      short_desc: Unique identifiers for provider fulfillments
+
+  - path: "$.message.catalog.providers[*].items[*]"
+    description:
+      code: ITEMS
+      name: Items
+      short_desc: List of items from providers
+
+  - path: "$.message.catalog.providers[*].items[*].id"
+    description:
+      code: ITEM_IDS
+      name: Item IDs
+      short_desc: Unique identifiers for provider items
+
+  - path: "$.context.bpp_id"
+    description:
+      code: BPP_ID
+      name: BPP ID
+      short_desc: Unique identifier for BPP
+
+  - path: "$.context.bpp_uri"
+    description:
+      code: BPP_URI
+      name: BPP URI
+      short_desc: URI for the BPP
+
+  - path: "$.context.location.city.code"
+    description:
+      code: CITY_CODE
+      name: City Code
+      short_desc: City code for the transaction
+
+  - path: "$.message.catalog.providers[*].locations"
+    description:
+      code: LOCATIONS
+      name: Locations
+      short_desc: List of provider locations
+
+  - path: "$.message.catalog.providers[*].locations[*].id"
+    description:
+      code: LOCATIONS_ID
+      name: Location IDs
+      short_desc: Unique identifiers for provider locations
+
+  - path: "$.message.catalog.providers[*].payments[*]"
+    description:
+      code: PAYMENTS
+      name: Payments
+      short_desc: List of provider payments
+
+select:
+  - path: "$.context.message_id"
+    description:
+      code: MESSAGE_ID
+      name: Message ID
+      short_desc: Unique identifier for the message
+
+  - path: "$.message.order.items[*].id"
+    description:
+      code: SELECTED_ITEM_ID
+      name: Selected Item ID
+      short_desc: Unique identifiers of selected order items
+
+  - path: "$.message.order.items[*]"
+    description:
+      code: SELECTED_ITEMS
+      name: Selected Items
+      short_desc: List of selected items in the order
+
+  - path: "$.message.order.provider.id"
+    description:
+      code: SELECTED_PROVIDER_ID
+      name: Selected Provider ID
+      short_desc: Unique identifier of the selected provider
+
+  - path: "$.message.order.items[0].price.value"
+    description:
+      code: UPDATED_PRICE
+      name: Updated Price
+      short_desc: Updated price of the first selected item
+
+  - path: "$.message.order.items[*].add_ons[*]"
+    description:
+      code: SELECTED_ADD_ONS
+      name: Selected Add-ons
+      short_desc: List of selected add-ons for the order items
+
+on_select:
+  - path: "$.message.order.fulfillments[*]"
+    description:
+      code: SELECTED_FULFILLMENTS
+      name: Selected Fulfillments
+      short_desc: List of selected fulfillments in the order
+
+  - path: "$.message.order.quote"
+    description:
+      code: QUOTE
+      name: Order Quote
+      short_desc: Quoted price and breakdown for the order
+
+  - path: "$.message.order.items[*]"
+    description:
+      code: ITEMS
+      name: Order Items
+      short_desc: List of items in the order
+
+  - path: "$.message.order.fulfillments[*].id"
+    description:
+      code: SELECTED_FULFILLMENT_ID
+      name: Selected Fulfillment ID
+      short_desc: Unique identifiers of selected fulfillments
+
+init:
+  - path: "$.context.message_id"
+    description:
+      code: MESSAGE_ID
+      name: Message ID
+      short_desc: Unique identifier for the message
+
+  - path: "$.message.order.billing"
+    description:
+      code: BILLING
+      name: Billing Information
+      short_desc: Billing details for the order
+
+  - path: "$.message.order.payments[*]"
+    description:
+      code: PAYMENTS
+      name: Payments
+      short_desc: Payment details associated with the order
+
+  - path: "$.message.order.fulfillments[*]"
+    description:
+      code: FULFILLMENTS
+      name: Fulfillments
+      short_desc: Fulfillment details for the order
+
+  - path: "$.message.order.provider.id"
+    description:
+      code: PROVIDER_ID
+      name: Provider ID
+      short_desc: Identifier of the orders provider
+
+on_init:
+  - path: "$.message.order.cancellation_terms[*]"
+    description:
+      code: CANCELLATION_TERMS
+      name: Cancellation Terms
+      short_desc: Terms and conditions for order cancellation
+
+  - path: "$.message.order.fulfillments[*]"
+    description:
+      code: FULFILLMENTS
+      name: Selected Fulfillments
+      short_desc: Fulfillment details for the order
+
+  - path: "$.message.order.payments[*]"
+    description:
+      code: PAYMENTS
+      name: Payments
+      short_desc: Payment details associated with the order
+
+  - path: "$.message.order.payments[*].id"
+    description:
+      code: PAYMENT_IDS
+      name: Payment IDs
+      short_desc: Identifiers of individual payments
+
+  - path: "$.message.order.items[*]"
+    description:
+      code: ITEMS
+      name: Items
+      short_desc: Items included in the order
+
+confirm: 
+  - path: "$.context.message_id"
+    description:
+      code: MESSAGE_ID
+      name: Message ID
+      short_desc: Unique identifier for the message
+
+  - path: "$.message.order.fulfillments[0].id"
+    description:
+      code: FULFILLMENT_ID
+      name: Fulfillment ID
+      short_desc: Identifier of the first fulfillment in the order
+
+  - path: "$.message.order.payments[0].id"
+    description:
+      code: PAYMENT_ID
+      name: Payment ID
+      short_desc: Identifier of the first payment in the order
+
+  - path: "$.message.order.provider.id"
+    description:
+      code: PROVIDER_ID
+      name: Provider ID
+      short_desc: Identifier of the order provider
+
+  - path: "$.message.order.items[*]"
+    description:
+      code: BAP_ITEMS
+      name: BAP Items
+      short_desc: Items selected by the BAP for the order
+on_confirm:
+  - path: "$.message.order.id"
+    description:
+      code: ORDER_ID
+      name: Order ID
+      short_desc: Unique identifier for the order
+
+  - path: "$.message.order.status"
+    description:
+      code: STATUS
+      name: Order Status
+      short_desc: Current status of the order
+
+  - path: "$.message.order.fulfillments[*]"
+    description:
+      code: SELECTED_FULFILLMENTS
+      name: Selected Fulfillments
+      short_desc: List of fulfillments associated with the order
+
+  - path: "$.message.order.created_at"
+    description:
+      code: CREATED_AT
+      name: Order Creation Time
+      short_desc: Timestamp when the order was created
+
+  - path: "$.message.order.fulfillments[0].id"
+    description:
+      code: PAYMENT_ID
+      name: Payment ID
+      short_desc: Identifier of the first fulfillment (used as payment reference)
+on_status:
+  - path: "$.message.order.id"
+    description:
+      code: ORDER_ID
+      name: Order ID
+      short_desc: Unique identifier for the order
+
+  - path: "$.message.order.status"
+    description:
+      code: STATUS
+      name: Order Status
+      short_desc: Current status of the order
+
+  - path: "$.message.order.fulfillments[*]"
+    description:
+      code: SELECTED_FULFILLMENTS
+      name: Selected Fulfillments
+      short_desc: List of fulfillments associated with the order
+
+  - path: "$.message.order.quote"
+    description:
+      code: QUOTE
+      name: Order Quote
+      short_desc: Quotation details for the order
+
+  - path: "$.message.order.items[*]"
+    description:
+      code: ITEMS
+      name: Order Items
+      short_desc: Items included in the order
+
+  - path: "$.message.order.payments[*]"
+    description:
+      code: PAYMENTS
+      name: Order Payments
+      short_desc: Payment details associated with the order
+track:
+  - path: "$.context.message_id"
+    description:
+      code: MESSAGE_ID
+      name: Message ID
+      short_desc: Unique identifier for the message
+
+  - path: "$.message.order_id"
+    description:
+      code: ORDER_ID
+      name: Order ID
+      short_desc: Unique identifier for the order
+on_track: 
+  - path: "$.message.tracking.status"
+    description:
+      code: TRACKING_STATUS
+      name: Tracking Status
+      short_desc: Current status of the tracking update
+
+
+on_update:
+  - path: "$.message.order.id"
+    description:
+      code: ORDER_ID
+      name: Order ID
+      short_desc: Unique identifier for the order
+
+  - path: "$.message.order.status"
+    description:
+      code: ORDER_STATUS
+      name: Order Status
+      short_desc: Current status of the order
+
+  - path: "$.message.order.fulfillments[*]"
+    description:
+      code: ORDER_FULFILLMENTS
+      name: Order Fulfillments
+      short_desc: List of fulfillments associated with the order
+
+status:
+  - path: "$.context.message_id"
+    description:
+      code: MESSAGE_ID
+      name: Message ID
+      short_desc: Unique identifier for the message
+
+  - path: "$.message.order_id"
+    description:
+      code: ORDER_ID
+      name: Order ID
+      short_desc: Unique identifier for the order
+cancel:
+  - path: "$.context.message_id"
+    description:
+      code: MESSAGE_ID
+      name: Message ID
+      short_desc: Unique identifier for the message
+
+  - path: "$.message.cancellation_reason_id"
+    description:
+      code: CANCELLATION_REASON_ID
+      name: Cancellation Reason ID
+      short_desc: Identifier for the cancellation reason
+
+on_cancel:
+  - path: "$.context.message_id"
+    description:
+      code: MESSAGE_ID
+      name: Message ID
+      short_desc: Unique identifier for the message
+
+  - path: "$.message.order.status"
+    description:
+      code: ORDER_STATUS
+      name: Order Status
+      short_desc: Current status of the order
+
+  - path: "$.message.order.quote"
+    description:
+      code: CANCELLATION_QUOTE
+      name: Cancellation Quote
+      short_desc: Quote details associated with the cancellation
+
+  - path: "$.message.order.cancellation"
+    description:
+      code: CANCELLATION_REASON
+      name: Cancellation Reason
+      short_desc: Reason for cancelling the order
+
+  - path: "$.message.order.fulfillments[*]"
+    description:
+      code: CANCELLATION_FULFILLMENTS
+      name: Cancellation Fulfillments
+      short_desc: Fulfillments impacted by cancellation
+
+update:
+  - path: "$.context.message_id"
+    description:
+    code: MESSAGE_ID
+    name: Message ID
+    short_desc: Unique identifier for the message
+
+  - path: "$.message.order.fulfillments[0].stops[0]"
+    description:
+      code: UPDATE_STOP
+      name: Updated Stop
+      short_desc: The updated fulfillment stop details
+
+  - path: "$.message.order.quote"
+    description:
+      code: UPDATE_QUOTE
+      name: Updated Quote
+      short_desc: Quote details after update
+
+  - path: "$.message.order.quote.price.value"
+    description:
+      code: UPDATED_PRICE
+      name: Updated Price
+      short_desc: Final updated price value from the quote
