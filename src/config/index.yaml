@@ -20,6 +20,15 @@ domain:
           $ref: "src/config/TRV11/V-2.0.1/supportedActions/index.yaml"
     supportedActions:
       $ref: "src/config/TRV11/V-2.0.1/supportedActions/index.yaml"
+  - name: ONDC:TRV12
+    versions:
+      - id: 2.0.0
+        reporting: false
+        usecase:
+          - name: Airline
+            flows: "./TRV12/V-2.0.0/airline/flows/index.yaml"
+        supportedActions:
+          $ref: "src/config/TRV12/V-2.0.0/supportedActions/index.yaml"    
   - name: ONDC:TRV14
     versions:
       - id: 2.0.0
@@ -209,7 +218,12 @@ usecases:
             - Hotel-Booking 
         - key: 2.0.1
           usecase:
-            - Hotel-Booking-V2           
+            - Hotel-Booking-V2 
+    - key: ONDC:TRV12
+      version:
+        - key: 2.0.0
+          usecase:
+            - Airline                  
     - key: ONDC:RET10
       version:
         - key: 1.2.5
