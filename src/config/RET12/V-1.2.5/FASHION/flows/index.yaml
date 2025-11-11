@@ -330,21 +330,12 @@ flows:
           - name: cancellation_reason_id
             label: Select a reason_id
             type: select
-            values:
-              - "002"  
-              - "011"  
-              - "013"  
-              - "014"  
-              - "016"  
-              - "018"  
-              - "021"  
-              - "022"  
-              - "023"  
-              - "024"  
+            values: 
               - "051"  
               - "052"  
               - "053"
-            default: "002"
+              - "999"
+            default: "053"
       - key: on_cancel
         type: on_cancel
         unsolicited: false
@@ -1233,7 +1224,7 @@ flows:
         pair: on_issue_processing
         owner: BAP
         expect: false
-      - key: on_issue_processing
+      - key: on_issue_processing  
         type: on_issue
         label: processing
         unsolicited: false
@@ -1282,16 +1273,13 @@ flows:
         owner: BAP
         expect: false
         input:
-          # - name: resolution_accept
-          #   label: Select a resolution
-          #   type: select
-          #   values:
-          #     - "R1-Refund"
-          #     - "R2-Replacement"
-          #   default: "R2-Replacement"
           - name: resolution_accept
-            label: Enter resolution ID
-            type: text
+            label: Select a resolution
+            type: select
+            values: 
+              - "R1-Refund"  
+              - "R2-Replacement"  
+            default: "R2-Replacement"
       - key: on_issue_resolved
         type: on_issue
         label: resolved
@@ -1307,14 +1295,6 @@ flows:
         description: Open an issue for IGM
         pair: null
         owner: BAP
-        expect: false
-      - key: on_update_igm_return
-        type: on_update
-        label: on_update_igm
-        unsolicited: true
-        description: final on_update call after issue closed
-        pair: null
-        owner: BPP
         expect: false
   - id: Delivery_Flow_With_IGM_2
     description: Retail 1.2.5 (Delivery with IGM 2)
@@ -1416,7 +1396,7 @@ flows:
         pair: on_issue_processing
         owner: BAP
         expect: false
-      - key: on_issue_processing
+      - key: on_issue_processing  
         type: on_issue
         label: processing
         unsolicited: false
@@ -1432,58 +1412,6 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: issue_resolution_reject
-        type: issue
-        label: resolution_reject
-        unsolicited: false
-        description: Open an issue for IGM
-        pair: on_issue_processing_1
-        owner: BAP
-        expect: false
-        input:
-          - name: resolution_accept
-            label: Enter resolution ID
-            type: text 
-      - key: on_issue_processing_1
-        type: on_issue
-        label: processing
-        unsolicited: false
-        description: anything
-        pair: null
-        owner: BPP
-        expect: false 
-      - key: on_issue_resolution_1
-        type: on_issue
-        label: resolution
-        unsolicited: true
-        description: LSSA
-        pair: null
-        owner: BPP
-        expect: false 
-      - key: issue_escalate
-        type: issue
-        label: escalate
-        unsolicited: false
-        description: Open an issue for IGM
-        pair: on_issue_processing_2
-        owner: BAP
-        expect: false
-      - key: on_issue_processing_2
-        type: on_issue
-        label: processing
-        unsolicited: false
-        description: anything
-        pair: null
-        owner: BPP
-        expect: false 
-      - key: on_issue_resolution_2
-        type: on_issue
-        label: resolution
-        unsolicited: true
-        description: LSSA
-        pair: null
-        owner: BPP
-        expect: false           
       - key: issue_resolution_accept
         type: issue
         label: resolution_accept
@@ -1493,16 +1421,13 @@ flows:
         owner: BAP
         expect: false
         input:
-          # - name: resolution_accept
-          #   label: Select a resolution
-          #   type: select
-          #   values:
-          #     - "R1-Refund"
-          #     - "R2-Replacement"
-          #   default: "R2-Replacement"
           - name: resolution_accept
-            label: Enter resolution ID
-            type: text
+            label: Select a resolution
+            type: select
+            values: 
+              - "R1-Refund"  
+              - "R2-Replacement"  
+            default: "R2-Replacement"
       - key: on_issue_resolved
         type: on_issue
         label: resolved
@@ -1518,14 +1443,6 @@ flows:
         description: Open an issue for IGM
         pair: null
         owner: BAP
-        expect: false
-      - key: on_update_igm_replacement
-        type: on_update
-        label: on_update_igm
-        unsolicited: true
-        description: final on_update call after issue closed
-        pair: null
-        owner: BPP
         expect: false
   - id: Delivery_Flow_With_IGM_3
     description: Retail 1.2.5 (Delivery with IGM 3)
@@ -1627,7 +1544,7 @@ flows:
         pair: on_issue_processing
         owner: BAP
         expect: false
-      - key: on_issue_processing
+      - key: on_issue_processing  
         type: on_issue
         label: processing
         unsolicited: false
@@ -1635,7 +1552,7 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: on_issue_resolution_igm_3
+      - key: on_issue_resolution
         type: on_issue
         label: resolution
         unsolicited: true
@@ -1643,26 +1560,23 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: issue_resolution_accept_igm_3
+      - key: issue_resolution_accept
         type: issue
         label: resolution_accept
         unsolicited: false
         description: Open an issue for IGM
-        pair: on_issue_resolved_igm_3
+        pair: on_issue_resolved
         owner: BAP
         expect: false
         input:
-          # - name: resolution_accept
-          #   label: Select a resolution
-          #   type: select
-          #   values:
-          #     - "R1-Refund"
-          #     - "R2-Replacement"
-          #   default: "R2-Replacement"
           - name: resolution_accept
-            label: Enter resolution ID
-            type: text
-      - key: on_issue_resolved_igm_3
+            label: Select a resolution
+            type: select
+            values: 
+              - "R1-Refund"  
+              - "R2-Replacement"  
+            default: "R2-Replacement"
+      - key: on_issue_resolved
         type: on_issue
         label: resolved
         unsolicited: false
@@ -1670,7 +1584,7 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: issue_close_igm_3
+      - key: issue_close
         type: issue
         label: close
         unsolicited: false
@@ -1678,10 +1592,3 @@ flows:
         pair: null
         owner: BAP
         expect: false
-      - key: on_status_igm_3
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order delivered

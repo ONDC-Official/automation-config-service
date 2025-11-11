@@ -18,18 +18,16 @@ flows:
             label: Features supported
             type: checkbox
             options:
-              - code: "012"
-                name: "Cash on delivery (COD) order"
-              - code: "017"
-                name: "Seller Creds"
-              - code: "01A"
-                name: "Item Unitized Count"
-              - code: "01B"
-                name: "Minimum Item Quantity"
-              - code: "01B"
-                name: "Minimum order value"
-              - code: "005"
-                name: "Force cancellation"
+            - code: "012"
+              name: "Cash on delivery (COD) order"
+            - code: "017"
+              name: "Seller Creds"
+            - code: "01A"
+              name: "Item Unitized Count"
+            - code: "01B"
+              name: "Minimum Item Quantity"
+            - code: "01B"
+              name: "Minimum order value"
       - key: on_search
         type: on_search
         unsolicited: false
@@ -160,10 +158,10 @@ flows:
         pair: null
         owner: BPP
         expect: false
-        description: Status updates - order delivered
+        description: Status updates - order delivered 
   - id: Cross_Category_Cart_Flow
     description: Retail 1.2.5 (Cross Category Cart Flow)
-    sequence:
+    sequence: 
       - key: select_ccc
         type: select
         unsolicited: false
@@ -252,7 +250,8 @@ flows:
         pair: null
         owner: BPP
         expect: false
-        description: Status updates - order delivered
+        description: Status updates - order delivered 
+
   - id: Out_Of_Stock_Flow
     description: Retail 1.2.5 (Out Of Stock)
     sequence:
@@ -425,10 +424,10 @@ flows:
             label: Select a reason_id
             type: select
             values:
-              - "051"
-              - "052"
-              - "053"
-              - "999"
+              - '051'
+              - '052'
+              - '053'
+              - '999'
             default: "051"
       - key: on_cancel
         type: on_cancel
@@ -600,135 +599,6 @@ flows:
         owner: BPP
         expect: false
         description: Seller Accepts confirmation
-  - id: Force_Cancellation_Flow
-    description: Retail 1.2.5 (Cancellation)
-    sequence:
-      - key: select
-        type: select
-        unsolicited: false
-        pair: on_select
-        owner: BAP
-        expect: true
-        description: BAP select the item
-        input:
-          - name: fashion_select
-            type: ret10_grocery_select
-      - key: on_select
-        type: on_select
-        unsolicited: false
-        pair: null
-        owner: BPP
-        expect: false
-        description:
-          BPP returns item breakup when item is in stock and offer applied
-          (if any)
-      - key: init
-        type: init
-        unsolicited: false
-        pair: on_init
-        owner: BAP
-        expect: false
-        description: Buyer initiate the product and send the updated fulfillment id
-      - key: on_init
-        type: on_init
-        unsolicited: false
-        pair: null
-        owner: BPP
-        expect: false
-        description: Respond to init
-      - key: confirm
-        type: confirm
-        unsolicited: false
-        pair: on_confirm
-        owner: BAP
-        expect: false
-        description: Buyer confirms product
-      - key: on_confirm
-        type: on_confirm
-        unsolicited: false
-        pair: null
-        owner: BPP
-        expect: false
-        description: Seller Accepts confirmation
-      - key: on_status_pending
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order accepted
-      - key: on_status_packed
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order packed
-      - key: on_status_agent_assigned
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - agent assigned
-      - key: on_status_picked
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order picked up
-      - key: on_status_out_for_delivery_force
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order out for delivery
-      - key: cancel_no
-        type: cancel
-        unsolicited: false
-        pair: null
-        owner: BAP
-        expect: false
-        description: Buyer side full order cancellation
-        payloadField: $.message.order.cancellation_reason_id
-        input:
-          - name: cancellation_reason_id
-            label: Select a reason_id
-            type: select
-            values:
-              - "052"
-            default: "052"
-      - key: cancel_yes
-        type: cancel
-        unsolicited: false
-        pair: on_cancel_yes
-        owner: BAP
-        expect: false
-        description: Buyer side full order cancellation
-        payloadField: $.message.order.cancellation_reason_id
-        input:
-          - name: cancellation_reason_id
-            label: Select a reason_id
-            type: select
-            values:
-              - "052"
-            default: "052"
-      - key: on_cancel_yes
-        type: on_cancel
-        unsolicited: false
-        pair: null
-        owner: BPP
-        expect: false
-        description: Seller Accepts cancellation
-      - key: update_settlement_cancel
-        type: update
-        unsolicited: true
-        pair: null
-        owner: BAP
-        expect: false
-        description: settlement trail update
   - id: Cash_On_Delivery_Flow
     description: Retail 1.2.5 (Cash On Delivery)
     sequence:
@@ -814,119 +684,6 @@ flows:
         owner: BPP
         expect: false
         description: Status updates - order delivered
-  - id: Offers_Flow
-    description: Retail 1.2.5 (Offers)
-    sequence:
-      - key: select_offers
-        type: select
-        unsolicited: false
-        pair: on_select
-        owner: BAP
-        expect: true
-        description: BAP select the item with offers
-        input:
-          - name: fashion_select
-            type: ret10_grocery_select
-      - key: on_select_offers
-        type: on_select
-        unsolicited: false
-        pair: null
-        owner: BPP
-        expect: false
-        description:
-          BPP returns item breakup when item is in stock and offer applied
-          (if any)
-      - key: init_offers
-        type: init
-        unsolicited: false
-        pair: on_init
-        owner: BAP
-        expect: false
-        description: Buyer initiate the product and send the updated fulfillment id
-      - key: on_init
-        type: on_init
-        unsolicited: false
-        pair: null
-        owner: BPP
-        expect: false
-        description: Respond to init
-      - key: confirm
-        type: confirm
-        unsolicited: false
-        pair: on_confirm
-        owner: BAP
-        expect: false
-        description: Buyer confirms product
-      - key: on_confirm
-        type: on_confirm
-        unsolicited: false
-        pair: null
-        owner: BPP
-        expect: false
-        description: Seller Accepts confirmation
-      - key: on_update_part_cancel
-        type: on_update
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Part cancellation request
-      - key: update_partial_cancel_settlement
-        type: update
-        unsolicited: false
-        pair: null
-        owner: BAP
-        expect: false
-        description: settlement trail update
-      - key: on_status_pending
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order accepted
-      - key: on_status_packed
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order packed
-      - key: on_status_agent_assigned
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - agent assigned
-      - key: on_status_picked
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order picked up
-      - key: on_status_out_for_delivery
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order out for delivery
-      - key: on_cancel_rto
-        type: on_cancel
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Seller side full order cancellation
-      - key: on_status_rto_delivereddisposed
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - rto order delivered
   - id: Delivery_Flow_With_IGM_1
     description: Retail 1.2.5 (Delivery with IGM 1)
     sequence: &base_line_flow
@@ -1027,7 +784,7 @@ flows:
         pair: on_issue_processing
         owner: BAP
         expect: false
-      - key: on_issue_processing
+      - key: on_issue_processing  
         type: on_issue
         label: processing
         unsolicited: false
@@ -1076,16 +833,13 @@ flows:
         owner: BAP
         expect: false
         input:
-          # - name: resolution_accept
-          #   label: Select a resolution
-          #   type: select
-          #   values:
-          #     - "R1-Refund"
-          #     - "R2-Replacement"
-          #   default: "R2-Replacement"
           - name: resolution_accept
-            label: Enter resolution ID
-            type: text
+            label: Select a resolution
+            type: select
+            values: 
+              - "R1-Refund"  
+              - "R2-Replacement"  
+            default: "R2-Replacement"
       - key: on_issue_resolved
         type: on_issue
         label: resolved
@@ -1101,14 +855,6 @@ flows:
         description: Open an issue for IGM
         pair: null
         owner: BAP
-        expect: false
-      - key: on_update_igm_return
-        type: on_update
-        label: on_update_igm
-        unsolicited: true
-        description: final on_update call after issue closed
-        pair: null
-        owner: BPP
         expect: false
   - id: Delivery_Flow_With_IGM_2
     description: Retail 1.2.5 (Delivery with IGM 2)
@@ -1210,7 +956,7 @@ flows:
         pair: on_issue_processing
         owner: BAP
         expect: false
-      - key: on_issue_processing
+      - key: on_issue_processing  
         type: on_issue
         label: processing
         unsolicited: false
@@ -1226,58 +972,6 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: issue_resolution_reject
-        type: issue
-        label: resolution_reject
-        unsolicited: false
-        description: Open an issue for IGM
-        pair: on_issue_processing_1
-        owner: BAP
-        expect: false
-        input:
-          - name: resolution_accept
-            label: Enter resolution ID
-            type: text 
-      - key: on_issue_processing_1
-        type: on_issue
-        label: processing
-        unsolicited: false
-        description: anything
-        pair: null
-        owner: BPP
-        expect: false 
-      - key: on_issue_resolution_1
-        type: on_issue
-        label: resolution
-        unsolicited: true
-        description: LSSA
-        pair: null
-        owner: BPP
-        expect: false 
-      - key: issue_escalate
-        type: issue
-        label: escalate
-        unsolicited: false
-        description: Open an issue for IGM
-        pair: on_issue_processing_2
-        owner: BAP
-        expect: false
-      - key: on_issue_processing_2
-        type: on_issue
-        label: processing
-        unsolicited: false
-        description: anything
-        pair: null
-        owner: BPP
-        expect: false 
-      - key: on_issue_resolution_2
-        type: on_issue
-        label: resolution
-        unsolicited: true
-        description: LSSA
-        pair: null
-        owner: BPP
-        expect: false           
       - key: issue_resolution_accept
         type: issue
         label: resolution_accept
@@ -1287,16 +981,13 @@ flows:
         owner: BAP
         expect: false
         input:
-          # - name: resolution_accept
-          #   label: Select a resolution
-          #   type: select
-          #   values:
-          #     - "R1-Refund"
-          #     - "R2-Replacement"
-          #   default: "R2-Replacement"
           - name: resolution_accept
-            label: Enter resolution ID
-            type: text
+            label: Select a resolution
+            type: select
+            values: 
+              - "R1-Refund"  
+              - "R2-Replacement"  
+            default: "R2-Replacement"
       - key: on_issue_resolved
         type: on_issue
         label: resolved
@@ -1312,14 +1003,6 @@ flows:
         description: Open an issue for IGM
         pair: null
         owner: BAP
-        expect: false
-      - key: on_update_igm_replacement
-        type: on_update
-        label: on_update_igm
-        unsolicited: true
-        description: final on_update call after issue closed
-        pair: null
-        owner: BPP
         expect: false
   - id: Delivery_Flow_With_IGM_3
     description: Retail 1.2.5 (Delivery with IGM 3)
@@ -1421,7 +1104,7 @@ flows:
         pair: on_issue_processing
         owner: BAP
         expect: false
-      - key: on_issue_processing
+      - key: on_issue_processing  
         type: on_issue
         label: processing
         unsolicited: false
@@ -1429,7 +1112,7 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: on_issue_resolution_igm_3
+      - key: on_issue_resolution
         type: on_issue
         label: resolution
         unsolicited: true
@@ -1437,26 +1120,23 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: issue_resolution_accept_igm_3
+      - key: issue_resolution_accept
         type: issue
         label: resolution_accept
         unsolicited: false
         description: Open an issue for IGM
-        pair: on_issue_resolved_igm_3
+        pair: on_issue_resolved
         owner: BAP
         expect: false
         input:
-          # - name: resolution_accept
-          #   label: Select a resolution
-          #   type: select
-          #   values:
-          #     - "R1-Refund"
-          #     - "R2-Replacement"
-          #   default: "R2-Replacement"
           - name: resolution_accept
-            label: Enter resolution ID
-            type: text
-      - key: on_issue_resolved_igm_3
+            label: Select a resolution
+            type: select
+            values: 
+              - "R1-Refund"  
+              - "R2-Replacement"  
+            default: "R2-Replacement"
+      - key: on_issue_resolved
         type: on_issue
         label: resolved
         unsolicited: false
@@ -1464,7 +1144,7 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: issue_close_igm_3
+      - key: issue_close
         type: issue
         label: close
         unsolicited: false
@@ -1472,10 +1152,3 @@ flows:
         pair: null
         owner: BAP
         expect: false
-      - key: on_status_igm_3
-        type: on_status
-        unsolicited: true
-        pair: null
-        owner: BPP
-        expect: false
-        description: Status updates - order delivered  
