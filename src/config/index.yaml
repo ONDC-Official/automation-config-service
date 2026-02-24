@@ -182,7 +182,7 @@ domain:
             flows: "./RET18/V-1.2.5/Health&Wellness/flows/index.yaml"
         supportedActions:
           $ref: "src/config/RET18/V-1.2.5/supportedActions/index.yaml"
-  - name: ONDC:REINVL
+  - name: ONDC:RETINVL
     versions:
       - id: 1.2.5
         reporting: false
