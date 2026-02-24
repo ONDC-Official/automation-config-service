@@ -1,7 +1,7 @@
 name: ONDC:RETINVL
 versions:
   - id: 1.2.5
-    reporting: false
+    reporting: true
     usecase:
       - name: RETINVL
         flows: "./v-1.2.5/RETINVL/flows/index.yaml"
