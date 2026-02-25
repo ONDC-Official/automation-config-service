@@ -1,0 +1,768 @@
+// THIS CODE WAS USED TO MERGE MAIN TO RELEASE_STAGING ON 25-feb-2026
+
+// import fs from "fs";
+// import path from "path";
+// import yaml from "js-yaml";
+
+// const currentData = {
+//     domain: [
+//         {
+//             name: "ONDC:TRV11",
+//             versions: [
+//                 {
+//                     id: "2.0.1",
+//                     usecase: [
+//                         {
+//                             name: "Metro",
+//                             flows: "./TRV11/V-2.0.1/metro/flows/index.yaml",
+//                         },
+//                         {
+//                             name: "Bus",
+//                             flows: "./TRV11/V-2.0.1/bus/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/TRV11/V-2.0.1/supportedActions/index.yaml",
+//                     },
+//                 },
+//                 {
+//                     id: "2.1.0",
+//                     usecase: [
+//                         {
+//                             name: "Metro",
+//                             flows: "./TRV11/V-2.1.0/metro/flows/index.yaml",
+//                         },
+//                         {
+//                             name: "Bus",
+//                             flows: "./TRV11/V-2.1.0/bus/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/TRV11/V-2.1.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//             supportedActions: {
+//                 $ref: "src/config/TRV11/V-2.0.1/supportedActions/index.yaml",
+//             },
+//         },
+//         {
+//             name: "ONDC:TRV14",
+//             versions: [
+//                 {
+//                     id: "2.0.0",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "unreserved-entry-pass",
+//                             flows: "./TRV14/V-2.0.0/unreserved-ticketing/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/TRV14/V-2.0.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:TRV12",
+//             versions: [
+//                 {
+//                     id: "2.0.0",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "Airline",
+//                             flows: "./TRV12/V-2.0.0/airline/flows/index.yaml",
+//                         },
+//                         {
+//                             name: "Intercity",
+//                             flows: "./TRV12/V-2.0.0/intercity/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/TRV12/V-2.0.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:TRV13",
+//             versions: [
+//                 {
+//                     id: "2.0.0",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "Hotel-Booking",
+//                             flows: "./TRV13/V-2.0.0/hotel-booking/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/TRV13/V-2.0.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//                 {
+//                     id: "2.0.1",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "Hotel-Booking-V2",
+//                             flows: "./TRV13/V-2.0.1/hotel-booking/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/TRV13/V-2.0.1/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:LOG10",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: true,
+//                     usecase: [
+//                         {
+//                             name: "Logistics (P2P)",
+//                             flows: "./LOG10/V-1.2.5/logistics/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/LOG10/V-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:LOG11",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: true,
+//                     usecase: [
+//                         {
+//                             name: "Logistics (P2H2P)",
+//                             flows: "./LOG11/V-1.2.5/logistics/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/LOG11/V-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:TRV10",
+//             versions: [
+//                 {
+//                     id: "2.1.0",
+//                     usecase: [
+//                         {
+//                             name: "Ride-hailing",
+//                             flows: "./TRV10/V-2.1.0/ride-hailing/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/TRV10/V-2.1.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//                 {
+//                     id: "2.0.1",
+//                     usecase: [
+//                         {
+//                             name: "Ride-hailing",
+//                             flows: "./TRV10/V-2.0.1/ride-hailing/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/TRV10/V-2.0.1/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RET11",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "F&B",
+//                             flows: "./RET11/V-1.2.5/F&B/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET11/V-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//                 {
+//                     id: "1.2.0",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "F&B",
+//                             flows: "./RET11/V-1.2.0/F&B/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET11/V-1.2.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RET10",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "GROCERY",
+//                             flows: "./RET10/v-1.2.5/GROCERY/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET10/v-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//                 {
+//                     id: "1.2.0",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "GROCERY",
+//                             flows: "./RET10/v-1.2.0/GROCERY/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET10/v-1.2.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RET12",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "FASHION",
+//                             flows: "./RET12/V-1.2.5/FASHION/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET12/V-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RET13",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "BPC",
+//                             flows: "./RET13/V-1.2.5/BPC/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET13/V-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RET14",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "ELECTRONICS",
+//                             flows: "./RET14/v-1.2.5/ELECTRONICS/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET14/v-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RET15",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "APPLIANCES",
+//                             flows: "./RET15/v-1.2.5/APPLIANCES/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET15/v-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RET16",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "HOME&KITCHEN",
+//                             flows: "./RET16/v-1.2.5/HOME&KITCHEN/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET16/v-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RET18",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "HEALTH&WELLNESS",
+//                             flows: "./RET18/V-1.2.5/Health&Wellness/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RET18/V-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:RETINVL",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "RETINVL",
+//                             flows: "./RETINVL/v-1.2.5/RETINVL/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/RETINVL/v-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:AGR10",
+//             versions: [
+//                 {
+//                     id: "1.2.5",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "agriculture-input",
+//                             flows: "./AGR10/v-1.2.5/AGRI_INPUT/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/AGR10/v-1.2.5/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:FIS11",
+//             versions: [
+//                 {
+//                     id: "2.0.0",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "metro-card-recharge",
+//                             flows: "./FIS11/V-2.0.0/metroCardRecharge/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/FIS11/V-2.0.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:FIS12",
+//             versions: [
+//                 {
+//                     id: "2.0.2",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "GOLD LOAN",
+//                             flows: "./FIS12/V-2.0.2/goldLoan/flows/index.yaml",
+//                         },
+//                         {
+//                             name: "PERSONAL LOAN",
+//                             flows: "./FIS12/V-2.0.2/personalLoan/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/FIS12/V-2.0.2/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:FIS13",
+//             versions: [
+//                 {
+//                     id: "2.0.0",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "transit-insurance",
+//                             flows: "./FIS13/V-2.0.0/transit-insurance/flows/index.yaml",
+//                         },
+//                         {
+//                             name: "accidental-insurance",
+//                             flows: "./FIS13/V-2.0.0/accidental-insurance/flows/index.yaml",
+//                         },
+//                         {
+//                             name: "hospicash-insurance",
+//                             flows: "./FIS13/V-2.0.0/hospicash-insurance/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/FIS13/V-2.0.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//         {
+//             name: "ONDC:FIS10",
+//             versions: [
+//                 {
+//                     id: "2.1.0",
+//                     reporting: false,
+//                     usecase: [
+//                         {
+//                             name: "gift-card",
+//                             flows: "./FIS10/V-2.1.0/giftCard/flows/index.yaml",
+//                         },
+//                     ],
+//                     supportedActions: {
+//                         $ref: "src/config/FIS10/V-2.1.0/supportedActions/index.yaml",
+//                     },
+//                 },
+//             ],
+//         },
+//     ],
+//     usecases: {
+//         domain: [
+//             {
+//                 key: "ONDC:TRV11",
+//                 version: [
+//                     {
+//                         key: "2.0.1",
+//                         usecase: ["Metro", "Bus"],
+//                     },
+//                     {
+//                         key: "2.1.0",
+//                         usecase: ["Metro", "Bus"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:LOG10",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["Logistics (P2P)"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:LOG11",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["Logistics (P2H2P)"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:TRV10",
+//                 version: [
+//                     {
+//                         key: "2.1.0",
+//                         usecase: ["Ride-hailing"],
+//                     },
+//                     {
+//                         key: "2.0.1",
+//                         usecase: ["Ride-hailing"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RET11",
+//                 version: [
+//                     {
+//                         key: "1.2.0",
+//                         usecase: ["F&B"],
+//                     },
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["F&B"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:TRV13",
+//                 version: [
+//                     {
+//                         key: "2.0.0",
+//                         usecase: ["Hotel-Booking"],
+//                     },
+//                     {
+//                         key: "2.0.1",
+//                         usecase: ["Hotel-Booking-V2"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:TRV12",
+//                 version: [
+//                     {
+//                         key: "2.0.0",
+//                         usecase: ["Intercity", "Airline"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RET10",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["GROCERY"],
+//                     },
+//                     {
+//                         key: "1.2.0",
+//                         usecase: ["GROCERY"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RET12",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["FASHION"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RET13",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["BPC"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RET14",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["ELECTRONICS"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:TRV14",
+//                 version: [
+//                     {
+//                         key: "2.0.0",
+//                         usecase: ["unreserved-entry-pass"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RET15",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["APPLIANCES"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RET16",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["HOME&KITCHEN"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RET18",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["HEALTH&WELLNESS"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:RETINVL",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["RETINVL"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:AGR10",
+//                 version: [
+//                     {
+//                         key: "1.2.5",
+//                         usecase: ["agriculture-input"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:FIS11",
+//                 version: [
+//                     {
+//                         key: "2.0.0",
+//                         usecase: ["metro-card-recharge"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:FIS12",
+//                 version: [
+//                     {
+//                         key: "2.0.2",
+//                         usecase: ["GOLD LOAN", "PERSONAL LOAN"],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:FIS13",
+//                 version: [
+//                     {
+//                         key: "2.0.0",
+//                         usecase: [
+//                             "transit-insurance",
+//                             "accidental-insurance",
+//                             "hospicash-insurance",
+//                         ],
+//                     },
+//                 ],
+//             },
+//             {
+//                 key: "ONDC:FIS10",
+//                 version: [
+//                     {
+//                         key: "2.1.0",
+//                         usecase: ["gift-card"],
+//                     },
+//                 ],
+//             },
+//         ],
+//     },
+// };
+
+// export function createIndexForAll() {
+//     const folderIterationPath = path.resolve(__dirname, "../config");
+//     const skipFolders = ["INVL", "NIC2004:60232"];
+//     const subFolders = fs.readdirSync(folderIterationPath, {
+//         withFileTypes: true,
+//     });
+//     for (const subFolder of subFolders) {
+//         console.log(`Processing folder: ${subFolder.name}`);
+//         if (skipFolders.includes(subFolder.name)) {
+//             console.log(`Skipping folder: ${subFolder.name}`);
+//             continue;
+//         }
+//         if (subFolder.isDirectory()) {
+//             const folderName = subFolder.name;
+//             const domainName = `ONDC:${folderName}`;
+//             const indexFileContent: any = {
+//                 name: domainName,
+//                 versions: [],
+//             };
+//             const versionFolders = fs.readdirSync(
+//                 path.join(folderIterationPath, folderName),
+//                 {
+//                     withFileTypes: true,
+//                 },
+//             );
+//             const dataInCurrent = currentData.domain.find(
+//                 (d) => d.name === domainName,
+//             );
+//             for (const versionFolder of versionFolders) {
+//                 if (versionFolder.isDirectory()) {
+//                     const currentVersionData = dataInCurrent?.versions.find(
+//                         (v) => v.id === versionFolder.name.split("-")[1],
+//                     );
+//                     if (!currentVersionData) {
+//                         console.warn(
+//                             `No matching version data found for ${domainName} version ${versionFolder.name.split("-")[1]}`,
+//                         );
+//                         continue;
+//                     }
+//                     const versionName = versionFolder.name;
+//                     const extractedVersion = versionName.split("-")[1];
+//                     console.log(`Extracted version: ${extractedVersion}`);
+//                     const versionData = {
+//                         id: extractedVersion,
+//                         reporting:
+//                             (currentVersionData as any).reporting ?? false,
+//                         supportedActions: {
+//                             $ref: `src/config/${folderName}/${versionName}/supportedActions/index.yaml`,
+//                         },
+//                         usecase: currentVersionData.usecase.map(
+//                             (usecase: any) => ({
+//                                 name: usecase.name,
+//                                 flows: usecase.flows.split(folderName)[1],
+//                             }),
+//                         ),
+//                     };
+//                     indexFileContent.versions.push(versionData);
+//                 }
+//             }
+//             const indexFilePath = path.join(
+//                 folderIterationPath,
+//                 folderName,
+//                 "index.yaml",
+//             );
+//             fs.writeFileSync(
+//                 indexFilePath,
+//                 yaml.dump(indexFileContent, { noRefs: true }),
+//             );
+//         }
+//     }
+// }
+
+// console.log("NOW MANUALLY SET REPORTING TRUE");
+// createIndexForAll();

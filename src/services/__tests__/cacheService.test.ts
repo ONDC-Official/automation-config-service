@@ -5,15 +5,15 @@ import {
 	clearCache,
 	getCacheInfo,
 } from "../cacheService";
-import { loadYAMLWithRefs } from "../configService";
+import { loadDecoupledConfig } from "../configService";
 
 // Mock the configService
 jest.mock("../configService", () => ({
-	loadYAMLWithRefs: jest.fn(),
+	loadDecoupledConfig: jest.fn(),
 }));
 
-const mockLoadYAMLWithRefs = loadYAMLWithRefs as jest.MockedFunction<
-	typeof loadYAMLWithRefs
+const mockLoadDecoupledConfig = loadDecoupledConfig as jest.MockedFunction<
+	typeof loadDecoupledConfig
 >;
 
 describe("CacheService", () => {
@@ -44,11 +44,11 @@ describe("CacheService", () => {
 
 	describe("getConfigService", () => {
 		it("should load config from files when cache is empty", async () => {
-			mockLoadYAMLWithRefs.mockResolvedValue(mockConfig);
+			mockLoadDecoupledConfig.mockResolvedValue(mockConfig);
 
 			const result = await getConfigService();
 
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(1);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(1);
 			expect(result).toEqual(mockConfig);
 			expect(console.log).toHaveBeenCalledWith(
 				"console::::::::::…",
@@ -61,28 +61,28 @@ describe("CacheService", () => {
 		});
 
 		it("should return cached config when cache is valid", async () => {
-			mockLoadYAMLWithRefs.mockResolvedValue(mockConfig);
+			mockLoadDecoupledConfig.mockResolvedValue(mockConfig);
 
 			// First call loads from files
 			const result1 = await getConfigService();
 			expect(result1).toEqual(mockConfig);
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(1);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(1);
 
 			// Second call should use cache
 			const result2 = await getConfigService();
 			expect(result2).toEqual(mockConfig);
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(1); // Still only called once
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(1); // Still only called once
 		});
 
 		it("should reload config when cache is expired", async () => {
 			const newConfig = { ...mockConfig, updated: true };
-			mockLoadYAMLWithRefs
+			mockLoadDecoupledConfig
 				.mockResolvedValueOnce(mockConfig)
 				.mockResolvedValueOnce(newConfig);
 
 			// First call
 			await getConfigService();
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(1);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(1);
 
 			// Fast-forward time beyond TTL (3600 seconds)
 			const originalNow = Date.now;
@@ -91,20 +91,20 @@ describe("CacheService", () => {
 			// Second call should reload
 			const result = await getConfigService();
 			expect(result).toEqual(newConfig);
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(2);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(2);
 
 			// Restore Date.now
 			Date.now = originalNow;
 		});
 
 		it("should return cached config when file loading fails", async () => {
-			mockLoadYAMLWithRefs
+			mockLoadDecoupledConfig
 				.mockResolvedValueOnce(mockConfig)
 				.mockRejectedValueOnce(new Error("File load error"));
 
 			// First call succeeds and caches
 			await getConfigService();
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(1);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(1);
 
 			// Fast-forward time beyond TTL
 			const originalNow = Date.now;
@@ -122,12 +122,12 @@ describe("CacheService", () => {
 		});
 
 		it("should throw error when no cache and file loading fails", async () => {
-			mockLoadYAMLWithRefs.mockRejectedValue(new Error("File load error"));
+			mockLoadDecoupledConfig.mockRejectedValue(new Error("File load error"));
 
 			await expect(getConfigService()).rejects.toThrow(
 				"Failed to load config: File load error"
 			);
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(1);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(1);
 		});
 	});
 
@@ -147,23 +147,9 @@ describe("CacheService", () => {
 		});
 
 		it("should handle caching errors gracefully", async () => {
-			// Force an error by passing a circular object
-			const circularObj: any = { a: 1 };
-			circularObj.self = circularObj;
-
-			// Mock JSON.stringify to throw (though our implementation doesn't use it)
-			const originalStringify = JSON.stringify;
-			JSON.stringify = jest.fn(() => {
-				throw new Error("Stringify error");
-			});
-
-			try {
-				// This should still work since we're not using JSON.stringify in setConfigService
-				const result = await setConfigService(mockConfig);
-				expect(result).toBe("Session created");
-			} finally {
-				JSON.stringify = originalStringify;
-			}
+			// This should work since we're not using JSON operations in setConfigService
+			const result = await setConfigService(mockConfig);
+			expect(result).toBe("Session created");
 		});
 	});
 
@@ -269,17 +255,17 @@ describe("CacheService", () => {
 
 	describe("Integration tests", () => {
 		it("should handle complete cache lifecycle", async () => {
-			mockLoadYAMLWithRefs.mockResolvedValue(mockConfig);
+			mockLoadDecoupledConfig.mockResolvedValue(mockConfig);
 
 			// 1. Initial load from files
 			const result1 = await getConfigService();
 			expect(result1).toEqual(mockConfig);
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(1);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(1);
 
 			// 2. Subsequent calls use cache
 			const result2 = await getConfigService();
 			expect(result2).toEqual(mockConfig);
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(1);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(1);
 
 			// 3. Check cache health
 			const health = await checkCacheHealth();
@@ -293,11 +279,11 @@ describe("CacheService", () => {
 			// 5. Next call loads from files again
 			const result3 = await getConfigService();
 			expect(result3).toEqual(mockConfig);
-			expect(mockLoadYAMLWithRefs).toHaveBeenCalledTimes(2);
+			expect(mockLoadDecoupledConfig).toHaveBeenCalledTimes(2);
 		});
 
 		it("should maintain API compatibility with previous Redis implementation", async () => {
-			mockLoadYAMLWithRefs.mockResolvedValue(mockConfig);
+			mockLoadDecoupledConfig.mockResolvedValue(mockConfig);
 
 			// Test that all functions return the same types as before
 			const config = await getConfigService();

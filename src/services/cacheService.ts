@@ -1,5 +1,5 @@
 import path from "path";
-import { loadYAMLWithRefs } from "./configService";
+import { loadDecoupledConfig } from "./configService";
 
 const SESSION_EXPIRY = 3600; // 1 hour
 const configPath = "../config/index.yaml";
@@ -15,9 +15,9 @@ export const getConfigService = async () => {
 
 		// Check if cache is empty or expired
 		if (!configCache || now - lastLoadTime > CACHE_TTL) {
-			const config = await loadYAMLWithRefs(path.join(__dirname, configPath));
+			// Use the existing loadDecoupledConfig function
+			const config = await loadDecoupledConfig();
 			await setConfigService(config);
-			console.log("console::::::::::…", config, typeof config);
 			return config;
 		} else {
 			return configCache;
@@ -26,7 +26,7 @@ export const getConfigService = async () => {
 		// If loading fails, try to return cached version if available
 		if (configCache) {
 			console.warn(
-				`Config loading failed: ${error.message}. Using cached version.`
+				`Config loading failed: ${error.message}. Using cached version.`,
 			);
 			return configCache;
 		}
