@@ -1,0 +1,9 @@
+name: ONDC:AGR10
+versions:
+  - id: 1.2.5
+    reporting: false
+    supportedActions:
+      $ref: src/config/AGR10/v-1.2.5/supportedActions/index.yaml
+    usecase:
+      - name: agriculture-input
+        flows: /v-1.2.5/AGRI_INPUT/flows/index.yaml
