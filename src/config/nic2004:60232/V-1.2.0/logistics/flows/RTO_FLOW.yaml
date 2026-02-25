@@ -802,7 +802,8 @@ steps:
                 - 'yes'
                 - 'no'
               default: 'yes'
-          required: []
+          required:
+            - returnToOrigin
           additionalProperties: false
   - api: on_confirm
     action_id: on_confirm1
@@ -2100,9 +2101,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: search
-        timestamp: '2026-02-25T11:31:15.636Z'
+        timestamp: '2026-02-25T11:57:39.121Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: b86b98db-d88e-4a5d-a78d-3b21e91de336
+        message_id: 8ce43d84-bd09-44f6-bc4e-8699022044a3
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -2163,9 +2164,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: on_search
-        timestamp: '2026-02-25T11:31:15.665Z'
+        timestamp: '2026-02-25T11:57:39.164Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: b86b98db-d88e-4a5d-a78d-3b21e91de336
+        message_id: 8ce43d84-bd09-44f6-bc4e-8699022044a3
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -2187,7 +2188,7 @@ transaction_history:
                     value: >-
                       https://github.com/ONDC-Official/NP-Static-Terms/lspNP_LSP/1.0/tc.pdf
                   - code: effective_date
-                    value: '2026-02-25T11:31:15.665Z'
+                    value: '2026-02-25T11:57:39.164Z'
           bpp/providers:
             - id: P1
               descriptor:
@@ -2263,9 +2264,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: init
-        timestamp: '2026-02-25T11:31:15.706Z'
+        timestamp: '2026-02-25T11:57:39.212Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: 40380e0f-06f8-4580-99de-62ec0964cff3
+        message_id: a5339cf6-f659-4a61-ada3-1e18a74e4f5f
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -2332,8 +2333,8 @@ transaction_history:
             tax_number: XXXXXXXXXXXXXXX
             phone: '9886098860'
             email: abcd.efgh@gmail.com
-            created_at: '2026-02-25T11:31:15.706Z'
-            updated_at: '2026-02-25T11:31:15.706Z'
+            created_at: '2026-02-25T11:57:39.212Z'
+            updated_at: '2026-02-25T11:57:39.212Z'
           payment:
             type: POST-FULFILLMENT
             collected_by: BAP
@@ -2346,9 +2347,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: on_init
-        timestamp: '2026-02-25T11:31:15.754Z'
+        timestamp: '2026-02-25T11:57:39.256Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: 40380e0f-06f8-4580-99de-62ec0964cff3
+        message_id: a5339cf6-f659-4a61-ada3-1e18a74e4f5f
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -2486,9 +2487,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: confirm
-        timestamp: '2026-02-25T11:31:17.678Z'
+        timestamp: '2026-02-25T11:57:43.466Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: 5c4116ee-e790-43f8-87ed-e42142b2853a
+        message_id: c783aa91-806d-4092-a342-e3dc067c4790
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -2499,7 +2500,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: 8b722e48-ab7c-4455-b3ec-6bd900eee763
+          id: 8836ba23-1a67-40d0-9bc0-75e9046b6f73
           state: Created
           provider:
             id: P1
@@ -2591,7 +2592,7 @@ transaction_history:
                 - code: rto_action
                   list:
                     - code: return_to_origin
-                      value: 'yes'
+                      value: 'no'
           billing:
             name: ONDC Logistics Buyer NP
             address:
@@ -2605,8 +2606,8 @@ transaction_history:
             tax_number: XXXXXXXXXXXXXXX
             phone: '9886098860'
             email: abcd.efgh@gmail.com
-            created_at: '2026-02-25T11:31:15.706Z'
-            updated_at: '2026-02-25T11:31:15.706Z'
+            created_at: '2026-02-25T11:57:39.212Z'
+            updated_at: '2026-02-25T11:57:39.212Z'
           payment:
             type: POST-FULFILLMENT
             collected_by: BAP
@@ -2670,8 +2671,8 @@ transaction_history:
               list:
                 - code: accept_bpp_terms
                   value: 'Y'
-          created_at: '2026-02-25T11:31:17.678Z'
-          updated_at: '2026-02-25T11:31:17.678Z'
+          created_at: '2026-02-25T11:57:43.466Z'
+          updated_at: '2026-02-25T11:57:43.466Z'
           cancellation_terms:
             - fulfillment_state:
                 descriptor:
@@ -2716,9 +2717,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: on_confirm
-        timestamp: '2026-02-25T11:31:17.712Z'
+        timestamp: '2026-02-25T11:57:43.500Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: 5c4116ee-e790-43f8-87ed-e42142b2853a
+        message_id: c783aa91-806d-4092-a342-e3dc067c4790
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -2729,7 +2730,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: 8b722e48-ab7c-4455-b3ec-6bd900eee763
+          id: 8836ba23-1a67-40d0-9bc0-75e9046b6f73
           state: Accepted
           provider:
             id: P1
@@ -2773,8 +2774,8 @@ transaction_history:
                 time:
                   duration: PT15M
                   range:
-                    start: '2026-02-25T11:31:17.712Z'
-                    end: '2026-02-25T11:46:17.712Z'
+                    start: '2026-02-25T11:57:43.500Z'
+                    end: '2026-02-25T12:12:43.500Z'
                 person:
                   name: person_name_1
                 location:
@@ -2823,8 +2824,8 @@ transaction_history:
                     url: 'http://description.com'
                 time:
                   range:
-                    start: '2026-02-25T11:46:17.712Z'
-                    end: '2026-02-26T11:31:17.712Z'
+                    start: '2026-02-25T12:12:43.500Z'
+                    end: '2026-02-26T11:57:43.500Z'
               tags:
                 - code: state
                   list:
@@ -2833,7 +2834,7 @@ transaction_history:
                 - code: rto_action
                   list:
                     - code: return_to_origin
-                      value: 'yes'
+                      value: 'no'
                 - code: weather_check
                   list:
                     - code: raining
@@ -2860,8 +2861,8 @@ transaction_history:
             tax_number: XXXXXXXXXXXXXXX
             phone: '9886098860'
             email: abcd.efgh@gmail.com
-            created_at: '2026-02-25T11:31:15.706Z'
-            updated_at: '2026-02-25T11:31:15.706Z'
+            created_at: '2026-02-25T11:57:39.212Z'
+            updated_at: '2026-02-25T11:57:39.212Z'
           '@ondc/org/linked_order':
             items:
               - category_id: F&B
@@ -2900,8 +2901,8 @@ transaction_history:
                 height:
                   unit: centimeter
                   value: 1
-          created_at: '2026-02-25T11:31:17.678Z'
-          updated_at: '2026-02-25T11:31:17.712Z'
+          created_at: '2026-02-25T11:57:43.466Z'
+          updated_at: '2026-02-25T11:57:43.500Z'
           cancellation_terms:
             - fulfillment_state:
                 descriptor:
@@ -2966,9 +2967,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: on_status
-        timestamp: '2026-02-25T11:31:17.761Z'
+        timestamp: '2026-02-25T11:57:43.552Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: 8beb9466-c825-4cdc-b094-bad834533f15
+        message_id: 53e25295-707b-4a9c-971c-996fed2c40b1
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -3030,8 +3031,8 @@ transaction_history:
             tax_number: XXXXXXXXXXXXXXX
             phone: '9886098860'
             email: abcd.efgh@gmail.com
-            created_at: '2026-02-25T11:31:15.706Z'
-            updated_at: '2026-02-25T11:31:15.706Z'
+            created_at: '2026-02-25T11:57:39.212Z'
+            updated_at: '2026-02-25T11:57:39.212Z'
           fulfillments:
             - id: '1'
               type: Delivery
@@ -3040,8 +3041,8 @@ transaction_history:
                 time:
                   duration: PT15M
                   range:
-                    start: '2026-02-25T11:31:17.712Z'
-                    end: '2026-02-25T11:46:17.712Z'
+                    start: '2026-02-25T11:57:43.500Z'
+                    end: '2026-02-25T12:12:43.500Z'
                 person:
                   name: person_name_1
                 location:
@@ -3090,8 +3091,8 @@ transaction_history:
                     url: 'http://description.com'
                 time:
                   range:
-                    start: '2026-02-25T11:46:17.712Z'
-                    end: '2026-02-26T11:31:17.712Z'
+                    start: '2026-02-25T12:12:43.500Z'
+                    end: '2026-02-26T11:57:43.500Z'
               tags: []
               state:
                 descriptor:
@@ -3102,7 +3103,7 @@ transaction_history:
                 phone: '9886098860'
               vehicle:
                 registration: 3LVJ945
-          id: 8b722e48-ab7c-4455-b3ec-6bd900eee763
+          id: 8836ba23-1a67-40d0-9bc0-75e9046b6f73
           items:
             - id: I1
               fulfillment_id: '1'
@@ -3159,7 +3160,7 @@ transaction_history:
               list:
                 - code: accept_bpp_terms
                   value: 'Y'
-          updated_at: '2026-02-25T11:31:17.761Z'
+          updated_at: '2026-02-25T11:57:43.552Z'
           cancellation_terms:
             - fulfillment_state:
                 descriptor:
@@ -3204,9 +3205,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: on_status
-        timestamp: '2026-02-25T11:31:17.806Z'
+        timestamp: '2026-02-25T11:57:43.598Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: ef1897e0-57ae-4177-b580-5f04b2a72a4f
+        message_id: fe08e333-9acd-422f-a898-3d4b7537f2fe
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -3217,7 +3218,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: 8b722e48-ab7c-4455-b3ec-6bd900eee763
+          id: 8836ba23-1a67-40d0-9bc0-75e9046b6f73
           state: In-progress
           provider:
             id: P1
@@ -3261,8 +3262,8 @@ transaction_history:
             tax_number: XXXXXXXXXXXXXXX
             phone: '9886098860'
             email: abcd.efgh@gmail.com
-            created_at: '2026-02-25T11:31:15.706Z'
-            updated_at: '2026-02-25T11:31:15.706Z'
+            created_at: '2026-02-25T11:57:39.212Z'
+            updated_at: '2026-02-25T11:57:39.212Z'
           payment:
             type: POST-FULFILLMENT
             collected_by: BAP
@@ -3308,7 +3309,7 @@ transaction_history:
                   unit: centimeter
                   value: 1
           created_at: '2024-09-02T09:58:23.392Z'
-          updated_at: '2026-02-25T11:31:17.806Z'
+          updated_at: '2026-02-25T11:57:43.598Z'
           fulfillments:
             - id: '1'
               type: Delivery
@@ -3317,9 +3318,9 @@ transaction_history:
                 time:
                   duration: PT15M
                   range:
-                    start: '2026-02-25T11:31:17.712Z'
-                    end: '2026-02-25T11:46:17.712Z'
-                  timestamp: '2026-02-25T11:31:17.806Z'
+                    start: '2026-02-25T11:57:43.500Z'
+                    end: '2026-02-25T12:12:43.500Z'
+                  timestamp: '2026-02-25T11:57:43.598Z'
                 person:
                   name: person_name_1
                 location:
@@ -3368,8 +3369,8 @@ transaction_history:
                     url: 'http://description.com'
                 time:
                   range:
-                    start: '2026-02-25T11:46:17.712Z'
-                    end: '2026-02-26T11:31:17.712Z'
+                    start: '2026-02-25T12:12:43.500Z'
+                    end: '2026-02-26T11:57:43.500Z'
               tags:
                 - code: tracking
                   list:
@@ -3452,9 +3453,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: on_status
-        timestamp: '2026-02-25T11:31:17.857Z'
+        timestamp: '2026-02-25T11:57:43.651Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: 61bd49cc-8196-4023-8681-960871b07a5d
+        message_id: ce56316a-b86b-480b-90e5-ff78277f3057
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -3465,7 +3466,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: 8b722e48-ab7c-4455-b3ec-6bd900eee763
+          id: 8836ba23-1a67-40d0-9bc0-75e9046b6f73
           state: In-progress
           provider:
             id: P1
@@ -3509,8 +3510,8 @@ transaction_history:
             tax_number: XXXXXXXXXXXXXXX
             phone: '9886098860'
             email: abcd.efgh@gmail.com
-            created_at: '2026-02-25T11:31:15.706Z'
-            updated_at: '2026-02-25T11:31:15.706Z'
+            created_at: '2026-02-25T11:57:39.212Z'
+            updated_at: '2026-02-25T11:57:39.212Z'
           payment:
             type: POST-FULFILLMENT
             collected_by: BAP
@@ -3556,7 +3557,7 @@ transaction_history:
                   unit: centimeter
                   value: 1
           created_at: '2024-09-02T09:58:23.392Z'
-          updated_at: '2026-02-25T11:31:17.857Z'
+          updated_at: '2026-02-25T11:57:43.651Z'
           fulfillments:
             - id: '1'
               type: Delivery
@@ -3565,9 +3566,9 @@ transaction_history:
                 time:
                   duration: PT15M
                   range:
-                    start: '2026-02-25T11:31:17.712Z'
-                    end: '2026-02-25T11:46:17.712Z'
-                  timestamp: '2026-02-25T11:31:17.857Z'
+                    start: '2026-02-25T11:57:43.500Z'
+                    end: '2026-02-25T12:12:43.500Z'
+                  timestamp: '2026-02-25T11:57:43.651Z'
                 person:
                   name: person_name_1
                 location:
@@ -3616,8 +3617,8 @@ transaction_history:
                     url: 'http://description.com'
                 time:
                   range:
-                    start: '2026-02-25T11:46:17.712Z'
-                    end: '2026-02-26T11:31:17.712Z'
+                    start: '2026-02-25T12:12:43.500Z'
+                    end: '2026-02-26T11:57:43.500Z'
               tags:
                 - code: tracking
                   list:
@@ -3700,9 +3701,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: on_cancel
-        timestamp: '2026-02-25T11:31:17.908Z'
+        timestamp: '2026-02-25T11:57:43.716Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: d1f4c3a9-e450-4dee-bfa4-623fabae695d
+        message_id: a975842d-22f4-434b-8569-72dcc36395be
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -3713,7 +3714,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: 8b722e48-ab7c-4455-b3ec-6bd900eee763
+          id: 8836ba23-1a67-40d0-9bc0-75e9046b6f73
           state: Cancelled
           cancellation:
             cancelled_by: bpp.example.com
@@ -3778,9 +3779,9 @@ transaction_history:
                 time:
                   duration: PT15M
                   range:
-                    start: '2026-02-25T11:31:17.712Z'
-                    end: '2026-02-25T11:46:17.712Z'
-                  timestamp: '2026-02-25T11:31:17.857Z'
+                    start: '2026-02-25T11:57:43.500Z'
+                    end: '2026-02-25T12:12:43.500Z'
+                  timestamp: '2026-02-25T11:57:43.651Z'
                 person:
                   name: person_name_1
                 location:
@@ -3829,15 +3830,15 @@ transaction_history:
                     url: 'http://description.com'
                 time:
                   range:
-                    start: '2026-02-25T11:46:17.712Z'
-                    end: '2026-02-26T11:31:17.712Z'
+                    start: '2026-02-25T12:12:43.500Z'
+                    end: '2026-02-26T11:57:43.500Z'
               tags:
                 - code: precancel_state
                   list:
                     - code: fulfillment_state
                       value: Out-for-delivery
                     - code: updated_at
-                      value: '2026-02-25T11:31:17.857Z'
+                      value: '2026-02-25T11:57:43.651Z'
                 - code: rto_event
                   list:
                     - code: retry_count
@@ -3864,7 +3865,7 @@ transaction_history:
                   code: RTO-Initiated
               start:
                 time:
-                  timestamp: '2026-02-25T11:31:17.908Z'
+                  timestamp: '2026-02-25T11:57:43.716Z'
           billing:
             name: ONDC Logistics Buyer NP
             address:
@@ -3878,8 +3879,8 @@ transaction_history:
             tax_number: XXXXXXXXXXXXXXX
             phone: '9886098860'
             email: abcd.efgh@gmail.com
-            created_at: '2026-02-25T11:31:15.706Z'
-            updated_at: '2026-02-25T11:31:15.706Z'
+            created_at: '2026-02-25T11:57:39.212Z'
+            updated_at: '2026-02-25T11:57:39.212Z'
           payment:
             type: POST-FULFILLMENT
             collected_by: BAP
@@ -3923,7 +3924,7 @@ transaction_history:
                 height:
                   unit: centimeter
                   value: 1
-          updated_at: '2026-02-25T11:31:17.908Z'
+          updated_at: '2026-02-25T11:57:43.716Z'
           cancellation_terms:
             - fulfillment_state:
                 descriptor:
@@ -3961,7 +3962,7 @@ transaction_history:
                 amount:
                   currency: INR
                   value: '50.00'
-          created_at: '2026-02-25T11:31:17.678Z'
+          created_at: '2026-02-25T11:57:43.466Z'
     action: on_cancel
     saved_info: {}
   - action_id: on_status
@@ -3969,9 +3970,9 @@ transaction_history:
       context:
         domain: 'nic2004:60232'
         action: on_status
-        timestamp: '2026-02-25T11:31:17.957Z'
+        timestamp: '2026-02-25T11:57:43.799Z'
         transaction_id: f7fa6fbf-37bc-4d92-9445-f7e83cc19243
-        message_id: d6ae148c-13c0-4d26-91f8-dd4be070daad
+        message_id: 4ef6f1f1-8b38-4c4f-b4d3-e5848b3b0c86
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -3982,7 +3983,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: 8b722e48-ab7c-4455-b3ec-6bd900eee763
+          id: 8836ba23-1a67-40d0-9bc0-75e9046b6f73
           state: Cancelled
           provider:
             id: P1
@@ -4043,9 +4044,9 @@ transaction_history:
                 time:
                   duration: PT15M
                   range:
-                    start: '2026-02-25T11:31:17.712Z'
-                    end: '2026-02-25T11:46:17.712Z'
-                  timestamp: '2026-02-25T11:31:17.857Z'
+                    start: '2026-02-25T11:57:43.500Z'
+                    end: '2026-02-25T12:12:43.500Z'
+                  timestamp: '2026-02-25T11:57:43.651Z'
                 person:
                   name: person_name_1
                 location:
@@ -4094,15 +4095,15 @@ transaction_history:
                     url: 'http://description.com'
                 time:
                   range:
-                    start: '2026-02-25T11:46:17.712Z'
-                    end: '2026-02-26T11:31:17.712Z'
+                    start: '2026-02-25T12:12:43.500Z'
+                    end: '2026-02-26T11:57:43.500Z'
               tags:
                 - code: precancel_state
                   list:
                     - code: fulfillment_state
                       value: Out-for-delivery
                     - code: updated_at
-                      value: '2026-02-25T11:31:17.857Z'
+                      value: '2026-02-25T11:57:43.651Z'
                 - code: rto_event
                   list:
                     - code: retry_count
@@ -4126,13 +4127,13 @@ transaction_history:
               type: RTO
               state:
                 descriptor:
-                  code: RTO-Delivered
+                  code: RTO-Disposed
               start:
                 time:
-                  timestamp: '2026-02-25T11:31:17.908Z'
+                  timestamp: '2026-02-25T11:57:43.716Z'
               end:
                 time:
-                  timestamp: '2026-02-25T11:31:17.957Z'
+                  timestamp: '2026-02-25T11:57:43.799Z'
           payment:
             type: POST-FULFILLMENT
             collected_by: BAP
@@ -4152,8 +4153,8 @@ transaction_history:
             tax_number: XXXXXXXXXXXXXXX
             phone: '9886098860'
             email: abcd.efgh@gmail.com
-            created_at: '2026-02-25T11:31:15.706Z'
-            updated_at: '2026-02-25T11:31:15.706Z'
+            created_at: '2026-02-25T11:57:39.212Z'
+            updated_at: '2026-02-25T11:57:39.212Z'
           '@ondc/org/linked_order':
             items:
               - category_id: F&B
@@ -4196,7 +4197,7 @@ transaction_history:
             cancelled_by: bpp.example.com
             reason:
               id: '013'
-          updated_at: '2026-02-25T11:31:17.957Z'
+          updated_at: '2026-02-25T11:57:43.799Z'
           cancellation_terms:
             - fulfillment_state:
                 descriptor:
