@@ -98,3 +98,6 @@ apiProperties:
   on_issue:
     async_predecessor: null
     transaction_partner: [ "search", "on_search", "init", "on_init", "confirm", "on_confirm", issue ]
+  on_issue_status:
+    async_predecessor: null
+    transaction_partner: [ "search", "on_search", "init", "on_init", "confirm", "on_confirm", issue, on_issue ]  
