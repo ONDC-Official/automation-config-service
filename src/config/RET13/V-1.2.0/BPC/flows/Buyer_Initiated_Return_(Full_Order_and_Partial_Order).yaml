@@ -18,7 +18,7 @@ steps:
     description: First Select where items are selected
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCWNvbnN0IGlucHV0cyA9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzOwoJaWYgKCFpbnB1dHMpIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKCWlmIChpbnB1dHMucHJvdmlkZXIpIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyLmlkID0gaW5wdXRzLnByb3ZpZGVyOwoJfQoJaWYgKGlucHV0cy5wcm92aWRlcl9sb2NhdGlvbiAmJiBBcnJheS5pc0FycmF5KGlucHV0cy5wcm92aWRlcl9sb2NhdGlvbikpIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyLmxvY2F0aW9ucyA9CgkJCWlucHV0cy5wcm92aWRlcl9sb2NhdGlvbi5tYXAoKGxvY2F0aW9uKSA9PiB7CgkJCQlyZXR1cm4gewoJCQkJCWlkOiBsb2NhdGlvbiwKCQkJCX07CgkJCX0pOwoJfSBlbHNlIGlmICgKCQlpbnB1dHMucHJvdmlkZXJfbG9jYXRpb24gJiYKCQl0eXBlb2YgaW5wdXRzLnByb3ZpZGVyX2xvY2F0aW9uID09PSAic3RyaW5nIgoJKSB7CgkJZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5wcm92aWRlci5sb2NhdGlvbnMgPSBbCgkJCXsKCQkJCWlkOiBpbnB1dHMucHJvdmlkZXJfbG9jYXRpb24sCgkJCX0sCgkJXTsKCX0KCWlmIChpbnB1dHMubG9jYXRpb25fZ3BzKSB7CgkJZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF0uZW5kLmxvY2F0aW9uLmdwcyA9CgkJCWlucHV0cy5sb2NhdGlvbl9ncHM7Cgl9CglpZiAoaW5wdXRzLmxvY2F0aW9uX3Bpbl9jb2RlKSB7CgkJZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF0uZW5kLmxvY2F0aW9uLmFkZHJlc3MuYXJlYV9jb2RlID0KCQkJaW5wdXRzLmxvY2F0aW9uX3Bpbl9jb2RlOwoJCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzLmNpdHlfY29kZTsKCX0KCWlmIChpbnB1dHMuaXRlbXMpIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zID0gaW5wdXRzLml0ZW1zLm1hcCgoaXRlbSkgPT4gewoJCQlyZXR1cm4gewoJCQkJaWQ6IGl0ZW0uaXRlbUlkLAoJCQkJcXVhbnRpdHk6IHsKCQkJCQljb3VudDogaXRlbS5xdWFudGl0eSwKCQkJCX0sCgkJCQlsb2NhdGlvbjogaXRlbS5sb2NhdGlvbiwKCQkJfTsKCQl9KTsKCX0KCWNvbnN0IGlucHV0S2V5cyA9IE9iamVjdC5rZXlzKGlucHV0cyk7Cgljb25zdCBvZmZlcnMgPSBpbnB1dEtleXMuZmlsdGVyKChrKSA9PiBrLnN0YXJ0c1dpdGgoIm9mZmVyc18iKSk7CglpZiAob2ZmZXJzLmxlbmd0aCA+IDApIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLm9mZmVycyA9IG9mZmVycwoJCQkuZmlsdGVyKChvZmZlcikgPT4gaW5wdXRzW29mZmVyXSAhPT0gZmFsc2UgJiYgaW5wdXRzW29mZmVyXSAhPT0gbnVsbCkKCQkJLm1hcCgob2ZmZXIpID0+IHsKCQkJCXJldHVybiB7CgkJCQkJaWQ6IG9mZmVyLnJlcGxhY2UoIm9mZmVyc18iLCAiIiksCgkJCQkJLy8gdGFnczogWwoJCQkJCS8vIAl7CgkJCQkJLy8gCQljb2RlOiAic2VsZWN0aW9uIiwKCQkJCQkvLyAJCWxpc3Q6IFsKCQkJCQkvLyAJCQl7CgkJCQkJLy8gCQkJCWNvZGU6ICJhcHBseSIsCgkJCQkJLy8gCQkJCXZhbHVlOiAieWVzIiwKCQkJCQkvLyAJCQl9LAoJCQkJCS8vIAkJXSwKCQkJCQkvLyAJfSwKCQkJCQkvLyBdLAoJCQkJfTsKCQkJfSk7Cgl9CglyZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCWNvbnN0IGlucHV0cyA9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzOwoJaWYgKCFpbnB1dHMpIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKCWlmIChpbnB1dHMucHJvdmlkZXIpIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyLmlkID0gaW5wdXRzLnByb3ZpZGVyOwoJfQoJaWYgKGlucHV0cy5wcm92aWRlcl9sb2NhdGlvbiAmJiBBcnJheS5pc0FycmF5KGlucHV0cy5wcm92aWRlcl9sb2NhdGlvbikpIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyLmxvY2F0aW9ucyA9CgkJCWlucHV0cy5wcm92aWRlcl9sb2NhdGlvbi5tYXAoKGxvY2F0aW9uKSA9PiB7CgkJCQlyZXR1cm4gewoJCQkJCWlkOiBsb2NhdGlvbiwKCQkJCX07CgkJCX0pOwoJfSBlbHNlIGlmICgKCQlpbnB1dHMucHJvdmlkZXJfbG9jYXRpb24gJiYKCQl0eXBlb2YgaW5wdXRzLnByb3ZpZGVyX2xvY2F0aW9uID09PSAic3RyaW5nIgoJKSB7CgkJZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5wcm92aWRlci5sb2NhdGlvbnMgPSBbCgkJCXsKCQkJCWlkOiBpbnB1dHMucHJvdmlkZXJfbG9jYXRpb24sCgkJCX0sCgkJXTsKCX0KCWlmIChpbnB1dHMubG9jYXRpb25fZ3BzKSB7CgkJZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF0uZW5kLmxvY2F0aW9uLmdwcyA9CgkJCWlucHV0cy5sb2NhdGlvbl9ncHM7Cgl9CglpZiAoaW5wdXRzLmxvY2F0aW9uX3Bpbl9jb2RlKSB7CgkJZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF0uZW5kLmxvY2F0aW9uLmFkZHJlc3MuYXJlYV9jb2RlID0KCQkJaW5wdXRzLmxvY2F0aW9uX3Bpbl9jb2RlOwoJCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzLmNpdHlfY29kZTsKCX0KCWlmIChpbnB1dHMuaXRlbXMpIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zID0gaW5wdXRzLml0ZW1zLm1hcCgoaXRlbSkgPT4gewoJCQlyZXR1cm4gewoJCQkJaWQ6IGl0ZW0uaXRlbUlkLAoJCQkJcXVhbnRpdHk6IHsKCQkJCQljb3VudDogaXRlbS5xdWFudGl0eSwKCQkJCX0sCgkJCQlsb2NhdGlvbl9pZDogaXRlbS5sb2NhdGlvbiwKCQkJfTsKCQl9KTsKCX0KCWNvbnN0IGlucHV0S2V5cyA9IE9iamVjdC5rZXlzKGlucHV0cyk7Cgljb25zdCBvZmZlcnMgPSBpbnB1dEtleXMuZmlsdGVyKChrKSA9PiBrLnN0YXJ0c1dpdGgoIm9mZmVyc18iKSk7CglpZiAob2ZmZXJzLmxlbmd0aCA+IDApIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLm9mZmVycyA9IG9mZmVycwoJCQkuZmlsdGVyKChvZmZlcikgPT4gaW5wdXRzW29mZmVyXSAhPT0gZmFsc2UgJiYgaW5wdXRzW29mZmVyXSAhPT0gbnVsbCkKCQkJLm1hcCgob2ZmZXIpID0+IHsKCQkJCXJldHVybiB7CgkJCQkJaWQ6IG9mZmVyLnJlcGxhY2UoIm9mZmVyc18iLCAiIiksCgkJCQkJLy8gdGFnczogWwoJCQkJCS8vIAl7CgkJCQkJLy8gCQljb2RlOiAic2VsZWN0aW9uIiwKCQkJCQkvLyAJCWxpc3Q6IFsKCQkJCQkvLyAJCQl7CgkJCQkJLy8gCQkJCWNvZGU6ICJhcHBseSIsCgkJCQkJLy8gCQkJCXZhbHVlOiAieWVzIiwKCQkJCQkvLyAJCQl9LAoJCQkJCS8vIAkJXSwKCQkJCQkvLyAJfSwKCQkJCQkvLyBdLAoJCQkJfTsKCQkJfSk7Cgl9CglyZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: >-
         LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: >-
@@ -2944,9 +2944,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: select
-        timestamp: '2026-02-25T05:52:48.995Z'
+        timestamp: '2026-02-26T09:50:27.289Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 7c6123ae-8364-4e85-a0aa-f49854f45e97
+        message_id: 894c4884-d0b7-4e17-b3b1-7d54bc7b629d
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -2965,11 +2965,11 @@ transaction_history:
             - id: I1
               quantity:
                 count: 1
-              location: L1
+              location_id: L1
             - id: I2
               quantity:
                 count: 1
-              location: L1
+              location_id: L1
           fulfillments:
             - end:
                 location:
@@ -2983,9 +2983,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_select
-        timestamp: '2026-02-25T05:52:49.080Z'
+        timestamp: '2026-02-26T09:50:27.306Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 7c6123ae-8364-4e85-a0aa-f49854f45e97
+        message_id: 894c4884-d0b7-4e17-b3b1-7d54bc7b629d
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -3074,9 +3074,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: init
-        timestamp: '2026-02-25T05:52:49.195Z'
+        timestamp: '2026-02-26T09:50:27.328Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: b1dd0cff-3ced-4590-9f68-1b3c131534a5
+        message_id: 3324e701-2082-48ae-b701-72c01b7471c3
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -3096,10 +3096,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -3112,8 +3114,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -3139,9 +3141,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_init
-        timestamp: '2026-02-25T05:52:49.225Z'
+        timestamp: '2026-02-26T09:50:27.355Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: b1dd0cff-3ced-4590-9f68-1b3c131534a5
+        message_id: 3324e701-2082-48ae-b701-72c01b7471c3
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -3161,10 +3163,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -3177,8 +3181,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -3267,9 +3271,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: confirm
-        timestamp: '2026-02-25T05:52:49.257Z'
+        timestamp: '2026-02-26T09:50:27.369Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 37128910-a6fe-4772-9597-0259dc40c82a
+        message_id: 33fd7bb3-160e-4cc4-8667-88ad44fc2b56
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -3280,7 +3284,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: Created
           billing:
             address:
@@ -3294,17 +3298,19 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           items:
             - id: I1
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           provider:
             id: P1
             locations:
@@ -3404,8 +3410,8 @@ transaction_history:
                     https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: tax_number
                   value: 37BABCA6712B1Z6
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.262Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.372Z'
     action: confirm
     saved_info: {}
   - action_id: on_confirm
@@ -3413,9 +3419,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_confirm
-        timestamp: '2026-02-25T05:52:49.290Z'
+        timestamp: '2026-02-26T09:50:27.383Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 37128910-a6fe-4772-9597-0259dc40c82a
+        message_id: 33fd7bb3-160e-4cc4-8667-88ad44fc2b56
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -3426,7 +3432,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: Created
           provider:
             id: P1
@@ -3437,10 +3443,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -3453,8 +3461,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -3576,8 +3584,8 @@ transaction_history:
                     https://github.com/ONDC-Official/protocol-network-extension/discussions/79
                 - code: tax_number
                   value: 37BABCA6712B1Z6
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.308Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.386Z'
     action: on_confirm
     saved_info: {}
   - action_id: on_status_accepted
@@ -3585,9 +3593,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_status
-        timestamp: '2026-02-25T05:52:49.343Z'
+        timestamp: '2026-02-26T09:50:27.398Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 9fc595c3-06dc-466c-9f29-3d54fd3e64d7
+        message_id: 762fd98b-a216-4a63-94ee-f33fa5d965f5
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -3598,7 +3606,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: Accepted
           provider:
             id: P1
@@ -3609,10 +3617,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -3625,8 +3635,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -3653,8 +3663,8 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -3673,8 +3683,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -3751,8 +3761,8 @@ transaction_history:
                 settlement_ifsc_code: XXXX
                 bank_name: XXXX
                 branch_name: XXXX
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.352Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.401Z'
     action: on_status
     saved_info: {}
   - action_id: on_status_packed
@@ -3760,9 +3770,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_status
-        timestamp: '2026-02-25T05:52:49.395Z'
+        timestamp: '2026-02-26T09:50:27.409Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: e3dabad2-dc39-4be0-8674-98fcbbedbb7b
+        message_id: c6a87d44-21f0-4123-b004-de86c2d3ac6d
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -3773,7 +3783,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: In-progress
           provider:
             id: P1
@@ -3784,10 +3794,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -3800,8 +3812,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -3828,8 +3840,8 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -3848,8 +3860,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -3926,8 +3938,8 @@ transaction_history:
                 settlement_ifsc_code: XXXX
                 bank_name: XXXX
                 branch_name: XXXX
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.406Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.412Z'
     action: on_status
     saved_info: {}
   - action_id: on_status_agent_assigned
@@ -3935,9 +3947,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_status
-        timestamp: '2026-02-25T05:52:49.438Z'
+        timestamp: '2026-02-26T09:50:27.425Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 8ed7a72a-8ddf-4fd1-a2a0-2eae88bf8b67
+        message_id: 23270e66-a2dd-4b9d-abc4-277a0e2e98ad
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -3948,7 +3960,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: In-progress
           provider:
             id: P1
@@ -3959,10 +3971,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -3975,8 +3989,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -4003,8 +4017,8 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -4023,8 +4037,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -4104,8 +4118,8 @@ transaction_history:
                 settlement_ifsc_code: XXXX
                 bank_name: XXXX
                 branch_name: XXXX
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.443Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.428Z'
     action: on_status
     saved_info: {}
   - action_id: on_status_picked
@@ -4113,9 +4127,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_status
-        timestamp: '2026-02-25T05:52:49.491Z'
+        timestamp: '2026-02-26T09:50:27.437Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 7ce63fb7-75a3-4660-9b21-f2bebaeaf43f
+        message_id: 1fe9af03-c09b-4a50-8b73-b1da1dd59664
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -4126,7 +4140,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: In-progress
           provider:
             id: P1
@@ -4137,10 +4151,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -4153,8 +4169,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -4181,9 +4197,9 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
-                  timestamp: '2026-02-25T05:52:49.497Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
+                  timestamp: '2026-02-26T09:50:27.439Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -4202,8 +4218,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -4286,8 +4302,8 @@ transaction_history:
           documents:
             - url: https://invoice_url
               label: Invoice
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.497Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.439Z'
     action: on_status
     saved_info: {}
   - action_id: on_status_out_for_delivery
@@ -4295,9 +4311,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_status
-        timestamp: '2026-02-25T05:52:49.539Z'
+        timestamp: '2026-02-26T09:50:27.453Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 8d87eeac-b8d4-4c8e-89c3-a70357f1c208
+        message_id: 4683c59d-d23f-43d3-90cf-09dce83ded7b
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -4308,7 +4324,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: In-progress
           provider:
             id: P1
@@ -4319,10 +4335,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -4335,8 +4353,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -4363,8 +4381,8 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -4383,8 +4401,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -4467,8 +4485,8 @@ transaction_history:
           documents:
             - url: https://invoice_url
               label: Invoice
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.545Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.456Z'
     action: on_status
     saved_info: {}
   - action_id: on_status_order_delivered
@@ -4476,9 +4494,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_status
-        timestamp: '2026-02-25T05:52:49.589Z'
+        timestamp: '2026-02-26T09:50:27.469Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 8aef341a-dea7-494a-8b03-e9d8491d5062
+        message_id: 8e3254b7-fa15-4e8e-8884-f1f99313c897
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -4489,7 +4507,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: Completed
           provider:
             id: P1
@@ -4500,10 +4518,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -4516,8 +4536,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -4544,8 +4564,8 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -4564,9 +4584,9 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
-                  timestamp: '2026-02-25T05:52:49.594Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
+                  timestamp: '2026-02-26T09:50:27.478Z'
               tags:
                 - code: routing
                   list:
@@ -4649,8 +4669,8 @@ transaction_history:
           documents:
             - url: https://invoice_url
               label: Invoice
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.594Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.478Z'
     action: on_status
     saved_info: {}
   - action_id: update_return
@@ -4658,9 +4678,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: update
-        timestamp: '2026-02-25T05:52:49.642Z'
+        timestamp: '2026-02-26T09:50:27.489Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: e520f629-cdaf-40f7-a8c1-cf728bb83476
+        message_id: 7fbee258-1b1a-407f-8de6-c66e28a06077
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -4672,7 +4692,7 @@ transaction_history:
       message:
         update_target: item
         order:
-          id: '295250'
+          id: '904083'
           fulfillments:
             - type: Return
               id: ad392135
@@ -4680,7 +4700,7 @@ transaction_history:
                 - code: return_request
                   list:
                     - code: id
-                      value: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+                      value: 9d378128-b4b7-45a4-8626-43f6e43213ca
                     - code: item_id
                       value: I2
                     - code: item_quantity
@@ -4703,9 +4723,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_update
-        timestamp: '2026-02-25T05:52:49.706Z'
+        timestamp: '2026-02-26T09:50:27.506Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: e520f629-cdaf-40f7-a8c1-cf728bb83476
+        message_id: 7fbee258-1b1a-407f-8de6-c66e28a06077
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -4716,7 +4736,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: Completed
           provider:
             id: P1
@@ -4727,10 +4747,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           quote:
             breakup:
               - '@ondc/org/item_id': I1
@@ -4785,8 +4807,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           fulfillments:
             - id: F1
               type: Delivery
@@ -4813,9 +4835,9 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
-                  timestamp: '2026-02-25T05:52:49.497Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
+                  timestamp: '2026-02-26T09:50:27.439Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -4834,8 +4856,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -4853,12 +4875,12 @@ transaction_history:
                 name: mock-agent
                 phone: '9886098860'
             - type: Return
-              id: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+              id: 9d378128-b4b7-45a4-8626-43f6e43213ca
               tags:
                 - code: return_request
                   list:
                     - code: id
-                      value: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+                      value: 9d378128-b4b7-45a4-8626-43f6e43213ca
                     - code: item_id
                       value: I2
                     - code: item_quantity
@@ -4895,8 +4917,8 @@ transaction_history:
                 settlement_ifsc_code: XXXX
                 bank_name: XXXX
                 branch_name: XXXX
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.715Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.509Z'
     action: on_update
     saved_info: {}
   - action_id: on_update_return_approved
@@ -4904,9 +4926,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_update
-        timestamp: '2026-02-25T05:52:49.765Z'
+        timestamp: '2026-02-26T09:50:27.518Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 497fca70-6f1a-4c73-9dfe-ba395a63d69a
+        message_id: a8142e34-2360-4b62-a06a-7710b2c6ff3b
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -4917,7 +4939,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: Completed
           provider:
             id: P1
@@ -4928,10 +4950,12 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -4944,8 +4968,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           quote:
             breakup:
               - '@ondc/org/item_id': I1
@@ -5014,9 +5038,9 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
-                  timestamp: '2026-02-25T05:52:49.497Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
+                  timestamp: '2026-02-26T09:50:27.439Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -5035,8 +5059,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -5054,12 +5078,12 @@ transaction_history:
                 name: mock-agent
                 phone: '9886098860'
             - type: Return
-              id: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+              id: 9d378128-b4b7-45a4-8626-43f6e43213ca
               tags:
                 - code: return_request
                   list:
                     - code: id
-                      value: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+                      value: 9d378128-b4b7-45a4-8626-43f6e43213ca
                     - code: item_id
                       value: I2
                     - code: item_quantity
@@ -5092,8 +5116,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T05:52:49.775Z'
-                    end: '2026-02-26T05:52:49.775Z'
+                    start: '2026-02-26T09:50:27.521Z'
+                    end: '2026-02-27T09:50:27.521Z'
               end:
                 location:
                   id: L1
@@ -5108,8 +5132,8 @@ transaction_history:
                     area_code: '400053'
                 time:
                   range:
-                    start: '2026-02-26T05:52:49.775Z'
-                    end: '2026-02-27T05:52:49.775Z'
+                    start: '2026-02-27T09:50:27.521Z'
+                    end: '2026-02-28T09:50:27.521Z'
           payment:
             params:
               amount: '500.00'
@@ -5131,8 +5155,8 @@ transaction_history:
                 settlement_ifsc_code: XXXX
                 bank_name: XXXX
                 branch_name: XXXX
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.775Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.521Z'
     action: on_update
     saved_info: {}
   - action_id: on_update_return_picked
@@ -5140,9 +5164,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_update
-        timestamp: '2026-02-25T05:52:49.817Z'
+        timestamp: '2026-02-26T09:50:27.535Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 69fea105-d4eb-46f2-a8e6-edd2cb1fad12
+        message_id: f00706e1-0cfb-4a89-bb32-dbad5ad0d90b
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -5153,7 +5177,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: Completed
           provider:
             id: P1
@@ -5164,14 +5188,16 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               quantity:
                 count: 1
-              fulfillment_id: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+              fulfillment_id: 9d378128-b4b7-45a4-8626-43f6e43213ca
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 0
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -5184,8 +5210,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           quote:
             breakup:
               - '@ondc/org/item_id': I1
@@ -5254,9 +5280,9 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
-                  timestamp: '2026-02-25T05:52:49.497Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
+                  timestamp: '2026-02-26T09:50:27.439Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -5275,8 +5301,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -5294,12 +5320,12 @@ transaction_history:
                 name: mock-agent
                 phone: '9886098860'
             - type: Return
-              id: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+              id: 9d378128-b4b7-45a4-8626-43f6e43213ca
               tags:
                 - code: return_request
                   list:
                     - code: id
-                      value: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+                      value: 9d378128-b4b7-45a4-8626-43f6e43213ca
                     - code: item_id
                       value: I2
                     - code: item_quantity
@@ -5332,9 +5358,9 @@ transaction_history:
                     area_code: '560002'
                 time:
                   range:
-                    start: '2026-02-25T05:52:49.775Z'
-                    end: '2026-02-26T05:52:49.775Z'
-                  timeStamp: '2026-02-25T05:52:49.826Z'
+                    start: '2026-02-26T09:50:27.521Z'
+                    end: '2026-02-27T09:50:27.521Z'
+                  timeStamp: '2026-02-26T09:50:27.544Z'
               end:
                 location:
                   id: L1
@@ -5349,8 +5375,8 @@ transaction_history:
                     area_code: '400053'
                 time:
                   range:
-                    start: '2026-02-26T05:52:49.775Z'
-                    end: '2026-02-27T05:52:49.775Z'
+                    start: '2026-02-27T09:50:27.521Z'
+                    end: '2026-02-28T09:50:27.521Z'
           payment:
             params:
               amount: '500.00'
@@ -5372,8 +5398,8 @@ transaction_history:
                 settlement_ifsc_code: XXXX
                 bank_name: XXXX
                 branch_name: XXXX
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:49.825Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.544Z'
     action: on_update
     saved_info: {}
   - action_id: update_settlement_trail
@@ -5381,9 +5407,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: update
-        timestamp: '2026-02-25T05:52:49.902Z'
+        timestamp: '2026-02-26T09:50:27.557Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 88096082-6852-4573-9cef-8a7c1b60cf7c
+        message_id: 38c56e28-2e5e-47e4-8f1b-95bd193f20f5
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -5395,9 +5421,9 @@ transaction_history:
       message:
         update_target: payment
         order:
-          id: '295250'
+          id: '904083'
           fulfillments:
-            - id: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+            - id: 9d378128-b4b7-45a4-8626-43f6e43213ca
               type: Return
           payment:
             '@ondc/org/settlement_details':
@@ -5405,7 +5431,7 @@ transaction_history:
                 settlement_phase: refund
                 settlement_type: netbanking
                 settlement_amount: '0'
-                settlement_timestamp: '2026-02-25T05:52:49.931Z'
+                settlement_timestamp: '2026-02-26T09:50:27.560Z'
     action: update
     saved_info: {}
   - action_id: on_update_return_delivered
@@ -5413,9 +5439,9 @@ transaction_history:
       context:
         domain: ONDC:RET13
         action: on_update
-        timestamp: '2026-02-25T05:52:49.997Z'
+        timestamp: '2026-02-26T09:50:27.576Z'
         transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-        message_id: 2155063a-b0e2-43b0-9d73-3cdf484e3976
+        message_id: 4d23435e-fa5d-4ae8-86fd-c752ba8d8d6f
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
@@ -5426,7 +5452,7 @@ transaction_history:
         core_version: 1.2.0
       message:
         order:
-          id: '295250'
+          id: '904083'
           state: Completed
           provider:
             id: P1
@@ -5437,14 +5463,16 @@ transaction_history:
               fulfillment_id: F1
               quantity:
                 count: 1
+              location_id: L1
             - id: I2
               quantity:
                 count: 1
-              fulfillment_id: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+              fulfillment_id: 9d378128-b4b7-45a4-8626-43f6e43213ca
             - id: I2
               fulfillment_id: F1
               quantity:
                 count: 0
+              location_id: L1
           billing:
             address:
               building: my building name or house
@@ -5457,8 +5485,8 @@ transaction_history:
             phone: '9898989898'
             name: ONDC buyer
             email: nobody@nomail.com
-            created_at: '2026-02-25T05:52:44.203Z'
-            updated_at: '2026-02-25T05:52:44.203Z'
+            created_at: '2026-02-26T09:50:22.342Z'
+            updated_at: '2026-02-26T09:50:22.342Z'
           quote:
             breakup:
               - '@ondc/org/item_id': I1
@@ -5527,9 +5555,9 @@ transaction_history:
                   email: nobody@nomail.com
                 time:
                   range:
-                    start: '2026-02-25T06:02:49.352Z'
-                    end: '2026-02-25T06:12:49.352Z'
-                  timestamp: '2026-02-25T05:52:49.497Z'
+                    start: '2026-02-26T10:00:27.401Z'
+                    end: '2026-02-26T10:10:27.401Z'
+                  timestamp: '2026-02-26T09:50:27.439Z'
               end:
                 contact:
                   email: nobody@nomail.com
@@ -5548,8 +5576,8 @@ transaction_history:
                     name: mock-house-name
                 time:
                   range:
-                    start: '2026-02-25T06:12:49.352Z'
-                    end: '2026-02-27T06:02:49.352Z'
+                    start: '2026-02-26T10:10:27.401Z'
+                    end: '2026-02-28T10:00:27.401Z'
               tags:
                 - code: routing
                   list:
@@ -5567,12 +5595,12 @@ transaction_history:
                 name: mock-agent
                 phone: '9886098860'
             - type: Return
-              id: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+              id: 9d378128-b4b7-45a4-8626-43f6e43213ca
               tags:
                 - code: return_request
                   list:
                     - code: id
-                      value: 021e7a8f-9cf3-49b2-bca3-ea51ff5e64af
+                      value: 9d378128-b4b7-45a4-8626-43f6e43213ca
                     - code: item_id
                       value: I2
                     - code: item_quantity
@@ -5605,9 +5633,9 @@ transaction_history:
                     area_code: '560002'
                 time:
                   range:
-                    start: '2026-02-25T05:52:49.775Z'
-                    end: '2026-02-26T05:52:49.775Z'
-                  timeStamp: '2026-02-25T05:52:49.826Z'
+                    start: '2026-02-26T09:50:27.521Z'
+                    end: '2026-02-27T09:50:27.521Z'
+                  timeStamp: '2026-02-26T09:50:27.544Z'
               end:
                 location:
                   id: L1
@@ -5622,9 +5650,9 @@ transaction_history:
                     area_code: '400053'
                 time:
                   range:
-                    start: '2026-02-26T05:52:49.775Z'
-                    end: '2026-02-27T05:52:49.775Z'
-                  timeStamp: '2026-02-25T05:52:50.011Z'
+                    start: '2026-02-27T09:50:27.521Z'
+                    end: '2026-02-28T09:50:27.521Z'
+                  timeStamp: '2026-02-26T09:50:27.585Z'
           payment:
             params:
               amount: '500.00'
@@ -5650,9 +5678,9 @@ transaction_history:
                 settlement_phase: refund
                 settlement_type: netbanking
                 settlement_amount: '0'
-                settlement_timestamp: '2026-02-25T05:52:49.931Z'
-          created_at: '2026-02-25T05:52:49.262Z'
-          updated_at: '2026-02-25T05:52:50.011Z'
+                settlement_timestamp: '2026-02-26T09:50:27.560Z'
+          created_at: '2026-02-26T09:50:27.372Z'
+          updated_at: '2026-02-26T09:50:27.585Z'
     action: on_update
     saved_info: {}
 validationLib: ''
