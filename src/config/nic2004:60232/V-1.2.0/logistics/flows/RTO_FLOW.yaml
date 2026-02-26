@@ -137,7 +137,6 @@ steps:
               enum:
                 - POST-FULFILLMENT
                 - ON-ORDER
-                - ON-FULFILLMENT
               default: POST-FULFILLMENT
             city_code:
               type: string
