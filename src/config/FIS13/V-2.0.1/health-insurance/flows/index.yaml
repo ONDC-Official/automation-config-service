@@ -46,6 +46,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -354,13 +360,13 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: confirm
+      - key: confirm2
         type: confirm
         unsolicited: false
-        pair: on_confirm
+        pair: on_confirm2
         owner: BAP
         expect: false
-      - key: on_confirm
+      - key: on_confirm2
         type: on_confirm
         unsolicited: false
         pair: null
@@ -413,6 +419,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -637,6 +649,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -855,6 +873,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1076,6 +1100,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1385,13 +1415,13 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: confirm
+      - key: confirm2
         type: confirm
         unsolicited: false
-        pair: on_confirm
+        pair: on_confirm2
         owner: BAP
         expect: false
-      - key: on_confirm
+      - key: on_confirm2
         type: on_confirm
         unsolicited: false
         pair: null
@@ -1445,6 +1475,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1670,6 +1706,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1889,6 +1931,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
