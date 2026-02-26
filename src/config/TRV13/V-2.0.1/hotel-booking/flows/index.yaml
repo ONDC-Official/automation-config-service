@@ -129,6 +129,15 @@ flows:
         pair: on_search_7
         owner: BAP
         expect: true
+        input:
+          - name: start_time
+            label: Enter Start Time
+            type: date
+            payloadField: $.message.intent.category.time.range.start
+          - name: end_time
+            label: Enter End Time
+            type: date
+            payloadField: $.message.intent.category.time.range.end
       - key: on_search_7
         type: on_search
         unsolicited: false
