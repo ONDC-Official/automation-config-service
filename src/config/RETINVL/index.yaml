@@ -6,4 +6,4 @@ versions:
       $ref: src/config/RETINVL/v-1.2.5/supportedActions/index.yaml
     usecase:
       - name: RETINVL
-        flows: /v-1.2.5/
+        flows: /v-1.2.5/RETINVL/flows/index.yaml
