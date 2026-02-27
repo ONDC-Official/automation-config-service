@@ -17,3 +17,10 @@ flows:
     description:  Delivery Flow for EB2B
     config:
       $ref: "src/config/RETeB2B/v-1.2.5/EB2B/flows/Merchant_Side_RTO_and_Part_Order_Cancellation_Flow.yaml"
+      
+  - type: playground
+    id: Out_of_Stock(Error_code)
+    tags: ["WORKBENCH","MANDATORY"]
+    description:  Delivery Flow for EB2B
+    config:
+      $ref: "src/config/RETeB2B/v-1.2.5/EB2B/flows/Out_of_Stock(Error_code).yaml"
