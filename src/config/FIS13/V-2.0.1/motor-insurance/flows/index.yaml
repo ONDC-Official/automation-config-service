@@ -46,6 +46,12 @@ flows:
         pair: on_select_motor
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select_motor
         type: on_select
         unsolicited: false
@@ -69,7 +75,7 @@ flows:
         unsolicited: true
         pair: null
         owner: BPP
-        expect: false         
+        expect: false
       # - key: status_motor
       #   type: status
       #   unsolicited: false
@@ -107,7 +113,7 @@ flows:
           - name: form_submission_id
             label: Enter Form Submission id
             type: HTML_FORM
-            reference: $.reference_data.pan_details_form  
+            reference: $.reference_data.pan_details_form
       - key: select3_motor
         type: select
         unsolicited: false
@@ -120,7 +126,7 @@ flows:
         unsolicited: false
         pair: null
         owner: BPP
-        expect: false  
+        expect: false
       - key: kyc_details_form
         label: form link provided in on_select
         type: DYNAMIC_FORM
@@ -132,13 +138,13 @@ flows:
           - name: form_submission_id
             label: Enter Form Submission id
             type: DYNAMIC_FORM
-            reference: $.reference_data.kyc_details_form     
+            reference: $.reference_data.kyc_details_form
       - key: on_status_unsolicited4_motor
         type: on_status
         unsolicited: true
         pair: null
         owner: BPP
-        expect: false        
+        expect: false
       - key: init_motor
         type: init
         unsolicited: false
@@ -297,6 +303,12 @@ flows:
         pair: on_select_motor
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select_motor
         type: on_select
         unsolicited: false
@@ -320,7 +332,7 @@ flows:
         unsolicited: true
         pair: null
         owner: BPP
-        expect: false        
+        expect: false
       # - key: status_motor
       #   type: status
       #   unsolicited: false
@@ -358,7 +370,7 @@ flows:
           - name: form_submission_id
             label: Enter Form Submission id
             type: HTML_FORM
-            reference: $.reference_data.pan_details_form  
+            reference: $.reference_data.pan_details_form
       - key: select3_motor
         type: select
         unsolicited: false
@@ -371,7 +383,7 @@ flows:
         unsolicited: false
         pair: null
         owner: BPP
-        expect: false  
+        expect: false
       - key: kyc_details_form
         label: form link provided in on_select
         type: DYNAMIC_FORM
@@ -383,13 +395,13 @@ flows:
           - name: form_submission_id
             label: Enter Form Submission id
             type: DYNAMIC_FORM
-            reference: $.reference_data.kyc_details_form    
+            reference: $.reference_data.kyc_details_form
       - key: on_status_unsolicited4_motor
         type: on_status
         unsolicited: true
         pair: null
         owner: BPP
-        expect: false          
+        expect: false
       - key: init_motor
         type: init
         unsolicited: false
@@ -471,13 +483,13 @@ flows:
         pair: null
         owner: BPP
         expect: false           
-      - key: confirm_motor
+      - key: confirm_motor2
         type: confirm
         unsolicited: false
-        pair: on_confirm_motor
+        pair: on_confirm_motor2
         owner: BAP
         expect: false
-      - key: on_confirm_motor
+      - key: on_confirm_motor2
         type: on_confirm
         unsolicited: false
         pair: null
@@ -530,6 +542,12 @@ flows:
         pair: on_select_motor
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select_motor
         type: on_select
         unsolicited: false
@@ -793,6 +811,12 @@ flows:
         pair: on_select_motor
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select_motor
         type: on_select
         unsolicited: false
