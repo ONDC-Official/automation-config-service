@@ -152,12 +152,20 @@ flows:
         description: Provider platform responds with the status of the order
         pair: null
         owner: BPP
+<<<<<<< HEAD
       - key: unsolicited_on_status_complete_METRO_200
+=======
+      - key: unsoliciated_on_status_complete_METRO_200
+>>>>>>> 61188f1ceadc5433d5fae446848f35608c9053df
         type: on_status
         unsolicited: true
         description: on_status (Order Completed)
         pair: null
+<<<<<<< HEAD
         owner: BPP
+=======
+        owner: BPP  
+>>>>>>> 61188f1ceadc5433d5fae446848f35608c9053df
   - id: ORDER_TO_CONFIRM_TO_JOURNEY_COMPLETION_SJT
     tags: ["WORKBENCH", "MANDATORY", "REPORTABLE"]
     title: Purchase journey of metro tickets (SJT)
@@ -274,12 +282,20 @@ flows:
         description: Provider platform responds with order status
         pair: null
         owner: BPP
+<<<<<<< HEAD
       - key: unsolicited_on_status_complete_METRO_200
+=======
+      - key: unsoliciated_on_status_complete_METRO_200
+>>>>>>> 61188f1ceadc5433d5fae446848f35608c9053df
         type: on_status
         unsolicited: true
         description: on_status (Order Completed)
         pair: null
+<<<<<<< HEAD
         owner: BPP    
+=======
+        owner: BPP  
+>>>>>>> 61188f1ceadc5433d5fae446848f35608c9053df
   - id: TECHNICAL_CANCELLATION_FLOW
     tags: ["WORKBENCH","MANDATORY", "REPORTABLE"]
     title: Technical cancellation journey
@@ -943,4 +959,8 @@ flows:
   #       unsolicited: true
   #       description: Provider platform initiates unsolicited cancellation
   #       pair: null
+<<<<<<< HEAD
   #       owner: BPP
+=======
+  #       owner: BPP
+>>>>>>> 61188f1ceadc5433d5fae446848f35608c9053df

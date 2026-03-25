@@ -129,7 +129,11 @@ flows:
         description: Provider platform responds with the status of the order
         pair: null
         owner: BPP
+<<<<<<< HEAD
       - key: unsolicited_on_status_BUS_200
+=======
+      - key: unsoliciated_on_status_BUS_200
+>>>>>>> 61188f1ceadc5433d5fae446848f35608c9053df
         type: on_status
         unsolicited: true
         description: on_status (Order Completed)
