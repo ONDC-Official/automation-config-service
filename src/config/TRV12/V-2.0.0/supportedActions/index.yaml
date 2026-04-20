@@ -8,10 +8,10 @@ supportedActions:
   on_init: ["init", "confirm"]
   confirm: ["on_confirm", "status"]
   on_confirm:
-    ["status", "cancel", "on_status", "on_update", "update", "on_cancel"]
+    ["status", "cancel", "on_status", "on_update", "update", "on_cancel", "issue"]
   status: ["on_status"]
   on_status:
-    ["status", "cancel", "on_update", "track", "on_status", "update", "rating"]
+    ["status", "cancel", "on_update", "track", "on_status", "update", "rating", "issue"]
   on_update: ["status", "update", "on_status", "track", "cancel", "on_cancel"]
   cancel: ["on_cancel", "status", "on_confirm"]
   on_cancel: ["cancel", "status", "on_status"]
@@ -19,6 +19,9 @@ supportedActions:
   on_track: ["on_status", "on_update"]
   update: ["on_update"]
   rating: ["on_rating"]
+  issue: ["on_issue", "issue", "on_update", "on_status", "on_confirm", "on_issue_status", "update"]
+  on_issue: ["issue", "on_issue", "on_status", "on_issue_status", "update", "on_update"]
+  on_issue_status: ["on_issue", "issue", "update", "on_update"]
 
 apiProperties:
   search:
@@ -69,6 +72,15 @@ apiProperties:
   on_update:
     async_predecessor: "update"
     transaction_partner: ["update"]
-rating:
-  async_predecessor: "on_status"
-  transaction_partner: ["on_status"]
+  rating:
+    async_predecessor: "on_status"
+    transaction_partner: ["on_status"]
+  issue:
+    async_predecessor: null
+    transaction_partner: [] 
+  on_issue:
+    async_predecessor: null
+    transaction_partner: []
+  on_issue_status:
+    async_predecessor: null
+    transaction_partner: []  
