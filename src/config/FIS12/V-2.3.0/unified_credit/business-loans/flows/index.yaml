@@ -1,0 +1,21 @@
+flows:
+  - type: playground
+    id: business_term_loan_with_offline_online
+    usecase: UNIFIED CREDIT
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+      - PERSONAL LOAN
+    description: Business Loan - Term Loan with Offline & Online Journey
+    config:
+      $ref:  "src/config/FIS12/V-2.3.0/unified_credit/business-loans/flows/Business_Term_Loan_with_offline_online_journey.yaml"
+  - type: playground
+    id: business_term_loan_without_aa
+    usecase: UNIFIED CREDIT
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+      - PERSONAL LOAN
+    description: Business Loan - Term Loan without Account Aggregator
+    config:
+      $ref: "src/config/FIS12/V-2.3.0/unified_credit/business-loans/flows/Business_Term_Loan_without_aa.yaml"
