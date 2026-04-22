@@ -1,7 +1,7 @@
 flows:
   - type: playground
     id: master_search
-    usecase: LAMF
+    usecase: LAMF_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -10,7 +10,7 @@ flows:
       $ref:  "src/config/FIS12/V-2.3.0/lamf/flows/master_search.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc_offline_journey
-    usecase: LAMF
+    usecase: LAMF_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -19,7 +19,7 @@ flows:
       $ref:  "src/config/FIS12/V-2.3.0/lamf/flows/lamf_credit_line_with_mfc_offline_journey.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc
-    usecase: LAMF
+    usecase: LAMF_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE

@@ -1,7 +1,7 @@
 flows:
   - type: playground
     id: master_search
-    usecase: BUSINESS LOAN
+    usecase: BUSINESS_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -10,7 +10,7 @@ flows:
       $ref:  "src/config/FIS12/V-2.3.0/business-loans/flows/master_search.yaml"
   - type: playground
     id: business_term_loan_with_offline_online
-    usecase: UNIFIED CREDIT
+    usecase: BUSINESS_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -20,7 +20,7 @@ flows:
       $ref:  "src/config/FIS12/V-2.3.0/business-loans/flows/business_term_loan_with_offline_online.yaml"
   - type: playground
     id: business_term_loan_without_aa
-    usecase: BUSINESS LOAN
+    usecase: BUSINESS_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
