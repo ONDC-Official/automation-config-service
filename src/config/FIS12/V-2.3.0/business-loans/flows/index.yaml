@@ -17,7 +17,7 @@ flows:
       # - PERSONAL LOAN
     description: Business Loan - Term Loan with Offline & Online Journey
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/business-loans/flows/business_term_loan_with_offline_online_journey.yaml"
+      $ref:  "src/config/FIS12/V-2.3.0/business-loans/flows/business_term_loan_with_offline_online-journey.yaml"
   - type: playground
     id: business_term_loan_without_aa
     usecase: BUSINESS LOAN
@@ -27,4 +27,4 @@ flows:
       # - PERSONAL LOAN
     description: Business Loan - Term Loan without Account Aggregator
     config:
-      $ref: "src/config/FIS12/V-2.3.0/business-loans/flows/business_term_loan_without_aa.yaml"
+      $ref: "src/config/FIS12/V-2.3.0/business-loans/flows/business_term_loan_without-aa.yaml"

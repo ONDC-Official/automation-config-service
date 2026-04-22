@@ -16,7 +16,7 @@ flows:
       - REPORTABLE
     description: Master Search
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/lamf/flows/lamf_credit_line_with_mfc_offline_journey.yaml"
+      $ref:  "src/config/FIS12/V-2.3.0/lamf/flows/lamf_credit_line_with_mfc_offline-journey.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc
     usecase: LAMF
@@ -25,5 +25,5 @@ flows:
       - REPORTABLE
     description: Master Search
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/lamf/flows/lamf_credit_line_with_mfc.yaml"        
+      $ref:  "src/config/FIS12/V-2.3.0/lamf/flows/lamf_credit_line_with-mfc.yaml"        
  
