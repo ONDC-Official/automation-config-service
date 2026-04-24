@@ -10,6 +10,10 @@ flows:
         owner: BAP
         expect: true
         input:
+          - name: city_code
+            label: Enter the city code
+            type: text
+            payloadField: $.context.city
           - label: Options
             name: options
             type: checkbox
