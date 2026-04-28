@@ -205,8 +205,6 @@ steps:
                         holidays:
                           - 2025-01-26
                           - 2025-08-15
-                          - 2025-01-26
-                          - 2025-08-15
                     gps: 12.9675,77.7496
                     address:
                       locality: Jayanagar
@@ -220,8 +218,6 @@ steps:
                       timestamp: 2025-01-08T07:30:30.000Z
                       schedule:
                         holidays:
-                          - 2025-01-26
-                          - 2025-08-15
                           - 2025-01-26
                           - 2025-08-15
                     gps: 12.9352,77.6245
@@ -3535,14 +3531,14 @@ transaction_history:
       context:
         domain: ONDC:RETeB2B
         action: search
-        timestamp: 2026-04-28T07:02:27.813Z
+        timestamp: 2026-04-28T07:33:46.811Z
         transaction_id: 9e8654ed-0dd3-4315-81f2-814780f13e79
-        message_id: d0c8e0f9-ebf7-4891-a9bf-d8dd33e875f5
+        message_id: bf04bfe6-5370-40a7-8e46-0384c64a2b85
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
         country: IND
-        city: std:011
+        city: std:080
         core_version: 1.2.5
       message:
         intent:
@@ -3561,15 +3557,10 @@ transaction_history:
                 - code: static_terms_new
                   value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: effective_date
-                  value: 2026-05-08T07:02:27.817Z
+                  value: 2026-05-08T07:33:46.816Z
             - code: bap_features
               list:
                 - code: 01A
-                  value: yes
-                - code: "0091"
-                - code: 01A
-                  value: yes
-                - code: "0091"
                   value: yes
     action: search
     saved_info: {}
@@ -3578,16 +3569,16 @@ transaction_history:
       context:
         domain: ONDC:RETeB2B
         action: on_search
-        timestamp: 2026-04-28T07:02:27.829Z
+        timestamp: 2026-04-28T07:33:46.825Z
         transaction_id: 9e8654ed-0dd3-4315-81f2-814780f13e79
-        message_id: d0c8e0f9-ebf7-4891-a9bf-d8dd33e875f5
+        message_id: bf04bfe6-5370-40a7-8e46-0384c64a2b85
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
         bpp_id: sample-bpp-id
         bpp_uri: https://bpp.example.com
         country: IND
-        city: std:011
+        city: std:080
         core_version: 1.2.5
       message:
         catalog:
@@ -3609,7 +3600,7 @@ transaction_history:
             - id: P1
               time:
                 label: enable
-                timestamp: 2026-04-28T07:02:27.829Z
+                timestamp: 2026-04-28T07:33:46.825Z
               descriptor:
                 name: ABC Manufacturer
                 code: distributor
@@ -3629,11 +3620,9 @@ transaction_history:
                 - id: L1
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                     schedule:
                       holidays:
-                        - 2025-01-26
-                        - 2025-08-15
                         - 2025-01-26
                         - 2025-08-15
                   gps: 12.9675,77.7496
@@ -3646,11 +3635,9 @@ transaction_history:
                 - id: L2
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                     schedule:
                       holidays:
-                        - 2025-01-26
-                        - 2025-08-15
                         - 2025-01-26
                         - 2025-08-15
                   gps: 12.9352,77.6245
@@ -3913,7 +3900,7 @@ transaction_history:
                 - id: I1
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                   parent_item_id: V1
                   descriptor:
                     name: Ashirwad Plain Atta 1kg
@@ -3982,7 +3969,7 @@ transaction_history:
                 - id: I2
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                   parent_item_id: V1
                   descriptor:
                     name: Ashirwad Plain Atta 5kg
@@ -4051,7 +4038,7 @@ transaction_history:
                 - id: I3
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                   parent_item_id: V1
                   descriptor:
                     name: Fortune Chakki Atta 1kg
@@ -4120,7 +4107,7 @@ transaction_history:
                 - id: I4
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                   parent_item_id: V1
                   descriptor:
                     name: Fortune Chakki Atta 5kg
@@ -4189,7 +4176,7 @@ transaction_history:
                 - id: I5
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                   parent_item_id: V2
                   descriptor:
                     name: Coca-Cola 300ml (Case of 24)
@@ -4253,7 +4240,7 @@ transaction_history:
                 - id: I6
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                   parent_item_id: V2
                   descriptor:
                     name: Coca-Cola 2L (Pack of 6)
@@ -4317,7 +4304,7 @@ transaction_history:
                 - id: I7
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                   parent_item_id: V2
                   descriptor:
                     name: Pepsi 300ml (Case of 24)
@@ -4380,7 +4367,7 @@ transaction_history:
                 - id: I8
                   time:
                     label: enable
-                    timestamp: 2026-04-28T07:02:27.829Z
+                    timestamp: 2026-04-28T07:33:46.825Z
                   parent_item_id: V2
                   descriptor:
                     name: Pepsi 2L (Pack of 6)
@@ -4612,14 +4599,14 @@ transaction_history:
       context:
         domain: ONDC:RETeB2B
         action: search
-        timestamp: 2026-04-28T07:02:33.369Z
+        timestamp: 2026-04-28T07:33:53.033Z
         transaction_id: 9e8654ed-0dd3-4315-81f2-814780f13e79
-        message_id: c5d64d25-37e4-4473-b978-65f988d6915d
+        message_id: 7b5fcaee-ee77-49b8-974a-0d0d7906923a
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
         country: IND
-        city: std:011
+        city: std:080
         core_version: 1.2.5
       message:
         intent:
@@ -4628,7 +4615,7 @@ transaction_history:
           fulfillment:
             type: Delivery
             customer:
-              id: "1234"
+              id: "12341"
     action: search
     saved_info: {}
   - action_id: on_search-1
@@ -4636,16 +4623,16 @@ transaction_history:
       context:
         domain: ONDC:RETeB2B
         action: on_search
-        timestamp: 2026-04-28T07:02:33.381Z
+        timestamp: 2026-04-28T07:33:53.044Z
         transaction_id: 9e8654ed-0dd3-4315-81f2-814780f13e79
-        message_id: c5d64d25-37e4-4473-b978-65f988d6915d
+        message_id: 7b5fcaee-ee77-49b8-974a-0d0d7906923a
         bap_id: sample-bap-id
         bap_uri: https://bap.example.com
         ttl: PT30S
         bpp_id: sample-bpp-id
         bpp_uri: https://bpp.example.com
         country: IND
-        city: std:011
+        city: std:080
         core_version: 1.2.5
       message:
         catalog:
@@ -4661,7 +4648,7 @@ transaction_history:
                         - code: remaining_quantity
                           value: "35"
                         - code: valid_till
-                          value: 2026-07-27T07:02:33.381Z
+                          value: 2026-07-27T07:33:53.044Z
                         - code: tier
                           value: silver
                 - id: flat150
@@ -4673,7 +4660,7 @@ transaction_history:
                         - code: remaining_quantity
                           value: "50"
                         - code: valid_till
-                          value: 2026-07-27T07:02:33.381Z
+                          value: 2026-07-27T07:33:53.044Z
                         - code: tier
                           value: silver
                 - id: slab1
@@ -4685,7 +4672,7 @@ transaction_history:
                         - code: remaining_purchase_value
                           value: "25700"
                         - code: valid_till
-                          value: 2026-07-27T07:02:33.381Z
+                          value: 2026-07-27T07:33:53.044Z
                         - code: tier
                           value: silver
                 - id: freebie1
@@ -4697,7 +4684,7 @@ transaction_history:
                         - code: remaining_quantity
                           value: "50"
                         - code: valid_till
-                          value: 2026-07-27T07:02:33.381Z
+                          value: 2026-07-27T07:33:53.044Z
                         - code: tier
                           value: silver
                 - id: buy2get3
@@ -4709,7 +4696,7 @@ transaction_history:
                         - code: remaining_quantity
                           value: "50"
                         - code: valid_till
-                          value: 2026-07-27T07:02:33.381Z
+                          value: 2026-07-27T07:33:53.044Z
                         - code: tier
                           value: silver
               tags:
@@ -4718,7 +4705,7 @@ transaction_history:
                     - code: credit_limit
                       value: "25000.00"
                     - code: valid_till
-                      value: 2026-07-27T07:02:33.381Z
+                      value: 2026-07-27T07:33:53.044Z
                 - code: poc
                   list:
                     - code: name
