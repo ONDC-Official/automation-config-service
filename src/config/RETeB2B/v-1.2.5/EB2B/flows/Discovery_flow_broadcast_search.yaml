@@ -1819,8 +1819,8 @@ steps:
                         label: enable
                         schedule:
                           holidays:
-                            - 2025-01-26T00:00:00.000Z
-                            - 2025-08-15T00:00:00.000Z
+                            - 2025-01-26
+                            - 2025-08-15
                         timestamp: 2026-03-23T08:30:58.248Z
                     - address:
                         area_code: "560076"
@@ -1834,8 +1834,8 @@ steps:
                         label: enable
                         schedule:
                           holidays:
-                            - 2025-01-26T00:00:00.000Z
-                            - 2025-08-15T00:00:00.000Z
+                            - 2025-01-26
+                            - 2025-08-15
                         timestamp: 2026-03-23T08:30:58.248Z
                   offers:
                     - category_ids:
