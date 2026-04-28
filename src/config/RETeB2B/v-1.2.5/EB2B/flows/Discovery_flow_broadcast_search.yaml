@@ -1831,7 +1831,7 @@ steps:
                       gps: 12.9352,77.6245
                       id: L2
                       time:
-                        label: enableT00:00:00.000Z
+                        label: enable
                         schedule:
                           holidays:
                             - 2025-01-26
