@@ -205,6 +205,8 @@ steps:
                         holidays:
                           - 2025-01-26
                           - 2025-08-15
+                          - 2025-01-26
+                          - 2025-08-15
                     gps: 12.9675,77.7496
                     address:
                       locality: Jayanagar
@@ -218,6 +220,8 @@ steps:
                       timestamp: 2025-01-08T07:30:30.000Z
                       schedule:
                         holidays:
+                          - 2025-01-26
+                          - 2025-08-15
                           - 2025-01-26
                           - 2025-08-15
                     gps: 12.9352,77.6245
@@ -3538,7 +3542,7 @@ transaction_history:
         bap_uri: https://bap.example.com
         ttl: PT30S
         country: IND
-        city: std:080
+        city: std:011
         core_version: 1.2.5
       message:
         intent:
@@ -3563,6 +3567,9 @@ transaction_history:
                 - code: 01A
                   value: yes
                 - code: "0091"
+                - code: 01A
+                  value: yes
+                - code: "0091"
                   value: yes
     action: search
     saved_info: {}
@@ -3580,7 +3587,7 @@ transaction_history:
         bpp_id: sample-bpp-id
         bpp_uri: https://bpp.example.com
         country: IND
-        city: std:080
+        city: std:011
         core_version: 1.2.5
       message:
         catalog:
@@ -3627,6 +3634,8 @@ transaction_history:
                       holidays:
                         - 2025-01-26
                         - 2025-08-15
+                        - 2025-01-26
+                        - 2025-08-15
                   gps: 12.9675,77.7496
                   address:
                     locality: Jayanagar
@@ -3640,6 +3649,8 @@ transaction_history:
                     timestamp: 2026-04-28T07:02:27.829Z
                     schedule:
                       holidays:
+                        - 2025-01-26
+                        - 2025-08-15
                         - 2025-01-26
                         - 2025-08-15
                   gps: 12.9352,77.6245
@@ -4608,7 +4619,7 @@ transaction_history:
         bap_uri: https://bap.example.com
         ttl: PT30S
         country: IND
-        city: std:080
+        city: std:011
         core_version: 1.2.5
       message:
         intent:
@@ -4634,7 +4645,7 @@ transaction_history:
         bpp_id: sample-bpp-id
         bpp_uri: https://bpp.example.com
         country: IND
-        city: std:080
+        city: std:011
         core_version: 1.2.5
       message:
         catalog:
