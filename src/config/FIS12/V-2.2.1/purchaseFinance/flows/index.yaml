@@ -8,7 +8,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance with Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_With_AA.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_With_AA.yaml
   - type: playground
     id: Purchase_Finance_Single_Redirection_Without_AA
     usecase: PURCHASE FINANCE
@@ -19,7 +19,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA.yaml
   - type: playground
     id: Purchase_Finance_Single_Redirection_Without_AA_Cancellation
     usecase: PURCHASE FINANCE
@@ -29,7 +29,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA_Cancellation.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA_Cancellation.yaml
   - type: playground
     id: Purchase_Finance_Single_Redirection_Without_AA_Loan_Foreclosure
     usecase: PURCHASE FINANCE
@@ -39,7 +39,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA_Loan_Foreclosure.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA_Loan_Foreclosure.yaml
   - type: playground
     id: Purchase_Finance_Single_Redirection_Without_AA_Missed_EMI_Payment
     usecase: PURCHASE FINANCE
@@ -49,7 +49,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA_Missed_EMI_Payment.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA_Missed_EMI_Payment.yaml
   - type: playground
     id: Purchase_Finance_Single_Redirection_Without_AA_Pre_Part_Payment
     usecase: PURCHASE FINANCE
@@ -59,7 +59,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA_Pre_Part_Payment.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Single_Redirection_Without_AA_Pre_Part_Payment.yaml
   - type: playground
     id: Purchase_Finance_With_AA
     usecase: PURCHASE FINANCE
@@ -69,7 +69,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance with Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA.yaml
   - type: playground
     id: Purchase_Finance_With_AA_Cancellation
     usecase: PURCHASE FINANCE
@@ -79,7 +79,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance with Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Cancellation.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Cancellation.yaml
   - type: playground
     id: Purchase_Finance_With_AA_Loan_Foreclosure
     usecase: PURCHASE FINANCE
@@ -89,7 +89,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance with Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Loan_Foreclosure.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Loan_Foreclosure.yaml
   - type: playground
     id: Purchase_Finance_With_AA_Missed_EMI_Payment
     usecase: PURCHASE FINANCE
@@ -99,7 +99,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance with Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Missed_EMI_Payment.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Missed_EMI_Payment.yaml
   - type: playground
     id: Purchase_Finance_With_AA_Multiple_Offer
     usecase: PURCHASE FINANCE
@@ -109,7 +109,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance with Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Multiple_Offer.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Multiple_Offer.yaml
   - type: playground
     id: Purchase_Finance_With_AA_Pre_Part_Payment
     usecase: PURCHASE FINANCE
@@ -119,7 +119,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance with Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Pre_Part_Payment.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_With_AA_Pre_Part_Payment.yaml
   - type: playground
     id: Purchase_Finance_Without_AA
     usecase: PURCHASE FINANCE
@@ -129,7 +129,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA.yaml
   - type: playground
     id: Purchase_Finance_Without_AA_Cancellation
     usecase: PURCHASE FINANCE
@@ -139,7 +139,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Cancellation.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Cancellation.yaml
   - type: playground
     id: Purchase_Finance_Without_AA_Loan_Foreclosure
     usecase: PURCHASE FINANCE
@@ -149,7 +149,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Loan_Foreclosure.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Loan_Foreclosure.yaml
   - type: playground
     id: Purchase_Finance_Without_AA_Missed_EMI_Payment
     usecase: PURCHASE FINANCE
@@ -159,7 +159,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Missed_EMI_Payment.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Missed_EMI_Payment.yaml
   - type: playground
     id: Purchase_Finance_Without_AA_Multiple_Offer
     usecase: PURCHASE FINANCE
@@ -169,7 +169,7 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Multiple_Offer.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Multiple_Offer.yaml
   - type: playground
     id: Purchase_Finance_Without_AA_Pre_Part_Payment
     usecase: PURCHASE FINANCE
@@ -179,4 +179,4 @@ flows:
       - REPORTABLE
     description: Purchase Finance without Account Aggregator
     config:
-      $ref: /src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Pre_Part_Payment.yaml
+      $ref: src/config/FIS12/V-2.2.1/purchaseFinance/flows/Purchase_Finance_Without_AA_Pre_Part_Payment.yaml
