@@ -95,6 +95,135 @@ flows:
         pair: null
         owner: BPP  
 
+  - id: Partial_Cancellation_Flow
+    tags: ["WORKBENCH", "MANDATORY", "REPORTABLE"]
+    title: Purchase journey of metro Partial Cancellation Flow
+    description: This flow illustrates a Single Journey Ticket purchase from search to journey completion
+    sequence:
+      - key: search1_METRO_200
+        type: search
+        unsolicited: false
+        description: User searches over the network for metro providers
+        pair: on_search1_METRO_200
+        owner: BAP
+        expect: true
+        input:
+          - name: city_code
+            label: Enter city code
+            type: text
+            payloadField: $.context.location.city.code
+      - key: on_search1_METRO_200
+        type: on_search
+        unsolicited: false
+        description: Response with all station codes
+        pair: null
+        owner: BPP
+      - key: search2_METRO_200
+        type: search
+        unsolicited: false
+        description: User searches for metro from one station to another
+        pair: on_search2_Sjt_METRO_200
+        owner: BAP
+        expect: false
+        input:
+          - name: vehicle_category
+            label: Select vehicle category
+            type: select
+            values:
+              - METRO
+            payloadField: $.message.intent.fulfillment.vehicle.category
+          - name: city_code
+            label: Enter city code
+            type: text
+            payloadField: $.context.location.city.code
+          - name: start_code
+            label: Enter start station code
+            type: text
+            payloadField: $.message.intent.fulfillment.stops[?(@.type=='START')].location.descriptor.code
+          - name: end_code
+            label: Enter end station code
+            type: text
+            payloadField: $.message.intent.fulfillment.stops[?(@.type=='END')].location.descriptor.code
+          - name: bpp_id
+            label: enter your bpp_id
+            type: text
+            payloadField: $.context.bpp_id
+      - key: on_search2_Sjt_METRO_200
+        type: on_search
+        unsolicited: false
+        description: Response with start and end station code
+        pair: null
+        owner: BPP
+      - key: select_METRO_200
+        type: select
+        unsolicited: false
+        description: User selects the SJT ticket
+        pair: on_select_METRO_200
+        owner: BAP
+        input:
+          - name: Item_id
+            label: Select Item_ID
+            type: text
+            payloadField: $.message.order.items[0].id
+          - name: Item_Quantity
+            label: Select Item Quantity
+            type: text
+            payloadField: $.message.order.items[0].quantity.selected.count
+      - key: on_select_METRO_200
+        type: on_select
+        unsolicited: false
+        description: Response with selected ticket details
+        pair: null
+        owner: BPP
+      - key: init_METRO_200
+        type: init
+        unsolicited: false
+        description: Consumer platform initializes the order
+        pair: on_init_METRO_200
+        owner: BAP
+      - key: on_init_METRO_200
+        type: on_init
+        unsolicited: false
+        description: Provider platform responds with order draft
+        pair: null
+        owner: BPP
+      - key: confirm_METRO_200
+        type: confirm
+        unsolicited: false
+        description: Consumer platform confirms the booking
+        pair: on_confirm_METRO_200
+        owner: BAP
+      - key: on_confirm_METRO_200
+        type: on_confirm
+        unsolicited: false
+        description: Provider platform confirms the order
+        pair: null
+        owner: BPP
+      - key: update_METRO_201
+        type: update
+        unsolicited: false
+        description: Buyer app request for ticket cancellation with soft cancel request
+        pair: on_update_METRO_201
+        owner: BAP
+      - key: on_update_METRO_201
+        type: on_update
+        unsolicited: false
+        description: Provider accepts/appends the terms of cancellation
+        pair: null
+        owner: BPP
+      - key: update_METRO_202
+        type: update
+        unsolicited: false
+        description: Buyer app confirms the cancel request for ticket with confirm cancel request
+        pair: on_update_METRO_202
+        owner: BAP 
+      - key: on_update_METRO_202
+        type: on_update
+        unsolicited: false
+        description: Provider cancel the ticket and update the order status
+        pair: null
+        owner: BPP
+
   - id: ORDER_TO_CONFIRM_TO_JOURNEY_COMPLETION_RJT (W/O search_1 & select)
     tags: ["WORKBENCH","MANDATORY", "REPORTABLE"]
     title: Purchase journey of metro tickets without search_1 and select
