@@ -787,10 +787,10 @@ flows:
         description: on_status (Order Completed)
         pair: null
         owner: BPP  
-  - id: ORDER_TO_CONFIRM_TO_JOURNEY_COMPLETION_SJT
-    tags: ["WORKBENCH", "MANDATORY", "REPORTABLE"]
-    title: Purchase journey of metro tickets (SJT)
-    description: This flow illustrates a Single Journey Ticket purchase from search to journey completion
+  - id: ORDER_TO_CONFIRM_TO_JOURNEY_COMPLETION_RJT
+    tags: ["WORKBENCH","MANDATORY", "REPORTABLE"]
+    title: Purchase journey of metro tickets (RJT)
+    description: This flow illustrates a typical purchase journey where the journey starts with searching for a specific pair of stations all the way to getting the ticket and completion of the journey
     sequence:
       - key: search1_METRO_200
         type: search
