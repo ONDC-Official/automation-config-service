@@ -95,7 +95,7 @@ steps:
               additionalProperties: true
             items:
               type: array
-              title: "\U0001F6D2 Cart Items"
+              title: 🛒 Cart Items
               minItems: 1
               maxItems: 5
               items:
@@ -123,7 +123,7 @@ steps:
                   - quantity
             available_offers:
               type: array
-              title: "\U0001F381 available_offers"
+              title: 🎁 available_offers
               description: Click 'Add Offer' to apply promotions
               minItems: 0
               maxItems: 5
@@ -186,9 +186,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: select
-            timestamp: 2026-06-15T08:14:21.930Z
+            timestamp: 2026-06-16T15:25:30.725Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: daf041b4-2983-4e97-9083-9319f72e356a
+            message_id: d15411f5-80c2-431f-ad4b-1d76119dba5e
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -207,7 +207,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               fulfillments:
                 - end:
@@ -325,9 +325,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_select
-            timestamp: 2026-06-15T08:14:21.942Z
+            timestamp: 2026-06-16T15:25:30.744Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: daf041b4-2983-4e97-9083-9319f72e356a
+            message_id: d15411f5-80c2-431f-ad4b-1d76119dba5e
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -365,16 +365,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -401,7 +401,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
         type: request
         description: On-select response to select
@@ -497,9 +497,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: init
-            timestamp: 2026-06-15T08:14:21.962Z
+            timestamp: 2026-06-16T15:25:30.769Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: b7b20c60-391f-4ed6-bcd1-bf420e652feb
+            message_id: 99ccc48b-1432-4ab2-9b81-0c60216e21f6
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -518,7 +518,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               offers:
                 - id: discp10
@@ -535,8 +535,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:21.962Z
-                updated_at: 2026-06-15T08:14:21.962Z
+                created_at: 2026-06-16T15:25:30.769Z
+                updated_at: 2026-06-16T15:25:30.769Z
               payments:
                 - type: ON-FULFILLMENT
                   collected_by: BPP
@@ -559,16 +559,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -751,9 +751,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_init
-            timestamp: 2026-06-15T08:14:21.987Z
+            timestamp: 2026-06-16T15:25:30.793Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: b7b20c60-391f-4ed6-bcd1-bf420e652feb
+            message_id: 99ccc48b-1432-4ab2-9b81-0c60216e21f6
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -772,7 +772,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -787,8 +787,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:21.987Z
-                updated_at: 2026-06-15T08:14:21.987Z
+                created_at: 2026-06-16T15:25:30.793Z
+                updated_at: 2026-06-16T15:25:30.793Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -809,16 +809,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -870,7 +870,7 @@ steps:
                     - code: credit_limit
                       value: "25000.00"
                     - code: valid_till
-                      value: 2026-09-13T08:14:21.987Z
+                      value: 2026-09-14T15:25:30.793Z
         type: request
         description: Response to Init call
   - api: confirm
@@ -1050,9 +1050,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: confirm
-            timestamp: 2026-06-15T08:14:22.016Z
+            timestamp: 2026-06-16T15:25:30.810Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: d32e1ad0-eb06-4a17-aad7-59e1564c463c
+            message_id: f2a249ed-44c5-48ee-8a85-39d52506c137
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1063,7 +1063,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: Created
               provider:
                 id: P1
@@ -1073,7 +1073,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 18
+                    count: 20
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -1088,8 +1088,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.016Z
-                updated_at: 2026-06-15T08:14:22.016Z
+                created_at: 2026-06-16T15:25:30.810Z
+                updated_at: 2026-06-16T15:25:30.810Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -1112,16 +1112,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -1149,8 +1149,8 @@ steps:
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: NOT-PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -1184,8 +1184,8 @@ steps:
                       value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: tax_number
                       value: gst_number_of_buyerNP
-              created_at: 2026-06-15T08:14:22.016Z
-              updated_at: 2026-06-15T08:14:22.016Z
+              created_at: 2026-06-16T15:25:30.810Z
+              updated_at: 2026-06-16T15:25:30.810Z
         type: request
         description: Confirming the Order after Init
   - api: on_confirm
@@ -1377,9 +1377,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_confirm
-            timestamp: 2026-06-15T08:14:22.042Z
+            timestamp: 2026-06-16T15:25:30.825Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: d32e1ad0-eb06-4a17-aad7-59e1564c463c
+            message_id: f2a249ed-44c5-48ee-8a85-39d52506c137
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1390,7 +1390,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: Accepted
               provider:
                 id: P1
@@ -1401,7 +1401,7 @@ steps:
                   fulfillment_id: F1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
               billing:
                 name: Sharma Kirana Store
                 address:
@@ -1415,8 +1415,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.042Z
-                updated_at: 2026-06-15T08:14:22.042Z
+                created_at: 2026-06-16T15:25:30.825Z
+                updated_at: 2026-06-16T15:25:30.825Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -1457,16 +1457,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -1528,8 +1528,8 @@ steps:
                       value: https://github.com/ONDC-Official/protocol-network-extension/discussions/79
                     - code: tax_number
                       value: gst_number_of_buyerNP
-              created_at: 2026-06-15T08:14:22.042Z
-              updated_at: 2026-06-15T08:14:22.042Z
+              created_at: 2026-06-16T15:25:30.825Z
+              updated_at: 2026-06-16T15:25:30.825Z
         type: request
         description: On-confirm Response to the confirm call
   - api: on_status
@@ -1716,9 +1716,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-15T08:14:22.067Z
+            timestamp: 2026-06-16T15:25:30.848Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: 44603f76-4346-4b35-98f4-0b233a9d887c
+            message_id: 4c897819-6748-49ce-b382-78d27ea013ef
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1729,7 +1729,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: Accepted
               provider:
                 id: P1
@@ -1739,7 +1739,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -1754,8 +1754,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.067Z
-                updated_at: 2026-06-15T08:14:22.067Z
+                created_at: 2026-06-16T15:25:30.848Z
+                updated_at: 2026-06-16T15:25:30.848Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -1781,8 +1781,8 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -1799,8 +1799,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -1817,16 +1817,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -1854,8 +1854,8 @@ steps:
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: NOT-PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -1874,8 +1874,8 @@ steps:
                       settlement_ifsc_code: XXXXXXXXX
                       bank_name: State Bank of India
                       branch_name: Jayanagar Branch
-              created_at: 2026-06-15T08:14:22.067Z
-              updated_at: 2026-06-15T08:14:22.067Z
+              created_at: 2026-06-16T15:25:30.848Z
+              updated_at: 2026-06-16T15:25:30.848Z
         type: request
         description: On-status call which accepts the order
   - api: on_status
@@ -2062,9 +2062,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-15T08:14:22.087Z
+            timestamp: 2026-06-16T15:25:30.866Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: 0e9ff268-5a85-4c43-ab2e-649a92e25a5f
+            message_id: ba3b65ee-c679-43fd-bebd-69606dc651f8
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2075,7 +2075,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: In-progress
               provider:
                 id: P1
@@ -2085,7 +2085,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -2100,8 +2100,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.087Z
-                updated_at: 2026-06-15T08:14:22.087Z
+                created_at: 2026-06-16T15:25:30.866Z
+                updated_at: 2026-06-16T15:25:30.866Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -2127,8 +2127,8 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -2145,8 +2145,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -2163,16 +2163,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -2200,8 +2200,8 @@ steps:
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: NOT-PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -2220,8 +2220,8 @@ steps:
                       settlement_ifsc_code: XXXXXXXXX
                       bank_name: State Bank of India
                       branch_name: Jayanagar Branch
-              created_at: 2026-06-15T08:14:22.087Z
-              updated_at: 2026-06-15T08:14:22.087Z
+              created_at: 2026-06-16T15:25:30.866Z
+              updated_at: 2026-06-16T15:25:30.866Z
         type: request
         description: On-status call which is sent when the order is packed
   - api: on_status
@@ -2408,9 +2408,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-15T08:14:22.104Z
+            timestamp: 2026-06-16T15:25:30.878Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: a73b0a54-db8f-47a5-b8d2-8d4408d6da64
+            message_id: e135c26f-f8cf-479a-a240-a1c49ad06e72
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2421,7 +2421,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: In-progress
               provider:
                 id: P1
@@ -2431,7 +2431,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -2446,8 +2446,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.104Z
-                updated_at: 2026-06-15T08:14:22.104Z
+                created_at: 2026-06-16T15:25:30.878Z
+                updated_at: 2026-06-16T15:25:30.878Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -2473,8 +2473,8 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -2491,8 +2491,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -2512,16 +2512,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -2549,8 +2549,8 @@ steps:
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: NOT-PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -2569,8 +2569,8 @@ steps:
                       settlement_ifsc_code: XXXXXXXXX
                       bank_name: State Bank of India
                       branch_name: Jayanagar Branch
-              created_at: 2026-06-15T08:14:22.104Z
-              updated_at: 2026-06-15T08:14:22.104Z
+              created_at: 2026-06-16T15:25:30.878Z
+              updated_at: 2026-06-16T15:25:30.878Z
         type: request
         description: On-status call which is sent when an agent is assigned
   - api: on_status
@@ -2761,9 +2761,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-15T08:14:22.120Z
+            timestamp: 2026-06-16T15:25:30.898Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: acca0517-54c0-4130-b85c-fc09d7207daa
+            message_id: a1d89781-1726-4f3c-a13c-3ff9bf5e2a29
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2774,7 +2774,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: In-progress
               provider:
                 id: P1
@@ -2784,7 +2784,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -2799,8 +2799,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.120Z
-                updated_at: 2026-06-15T08:14:22.120Z
+                created_at: 2026-06-16T15:25:30.898Z
+                updated_at: 2026-06-16T15:25:30.898Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -2826,9 +2826,9 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
-                      timestamp: 2026-06-15T08:14:22.120Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
+                      timestamp: 2026-06-16T15:25:30.898Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -2845,8 +2845,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -2866,16 +2866,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -2903,8 +2903,8 @@ steps:
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: NOT-PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -2926,8 +2926,8 @@ steps:
               documents:
                 - url: https://invoice_url
                   label: Invoice
-              created_at: 2026-06-15T08:14:22.120Z
-              updated_at: 2026-06-15T08:14:22.120Z
+              created_at: 2026-06-16T15:25:30.898Z
+              updated_at: 2026-06-16T15:25:30.898Z
         type: request
         description: On-status call when the rider picks up the order
   - api: on_status
@@ -3118,9 +3118,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-15T08:14:22.136Z
+            timestamp: 2026-06-16T15:25:30.918Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: 1f2cf309-01a2-4715-8a14-b16799a8e62a
+            message_id: d9b3ae82-f60f-4cf7-83cf-27ebe1fb26a1
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3131,7 +3131,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: In-progress
               provider:
                 id: P1
@@ -3141,7 +3141,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -3156,8 +3156,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.136Z
-                updated_at: 2026-06-15T08:14:22.136Z
+                created_at: 2026-06-16T15:25:30.918Z
+                updated_at: 2026-06-16T15:25:30.918Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -3183,8 +3183,8 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -3201,8 +3201,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -3222,16 +3222,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -3259,8 +3259,8 @@ steps:
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: NOT-PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -3282,8 +3282,8 @@ steps:
               documents:
                 - url: https://invoice_url
                   label: Invoice
-              created_at: 2026-06-15T08:14:22.136Z
-              updated_at: 2026-06-15T08:14:22.136Z
+              created_at: 2026-06-16T15:25:30.918Z
+              updated_at: 2026-06-16T15:25:30.918Z
         type: request
         description: On-status which marks that the order is out for delivery
   - api: on_status
@@ -3476,9 +3476,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-15T08:14:22.154Z
+            timestamp: 2026-06-16T15:25:30.941Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: 03cd018c-7a6a-4e2b-834e-0032dea647ed
+            message_id: 9d3a71e6-255b-424c-823e-a049bf7591e9
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3489,7 +3489,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: Completed
               provider:
                 id: P1
@@ -3499,7 +3499,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -3514,8 +3514,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.154Z
-                updated_at: 2026-06-15T08:14:22.154Z
+                created_at: 2026-06-16T15:25:30.941Z
+                updated_at: 2026-06-16T15:25:30.941Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -3541,8 +3541,8 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -3559,9 +3559,9 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
-                      timestamp: 2026-06-15T08:14:22.154Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
+                      timestamp: 2026-06-16T15:25:30.941Z
                   tags:
                     - code: routing
                       list:
@@ -3581,16 +3581,16 @@ steps:
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -3618,8 +3618,8 @@ steps:
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -3641,8 +3641,8 @@ steps:
               documents:
                 - url: https://invoice_url
                   label: Invoice
-              created_at: 2026-06-15T08:14:22.154Z
-              updated_at: 2026-06-15T08:14:22.154Z
+              created_at: 2026-06-16T15:25:30.941Z
+              updated_at: 2026-06-16T15:25:30.941Z
         type: request
         description: On-status which marks the order as delivered
   - api: update
@@ -3712,9 +3712,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: update
-            timestamp: 2026-06-15T08:14:22.172Z
+            timestamp: 2026-06-16T15:25:30.962Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: e7668355-b4da-40f6-9875-97475cf9c783
+            message_id: 6589b85c-b226-45cb-956c-2d2b57c7281b
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3726,18 +3726,18 @@ steps:
           message:
             update_target: item
             order:
-              id: "964795"
+              id: "995629"
               fulfillments:
                 - type: Return
                   tags:
                     - code: return_request
                       list:
                         - code: id
-                          value: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                          value: f17f0045-f398-42c5-afe1-0da592b2bcd8
                         - code: item_id
                           value: I1
                         - code: item_quantity
-                          value: "18"
+                          value: "20"
                         - code: reason_id
                           value: "001"
                         - code: reason_desc
@@ -3999,9 +3999,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_update
-            timestamp: 2026-06-15T08:14:22.188Z
+            timestamp: 2026-06-16T15:25:30.981Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: e7668355-b4da-40f6-9875-97475cf9c783
+            message_id: 6589b85c-b226-45cb-956c-2d2b57c7281b
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4012,7 +4012,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: Completed
               provider:
                 id: P1
@@ -4022,21 +4022,21 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -4072,8 +4072,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.188Z
-                updated_at: 2026-06-15T08:14:22.188Z
+                created_at: 2026-06-16T15:25:30.981Z
+                updated_at: 2026-06-16T15:25:30.981Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -4099,9 +4099,9 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
-                      timestamp: 2026-06-15T08:14:22.188Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
+                      timestamp: 2026-06-16T15:25:30.981Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -4118,8 +4118,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -4138,17 +4138,17 @@ steps:
                     phone: "9886098860"
                   customer: {}
                   time:
-                    timestamp: 2026-06-15T08:14:22.188Z
+                    timestamp: 2026-06-16T15:25:30.981Z
                 - type: Return
                   tags:
                     - code: return_request
                       list:
                         - code: id
-                          value: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                          value: f17f0045-f398-42c5-afe1-0da592b2bcd8
                         - code: item_id
                           value: I1
                         - code: item_quantity
-                          value: "18"
+                          value: "20"
                         - code: reason_id
                           value: "001"
                         - code: reason_desc
@@ -4159,7 +4159,7 @@ steps:
                           value: PT24H
                         - code: ttl_reverseqc
                           value: P3D
-                  id: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                  id: f17f0045-f398-42c5-afe1-0da592b2bcd8
                   state:
                     descriptor:
                       code: Return_Initiated
@@ -4168,8 +4168,8 @@ steps:
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -4203,9 +4203,9 @@ steps:
                     - code: credit_limit
                       value: "25000.00"
                     - code: valid_till
-                      value: 2026-09-13T08:14:22.188Z
-              created_at: 2026-06-15T08:14:22.188Z
-              updated_at: 2026-06-15T08:14:22.188Z
+                      value: 2026-09-14T15:25:30.981Z
+              created_at: 2026-06-16T15:25:30.981Z
+              updated_at: 2026-06-16T15:25:30.981Z
         type: request
         description: on_update_return_init by seller
   - api: on_update
@@ -4434,9 +4434,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_update
-            timestamp: 2026-06-15T08:14:22.212Z
+            timestamp: 2026-06-16T15:25:30.999Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: 34648760-d387-4f47-b17c-997f99cef09d
+            message_id: 7123b90e-e5c7-471d-9be7-7e0c6cfe846c
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4447,7 +4447,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: Completed
               provider:
                 id: P1
@@ -4457,7 +4457,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 18
+                    count: 20
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -4472,21 +4472,21 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.212Z
-                updated_at: 2026-06-15T08:14:22.212Z
+                created_at: 2026-06-16T15:25:30.999Z
+                updated_at: 2026-06-16T15:25:30.999Z
               quote:
                 price:
                   currency: INR
-                  value: "936.00"
+                  value: "1040.00"
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 18
+                      count: 20
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "936.00"
+                      value: "1040.00"
                     item:
                       quantity:
                         available:
@@ -4534,9 +4534,9 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
-                      timestamp: 2026-06-15T08:14:22.212Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
+                      timestamp: 2026-06-16T15:25:30.999Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -4553,8 +4553,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -4574,17 +4574,17 @@ steps:
                   customer:
                     id: CUST-DEFAULT
                   time:
-                    timestamp: 2026-06-15T08:14:22.212Z
+                    timestamp: 2026-06-16T15:25:30.999Z
                 - type: Return
                   tags:
                     - code: return_request
                       list:
                         - code: id
-                          value: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                          value: f17f0045-f398-42c5-afe1-0da592b2bcd8
                         - code: item_id
                           value: I1
                         - code: item_quantity
-                          value: "18"
+                          value: "20"
                         - code: reason_id
                           value: "001"
                         - code: reason_desc
@@ -4595,7 +4595,7 @@ steps:
                           value: PT24H
                         - code: ttl_reverseqc
                           value: P3D
-                  id: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                  id: f17f0045-f398-42c5-afe1-0da592b2bcd8
                   state:
                     descriptor:
                       code: Return_Approved
@@ -4619,8 +4619,8 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:14:22.212Z
-                        end: 2026-06-16T08:14:22.212Z
+                        start: 2026-06-16T15:25:30.998Z
+                        end: 2026-06-17T15:25:30.998Z
                   end:
                     location:
                       id: L1
@@ -4634,15 +4634,15 @@ steps:
                         state: KA
                     time:
                       range:
-                        start: 2026-06-16T08:14:22.212Z
-                        end: 2026-06-17T08:14:22.212Z
+                        start: 2026-06-17T15:25:30.999Z
+                        end: 2026-06-18T15:25:30.999Z
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -4677,8 +4677,8 @@ steps:
                   list:
                     - code: tax_number
                       value: gst_number_of_buyerNP
-              created_at: 2026-06-15T08:14:22.212Z
-              updated_at: 2026-06-15T08:14:22.212Z
+              created_at: 2026-06-16T15:25:30.999Z
+              updated_at: 2026-06-16T15:25:30.999Z
         type: request
         description: return approved by seller by on_update_return_approved
   - api: on_update
@@ -4688,7 +4688,7 @@ steps:
     unsolicited: true
     description: return picked by seller with on_update_return_picked
     mock:
-      generate: ZnVuY3Rpb24gZXh0cmFjdFJldHVyblJlcXVlc3RzKGZ1bGZpbGxtZW50cyA9IFtdKSB7CiAgY29uc3QgcmVxdWVzdHMgPSBbXTsKCiAgZm9yIChjb25zdCBmdWxmaWxsbWVudCBvZiBmdWxmaWxsbWVudHMpIHsKICAgIGlmIChmdWxmaWxsbWVudD8udHlwZSAhPT0gIlJldHVybiIgfHwgIUFycmF5LmlzQXJyYXkoZnVsZmlsbG1lbnQudGFncykpIGNvbnRpbnVlOwoKICAgIGZvciAoY29uc3QgdGFnIG9mIGZ1bGZpbGxtZW50LnRhZ3MpIHsKICAgICAgaWYgKHRhZz8uY29kZSAhPT0gInJldHVybl9yZXF1ZXN0IiB8fCAhQXJyYXkuaXNBcnJheSh0YWcubGlzdCkpIGNvbnRpbnVlOwoKICAgICAgY29uc3QgaXRlbUlkID0gdGFnLmxpc3QuZmluZCgoeCkgPT4geC5jb2RlID09PSAiaXRlbV9pZCIpPy52YWx1ZTsKICAgICAgY29uc3QgaXRlbVF0eSA9IE51bWJlcih0YWcubGlzdC5maW5kKCh4KSA9PiB4LmNvZGUgPT09ICJpdGVtX3F1YW50aXR5Iik/LnZhbHVlIHx8IDApOwoKICAgICAgaWYgKGl0ZW1JZCAmJiBpdGVtUXR5ID4gMCkgewogICAgICAgIHJlcXVlc3RzLnB1c2goewogICAgICAgICAgZnVsZmlsbG1lbnRJZDogZnVsZmlsbG1lbnQuaWQsCiAgICAgICAgICBpdGVtSWQsCiAgICAgICAgICBxdWFudGl0eTogaXRlbVF0eSwKICAgICAgICAgIGZ1bGZpbGxtZW50LAogICAgICAgIH0pOwogICAgICB9CiAgICB9CiAgfQoKICByZXR1cm4gcmVxdWVzdHM7Cn0KCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGV4aXN0aW5nUGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBhcHBseUR5bmFtaWNUaW1lc3RhbXBzKGV4aXN0aW5nUGF5bG9hZCk7CgogIGNvbnN0IHNhdmVkQ2l0eSA9IHNlc3Npb25EYXRhPy5wYXlsb2FkX2NpdHk/LlswXTsKICBpZiAoc2F2ZWRDaXR5KSB7CiAgICBleGlzdGluZ1BheWxvYWQuY29udGV4dC5jaXR5ID0gc2F2ZWRDaXR5OwogIH0KCiAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaWQgPSBzZXNzaW9uRGF0YS5vcmRlcl9pZD8uWzBdOwogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyID0gc2Vzc2lvbkRhdGEucHJvdmlkZXI/LlswXTsKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5iaWxsaW5nID0gc2Vzc2lvbkRhdGEuYmlsbGluZz8uWzBdOwogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzID0gc2Vzc2lvbkRhdGEucGF5bWVudHM/LlswXTsKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5jcmVhdGVkX2F0ID0gc2Vzc2lvbkRhdGEub3JkZXJfY3JlYXRlZF9hdD8uWzBdOwogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnVwZGF0ZWRfYXQgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIC8vIGtlZXAgZnVsbCBmdWxmaWxsbWVudHMgYXJyYXksIGRvbid0IG92ZXJ3cml0ZSBvbmx5IGluZGV4IDAKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHMgPSBzZXNzaW9uRGF0YS5mdWxmaWxsbWVudHMgfHwgW107CgogIGNvbnN0IG9yZGVyID0gZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXI7CiAgY29uc3QgcXVvdGUgPSBzZXNzaW9uRGF0YS5xdW90ZVswXSB8fCBvcmRlci5xdW90ZTsKCiAgY29uc3QgZGVsaXZlcnlGdWxmaWxsbWVudCA9IG9yZGVyLmZ1bGZpbGxtZW50cy5maW5kKChmKSA9PiBmLnR5cGUgPT09ICJEZWxpdmVyeSIpOwogIGNvbnN0IHJldHVyblJlcXVlc3RzID0gZXh0cmFjdFJldHVyblJlcXVlc3RzKG9yZGVyLmZ1bGZpbGxtZW50cyk7CgogIGNvbnN0IHNvdXJjZUl0ZW1zID0gc2Vzc2lvbkRhdGEub25fc2VsZWN0X2l0ZW1zIHx8IFtdOwogIGNvbnN0IGl0ZW1zID0gW107CgogIC8vIEJ1aWxkIHJldHVybmVkIGl0ZW0gbWFwOiBpdGVtSWQgLT4geyBxdHksIGZ1bGZpbGxtZW50SWQgfQogIGNvbnN0IHJldHVybk1hcCA9IG5ldyBNYXAoKTsKICBmb3IgKGNvbnN0IHJlcSBvZiByZXR1cm5SZXF1ZXN0cykgewogICAgY29uc3QgcHJldiA9IHJldHVybk1hcC5nZXQocmVxLml0ZW1JZCkgfHwgeyBxdWFudGl0eTogMCwgZnVsZmlsbG1lbnRJZDogcmVxLmZ1bGZpbGxtZW50SWQgfTsKICAgIHJldHVybk1hcC5zZXQocmVxLml0ZW1JZCwgewogICAgICBxdWFudGl0eTogcHJldi5xdWFudGl0eSArIHJlcS5xdWFudGl0eSwKICAgICAgZnVsZmlsbG1lbnRJZDogcmVxLmZ1bGZpbGxtZW50SWQsCiAgICB9KTsKICB9CgogIC8vIEFkanVzdCBvcmRlciBpdGVtcyBiYXNlZCBvbiByZXR1cm4gcXVhbnRpdHkKICBmb3IgKGNvbnN0IGl0ZW0gb2Ygc291cmNlSXRlbXMpIHsKICAgIGNvbnN0IHJldHVybkluZm8gPSByZXR1cm5NYXAuZ2V0KGl0ZW0uaWQpOwoKICAgIGlmICghcmV0dXJuSW5mbykgewogICAgICBpdGVtcy5wdXNoKGl0ZW0pOwogICAgICBjb250aW51ZTsKICAgIH0KCiAgICBjb25zdCBvcmlnaW5hbFF0eSA9IE51bWJlcihpdGVtLnF1YW50aXR5Py5jb3VudCB8fCAwKTsKICAgIGNvbnN0IHJldHVybmVkUXR5ID0gTWF0aC5taW4ob3JpZ2luYWxRdHksIHJldHVybkluZm8ucXVhbnRpdHkpOwogICAgY29uc3QgcmVtYWluaW5nUXR5ID0gb3JpZ2luYWxRdHkgLSByZXR1cm5lZFF0eTsKCiAgICBpZiAocmVtYWluaW5nUXR5ID49IDApIHsKICAgICAgaXRlbXMucHVzaCh7CiAgICAgICAgLi4uaXRlbSwKICAgICAgICBxdWFudGl0eTogewogICAgICAgICAgLi4uaXRlbS5xdWFudGl0eSwKICAgICAgICAgIGNvdW50OiByZW1haW5pbmdRdHksCiAgICAgICAgfSwKICAgICAgfSk7CiAgICB9CgogICAgLy8gYWRkIHJldHVybiBsaW5lIGZvciByZXR1cm5lZCBxdWFudGl0eQogICAgaXRlbXMucHVzaCh7CiAgICAgIGlkOiBpdGVtLmlkLAogICAgICBxdWFudGl0eTogewogICAgICAgIGNvdW50OiByZXR1cm5lZFF0eSwKICAgICAgfSwKICAgICAgZnVsZmlsbG1lbnRfaWQ6IHJldHVybkluZm8uZnVsZmlsbG1lbnRJZCwKICAgICAgcmV0dXJuX2l0ZW06IHRydWUsCiAgICB9KTsKICB9CgogIG9yZGVyLml0ZW1zID0gaXRlbXM7CgogIC8vIFJlY2FsY3VsYXRlIHF1b3RlIHVzaW5nIGFsbCByZXR1cm5lZCBpdGVtcwogIGNvbnN0IGJyZWFrdXAgPSBxdW90ZT8uYnJlYWt1cCB8fCBbXTsKICBsZXQgdG90YWxEZWR1Y3Rpb24gPSAwOwogIGNvbnN0IHF1b3RlVHJhaWxzID0gW107CgogIGZvciAoY29uc3QgcmVxIG9mIHJldHVyblJlcXVlc3RzKSB7CiAgICBjb25zdCBicmVha3VwSXRlbSA9IGJyZWFrdXAuZmluZCgoeCkgPT4geFsiQG9uZGMvb3JnL2l0ZW1faWQiXSA9PT0gcmVxLml0ZW1JZCk7CiAgICBpZiAoIWJyZWFrdXBJdGVtKSBjb250aW51ZTsKCiAgICBjb25zdCB1bml0UHJpY2UgPSBOdW1iZXIoYnJlYWt1cEl0ZW0uaXRlbT8ucHJpY2U/LnZhbHVlIHx8IGJyZWFrdXBJdGVtLnByaWNlPy52YWx1ZSB8fCAwKTsKICAgIGNvbnN0IGRlZHVjdGlvbiA9IHVuaXRQcmljZSAqIHJlcS5xdWFudGl0eTsKICAgIHRvdGFsRGVkdWN0aW9uICs9IGRlZHVjdGlvbjsKCiAgICAvLyBtYWtlIHJldHVybmVkIGJyZWFrdXAgaXRlbSB6ZXJvZWQgb3V0IGluIHRyYWlscwogICAgcXVvdGVUcmFpbHMucHVzaCh7CiAgICAgIGNvZGU6ICJxdW90ZV90cmFpbCIsCiAgICAgIGxpc3Q6IFsKICAgICAgICB7IGNvZGU6ICJ0eXBlIiwgdmFsdWU6IGJyZWFrdXBJdGVtWyJAb25kYy9vcmcvdGl0bGVfdHlwZSJdIH0sCiAgICAgICAgeyBjb2RlOiAiaWQiLCB2YWx1ZTogYnJlYWt1cEl0ZW1bIkBvbmRjL29yZy9pdGVtX2lkIl0gfSwKICAgICAgICB7IGNvZGU6ICJjdXJyZW5jeSIsIHZhbHVlOiAiSU5SIiB9LAogICAgICAgIHsgY29kZTogInZhbHVlIiwgdmFsdWU6IGAkey0xICogZGVkdWN0aW9ufWAgfSwKICAgICAgXSwKICAgIH0pOwogIH0KCiAgaWYgKHF1b3RlPy5wcmljZT8udmFsdWUgIT0gbnVsbCkgewogICAgY29uc3QgZXhpc3RpbmdQcmljZSA9IE51bWJlcihxdW90ZS5wcmljZS52YWx1ZSB8fCAwKTsKICAgIHF1b3RlLnByaWNlLnZhbHVlID0gKGV4aXN0aW5nUHJpY2UgLSB0b3RhbERlZHVjdGlvbikudG9GaXhlZCgyKTsKICB9CgogIGlmIChBcnJheS5pc0FycmF5KHF1b3RlLmJyZWFrdXApKSB7CiAgICBxdW90ZS5icmVha3VwID0gcXVvdGUuYnJlYWt1cC5tYXAoKGIpID0+IHsKICAgICAgY29uc3QgcmVxID0gcmV0dXJuUmVxdWVzdHMuZmluZCgocikgPT4gci5pdGVtSWQgPT09IGJbIkBvbmRjL29yZy9pdGVtX2lkIl0pOwogICAgICBpZiAoIXJlcSkgcmV0dXJuIGI7CgogICAgICBjb25zdCB1bml0UHJpY2UgPSBOdW1iZXIoYi5pdGVtPy5wcmljZT8udmFsdWUgfHwgYi5wcmljZT8udmFsdWUgfHwgMCk7CiAgICAgIGNvbnN0IHF0eSA9IE51bWJlcihiWyJAb25kYy9vcmcvaXRlbV9xdWFudGl0eSJdPy5jb3VudCB8fCAwKTsKICAgICAgY29uc3QgcmV0dXJuZWRRdHkgPSBNYXRoLm1pbihxdHksIHJlcS5xdWFudGl0eSk7CgogICAgICByZXR1cm4gewogICAgICAgIC4uLmIsCiAgICAgICAgcHJpY2U6IHsKICAgICAgICAgIC4uLmIucHJpY2UsCiAgICAgICAgICB2YWx1ZTogKE51bWJlcihiLnByaWNlPy52YWx1ZSB8fCAwKSAtIHVuaXRQcmljZSAqIHJldHVybmVkUXR5KS50b0ZpeGVkKDIpLAogICAgICAgIH0sCiAgICAgICAgIkBvbmRjL29yZy9pdGVtX3F1YW50aXR5IjogewogICAgICAgICAgLi4uYlsiQG9uZGMvb3JnL2l0ZW1fcXVhbnRpdHkiXSwKICAgICAgICAgIGNvdW50OiBxdHkgLSByZXR1cm5lZFF0eSwKICAgICAgICB9LAogICAgICB9OwogICAgfSk7CiAgfQoKICBvcmRlci5mdWxmaWxsbWVudHMgPSBvcmRlci5mdWxmaWxsbWVudHMubWFwKChmKSA9PiB7CiAgICBpZiAoZi50eXBlICE9PSAiUmV0dXJuIikgcmV0dXJuIGY7CgogICAgY29uc3Qgbm93ID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogICAgY29uc3QgdGFncyA9IChmLnRhZ3MgfHwgW10pLmZpbHRlcigKICAgICAgKHRhZykgPT4gdGFnLmNvZGUgIT09ICJjdXN0b21lciIgJiYgdGFnLmNvZGUgIT09ICJ0aW1lIgogICAgKTsKCiAgICByZXR1cm4gewogICAgICAuLi5mLAogICAgICBzdGF0ZTogeyBkZXNjcmlwdG9yOiB7IGNvZGU6ICJSZXR1cm5fUGlja2VkIiB9IH0sCiAgICAgIHN0YXJ0OiB7CiAgICAgICAgbG9jYXRpb246IHsKICAgICAgICAgIC4uLmRlbGl2ZXJ5RnVsZmlsbG1lbnQ/LmVuZD8ubG9jYXRpb24sCiAgICAgICAgICBpZDogZGVsaXZlcnlGdWxmaWxsbWVudD8uc3RhcnQ/LmxvY2F0aW9uPy5pZCwKICAgICAgICAgIGRlc2NyaXB0b3I6IGRlbGl2ZXJ5RnVsZmlsbG1lbnQ/LnN0YXJ0Py5sb2NhdGlvbj8uZGVzY3JpcHRvciwKICAgICAgICB9LAogICAgICAgIGNvbnRhY3Q6IGRlbGl2ZXJ5RnVsZmlsbG1lbnQ/LnN0YXJ0Py5jb250YWN0LAogICAgICAgIHRpbWU6IHsgdGltZXN0YW1wOiBub3cgfSwKICAgICAgfSwKICAgICAgZW5kOiB7CiAgICAgICAgbG9jYXRpb246IGRlbGl2ZXJ5RnVsZmlsbG1lbnQ/LnN0YXJ0Py5sb2NhdGlvbiwKICAgICAgICB0aW1lOiB7IHRpbWVzdGFtcDogbm93IH0sCiAgICAgIH0sCiAgICAgIHRhZ3M6IFsuLi50YWdzLCAuLi5xdW90ZVRyYWlsc10sCiAgICB9OwogIH0pOwoKICBjb25zdCBzYXZlZFBheW1lbnRTdGF0dXMgPSBzZXNzaW9uRGF0YT8ucGF5bWVudF9zdGF0dXM/LlswXTsKICBpZiAob3JkZXIpIHsKICAgIG9yZGVyLnBheW1lbnRzWzBdID0gewogICAgICAuLi5vcmRlci5wYXltZW50c1swXSwKICAgICAgc3RhdHVzOgogICAgICAgIG9yZGVyLnN0YXRlID09PSAiQ29tcGxldGVkIgogICAgICAgICAgPyAiUEFJRCIKICAgICAgICAgIDogc2F2ZWRQYXltZW50U3RhdHVzIHx8IG9yZGVyLnBheW1lbnRzPy5bMF0/LnN0YXR1cyB8fCAiTk9ULVBBSUQiLAogICAgfTsKICB9CgogIGFwcGx5RHluYW1pY1RpbWVzdGFtcHMoZXhpc3RpbmdQYXlsb2FkKTsKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5xdW90ZSA9IHF1b3RlOwogIHJldHVybiBleGlzdGluZ1BheWxvYWQ7Cn0=
+      generate: ZnVuY3Rpb24gZXh0cmFjdFJldHVyblJlcXVlc3RzKGZ1bGZpbGxtZW50cyA9IFtdKSB7CiAgY29uc3QgcmVxdWVzdHMgPSBbXTsKCiAgZm9yIChjb25zdCBmdWxmaWxsbWVudCBvZiBmdWxmaWxsbWVudHMpIHsKICAgIGlmIChmdWxmaWxsbWVudD8udHlwZSAhPT0gIlJldHVybiIgfHwgIUFycmF5LmlzQXJyYXkoZnVsZmlsbG1lbnQudGFncykpIGNvbnRpbnVlOwoKICAgIGZvciAoY29uc3QgdGFnIG9mIGZ1bGZpbGxtZW50LnRhZ3MpIHsKICAgICAgaWYgKHRhZz8uY29kZSAhPT0gInJldHVybl9yZXF1ZXN0IiB8fCAhQXJyYXkuaXNBcnJheSh0YWcubGlzdCkpIGNvbnRpbnVlOwoKICAgICAgY29uc3QgaXRlbUlkID0gdGFnLmxpc3QuZmluZCgoeCkgPT4geC5jb2RlID09PSAiaXRlbV9pZCIpPy52YWx1ZTsKICAgICAgY29uc3QgaXRlbVF0eSA9IE51bWJlcih0YWcubGlzdC5maW5kKCh4KSA9PiB4LmNvZGUgPT09ICJpdGVtX3F1YW50aXR5Iik/LnZhbHVlIHx8IDApOwoKICAgICAgaWYgKGl0ZW1JZCAmJiBpdGVtUXR5ID4gMCkgewogICAgICAgIHJlcXVlc3RzLnB1c2goewogICAgICAgICAgZnVsZmlsbG1lbnRJZDogZnVsZmlsbG1lbnQuaWQsCiAgICAgICAgICBpdGVtSWQsCiAgICAgICAgICBxdWFudGl0eTogaXRlbVF0eSwKICAgICAgICAgIGZ1bGZpbGxtZW50LAogICAgICAgIH0pOwogICAgICB9CiAgICB9CiAgfQoKICByZXR1cm4gcmVxdWVzdHM7Cn0KCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGV4aXN0aW5nUGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBhcHBseUR5bmFtaWNUaW1lc3RhbXBzKGV4aXN0aW5nUGF5bG9hZCk7CgogIGNvbnN0IHNhdmVkQ2l0eSA9IHNlc3Npb25EYXRhPy5wYXlsb2FkX2NpdHk/LlswXTsKICBpZiAoc2F2ZWRDaXR5KSB7CiAgICBleGlzdGluZ1BheWxvYWQuY29udGV4dC5jaXR5ID0gc2F2ZWRDaXR5OwogIH0KCiAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaWQgPSBzZXNzaW9uRGF0YS5vcmRlcl9pZD8uWzBdOwogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyID0gc2Vzc2lvbkRhdGEucHJvdmlkZXI/LlswXTsKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5iaWxsaW5nID0gc2Vzc2lvbkRhdGEuYmlsbGluZz8uWzBdOwogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzID0gc2Vzc2lvbkRhdGEucGF5bWVudHM/LlswXTsKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5jcmVhdGVkX2F0ID0gc2Vzc2lvbkRhdGEub3JkZXJfY3JlYXRlZF9hdD8uWzBdOwogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnVwZGF0ZWRfYXQgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIC8vIGtlZXAgZnVsbCBmdWxmaWxsbWVudHMgYXJyYXksIGRvbid0IG92ZXJ3cml0ZSBvbmx5IGluZGV4IDAKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHMgPSBzZXNzaW9uRGF0YS5mdWxmaWxsbWVudHMgfHwgW107CgogIGNvbnN0IG9yZGVyID0gZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXI7CiAgY29uc3QgcXVvdGUgPSBzZXNzaW9uRGF0YS5xdW90ZVswXSB8fCBvcmRlci5xdW90ZTsKCiAgY29uc3QgZGVsaXZlcnlGdWxmaWxsbWVudCA9IG9yZGVyLmZ1bGZpbGxtZW50cy5maW5kKChmKSA9PiBmLnR5cGUgPT09ICJEZWxpdmVyeSIpOwogIGNvbnN0IHJldHVyblJlcXVlc3RzID0gZXh0cmFjdFJldHVyblJlcXVlc3RzKG9yZGVyLmZ1bGZpbGxtZW50cyk7CgogIGNvbnN0IHNvdXJjZUl0ZW1zID0gc2Vzc2lvbkRhdGEub25fc2VsZWN0X2l0ZW1zIHx8IFtdOwogIGNvbnN0IGl0ZW1zID0gW107CgogIC8vIEJ1aWxkIHJldHVybmVkIGl0ZW0gbWFwOiBpdGVtSWQgLT4geyBxdHksIGZ1bGZpbGxtZW50SWQgfQogIGNvbnN0IHJldHVybk1hcCA9IG5ldyBNYXAoKTsKICBmb3IgKGNvbnN0IHJlcSBvZiByZXR1cm5SZXF1ZXN0cykgewogICAgY29uc3QgcHJldiA9IHJldHVybk1hcC5nZXQocmVxLml0ZW1JZCkgfHwgeyBxdWFudGl0eTogMCwgZnVsZmlsbG1lbnRJZDogcmVxLmZ1bGZpbGxtZW50SWQgfTsKICAgIHJldHVybk1hcC5zZXQocmVxLml0ZW1JZCwgewogICAgICBxdWFudGl0eTogcHJldi5xdWFudGl0eSArIHJlcS5xdWFudGl0eSwKICAgICAgZnVsZmlsbG1lbnRJZDogcmVxLmZ1bGZpbGxtZW50SWQsCiAgICB9KTsKICB9CgogIC8vIEFkanVzdCBvcmRlciBpdGVtcyBiYXNlZCBvbiByZXR1cm4gcXVhbnRpdHkKICBmb3IgKGNvbnN0IGl0ZW0gb2Ygc291cmNlSXRlbXMpIHsKICAgIGNvbnN0IHJldHVybkluZm8gPSByZXR1cm5NYXAuZ2V0KGl0ZW0uaWQpOwoKICAgIGlmICghcmV0dXJuSW5mbykgewogICAgICBpdGVtcy5wdXNoKGl0ZW0pOwogICAgICBjb250aW51ZTsKICAgIH0KCiAgICBjb25zdCBvcmlnaW5hbFF0eSA9IE51bWJlcihpdGVtLnF1YW50aXR5Py5jb3VudCB8fCAwKTsKICAgIGNvbnN0IHJldHVybmVkUXR5ID0gTWF0aC5taW4ob3JpZ2luYWxRdHksIHJldHVybkluZm8ucXVhbnRpdHkpOwogICAgY29uc3QgcmVtYWluaW5nUXR5ID0gb3JpZ2luYWxRdHkgLSByZXR1cm5lZFF0eTsKCiAgICBpZiAocmVtYWluaW5nUXR5ID49IDApIHsKICAgICAgaXRlbXMucHVzaCh7CiAgICAgICAgLi4uaXRlbSwKICAgICAgICBxdWFudGl0eTogewogICAgICAgICAgLi4uaXRlbS5xdWFudGl0eSwKICAgICAgICAgIGNvdW50OiByZW1haW5pbmdRdHksCiAgICAgICAgfSwKICAgICAgfSk7CiAgICB9CgogICAgLy8gYWRkIHJldHVybiBsaW5lIGZvciByZXR1cm5lZCBxdWFudGl0eQogICAgaXRlbXMucHVzaCh7CiAgICAgIGlkOiBpdGVtLmlkLAogICAgICBxdWFudGl0eTogewogICAgICAgIGNvdW50OiByZXR1cm5lZFF0eSwKICAgICAgfSwKICAgICAgZnVsZmlsbG1lbnRfaWQ6IHJldHVybkluZm8uZnVsZmlsbG1lbnRJZCwKICAgIH0pOwogIH0KCiAgb3JkZXIuaXRlbXMgPSBpdGVtczsKCiAgLy8gUmVjYWxjdWxhdGUgcXVvdGUgdXNpbmcgYWxsIHJldHVybmVkIGl0ZW1zCiAgY29uc3QgYnJlYWt1cCA9IHF1b3RlPy5icmVha3VwIHx8IFtdOwogIGxldCB0b3RhbERlZHVjdGlvbiA9IDA7CiAgY29uc3QgcXVvdGVUcmFpbHMgPSBbXTsKCiAgZm9yIChjb25zdCByZXEgb2YgcmV0dXJuUmVxdWVzdHMpIHsKICAgIGNvbnN0IGJyZWFrdXBJdGVtID0gYnJlYWt1cC5maW5kKCh4KSA9PiB4WyJAb25kYy9vcmcvaXRlbV9pZCJdID09PSByZXEuaXRlbUlkKTsKICAgIGlmICghYnJlYWt1cEl0ZW0pIGNvbnRpbnVlOwoKICAgIGNvbnN0IHVuaXRQcmljZSA9IE51bWJlcihicmVha3VwSXRlbS5pdGVtPy5wcmljZT8udmFsdWUgfHwgYnJlYWt1cEl0ZW0ucHJpY2U/LnZhbHVlIHx8IDApOwogICAgY29uc3QgZGVkdWN0aW9uID0gdW5pdFByaWNlICogcmVxLnF1YW50aXR5OwogICAgdG90YWxEZWR1Y3Rpb24gKz0gZGVkdWN0aW9uOwoKICAgIC8vIG1ha2UgcmV0dXJuZWQgYnJlYWt1cCBpdGVtIHplcm9lZCBvdXQgaW4gdHJhaWxzCiAgICBxdW90ZVRyYWlscy5wdXNoKHsKICAgICAgY29kZTogInF1b3RlX3RyYWlsIiwKICAgICAgbGlzdDogWwogICAgICAgIHsgY29kZTogInR5cGUiLCB2YWx1ZTogYnJlYWt1cEl0ZW1bIkBvbmRjL29yZy90aXRsZV90eXBlIl0gfSwKICAgICAgICB7IGNvZGU6ICJpZCIsIHZhbHVlOiBicmVha3VwSXRlbVsiQG9uZGMvb3JnL2l0ZW1faWQiXSB9LAogICAgICAgIHsgY29kZTogImN1cnJlbmN5IiwgdmFsdWU6ICJJTlIiIH0sCiAgICAgICAgeyBjb2RlOiAidmFsdWUiLCB2YWx1ZTogYCR7LTEgKiBkZWR1Y3Rpb259YCB9LAogICAgICBdLAogICAgfSk7CiAgfQoKICBpZiAocXVvdGU/LnByaWNlPy52YWx1ZSAhPSBudWxsKSB7CiAgICBjb25zdCBleGlzdGluZ1ByaWNlID0gTnVtYmVyKHF1b3RlLnByaWNlLnZhbHVlIHx8IDApOwogICAgcXVvdGUucHJpY2UudmFsdWUgPSAoZXhpc3RpbmdQcmljZSAtIHRvdGFsRGVkdWN0aW9uKS50b0ZpeGVkKDIpOwogIH0KCiAgaWYgKEFycmF5LmlzQXJyYXkocXVvdGUuYnJlYWt1cCkpIHsKICAgIHF1b3RlLmJyZWFrdXAgPSBxdW90ZS5icmVha3VwLm1hcCgoYikgPT4gewogICAgICBjb25zdCByZXEgPSByZXR1cm5SZXF1ZXN0cy5maW5kKChyKSA9PiByLml0ZW1JZCA9PT0gYlsiQG9uZGMvb3JnL2l0ZW1faWQiXSk7CiAgICAgIGlmICghcmVxKSByZXR1cm4gYjsKCiAgICAgIGNvbnN0IHVuaXRQcmljZSA9IE51bWJlcihiLml0ZW0/LnByaWNlPy52YWx1ZSB8fCBiLnByaWNlPy52YWx1ZSB8fCAwKTsKICAgICAgY29uc3QgcXR5ID0gTnVtYmVyKGJbIkBvbmRjL29yZy9pdGVtX3F1YW50aXR5Il0/LmNvdW50IHx8IDApOwogICAgICBjb25zdCByZXR1cm5lZFF0eSA9IE1hdGgubWluKHF0eSwgcmVxLnF1YW50aXR5KTsKCiAgICAgIHJldHVybiB7CiAgICAgICAgLi4uYiwKICAgICAgICBwcmljZTogewogICAgICAgICAgLi4uYi5wcmljZSwKICAgICAgICAgIHZhbHVlOiAoTnVtYmVyKGIucHJpY2U/LnZhbHVlIHx8IDApIC0gdW5pdFByaWNlICogcmV0dXJuZWRRdHkpLnRvRml4ZWQoMiksCiAgICAgICAgfSwKICAgICAgICAiQG9uZGMvb3JnL2l0ZW1fcXVhbnRpdHkiOiB7CiAgICAgICAgICAuLi5iWyJAb25kYy9vcmcvaXRlbV9xdWFudGl0eSJdLAogICAgICAgICAgY291bnQ6IHF0eSAtIHJldHVybmVkUXR5LAogICAgICAgIH0sCiAgICAgIH07CiAgICB9KTsKICB9CgogIG9yZGVyLmZ1bGZpbGxtZW50cyA9IG9yZGVyLmZ1bGZpbGxtZW50cy5tYXAoKGYpID0+IHsKICAgIGlmIChmLnR5cGUgIT09ICJSZXR1cm4iKSByZXR1cm4gZjsKCiAgICBjb25zdCBub3cgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CiAgICBjb25zdCB0YWdzID0gKGYudGFncyB8fCBbXSkuZmlsdGVyKAogICAgICAodGFnKSA9PiB0YWcuY29kZSAhPT0gImN1c3RvbWVyIiAmJiB0YWcuY29kZSAhPT0gInRpbWUiCiAgICApOwoKICAgIHJldHVybiB7CiAgICAgIC4uLmYsCiAgICAgIHN0YXRlOiB7IGRlc2NyaXB0b3I6IHsgY29kZTogIlJldHVybl9QaWNrZWQiIH0gfSwKICAgICAgc3RhcnQ6IHsKICAgICAgICBsb2NhdGlvbjogewogICAgICAgICAgLi4uZGVsaXZlcnlGdWxmaWxsbWVudD8uZW5kPy5sb2NhdGlvbiwKICAgICAgICAgIGlkOiBkZWxpdmVyeUZ1bGZpbGxtZW50Py5zdGFydD8ubG9jYXRpb24/LmlkLAogICAgICAgICAgZGVzY3JpcHRvcjogZGVsaXZlcnlGdWxmaWxsbWVudD8uc3RhcnQ/LmxvY2F0aW9uPy5kZXNjcmlwdG9yLAogICAgICAgIH0sCiAgICAgICAgY29udGFjdDogZGVsaXZlcnlGdWxmaWxsbWVudD8uc3RhcnQ/LmNvbnRhY3QsCiAgICAgICAgdGltZTogeyB0aW1lc3RhbXA6IG5vdyB9LAogICAgICB9LAogICAgICBlbmQ6IHsKICAgICAgICBsb2NhdGlvbjogZGVsaXZlcnlGdWxmaWxsbWVudD8uc3RhcnQ/LmxvY2F0aW9uLAogICAgICAgIHRpbWU6IHsgdGltZXN0YW1wOiBub3cgfSwKICAgICAgfSwKICAgICAgdGFnczogWy4uLnRhZ3MsIC4uLnF1b3RlVHJhaWxzXSwKICAgIH07CiAgfSk7CgogIGNvbnN0IHNhdmVkUGF5bWVudFN0YXR1cyA9IHNlc3Npb25EYXRhPy5wYXltZW50X3N0YXR1cz8uWzBdOwogIGlmIChvcmRlcikgewogICAgb3JkZXIucGF5bWVudHNbMF0gPSB7CiAgICAgIC4uLm9yZGVyLnBheW1lbnRzWzBdLAogICAgICBzdGF0dXM6CiAgICAgICAgb3JkZXIuc3RhdGUgPT09ICJDb21wbGV0ZWQiCiAgICAgICAgICA/ICJQQUlEIgogICAgICAgICAgOiBzYXZlZFBheW1lbnRTdGF0dXMgfHwgb3JkZXIucGF5bWVudHM/LlswXT8uc3RhdHVzIHx8ICJOT1QtUEFJRCIsCiAgICB9OwogIH0KCiAgYXBwbHlEeW5hbWljVGltZXN0YW1wcyhleGlzdGluZ1BheWxvYWQpOwogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnF1b3RlID0gcXVvdGU7CiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiBtZWV0c1JlcXVpcmVtZW50cyhzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCAgCiAgZGVzY3JpcHRpb246InBheWxvYWQgaXMgdmFsaWQiLAogIGNvZGU6IDIwMH07Cn0=
       defaultPayload:
@@ -4934,9 +4934,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_update
-            timestamp: 2026-06-15T08:14:22.234Z
+            timestamp: 2026-06-16T15:25:31.033Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: c9b320ad-32d0-4f77-8515-95c5ff5dd4e9
+            message_id: df754294-c4e3-4eae-b7a7-b0fe02642df3
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4947,7 +4947,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: Completed
               provider:
                 id: P1
@@ -4961,9 +4961,8 @@ steps:
                   fulfillment_id: F1
                 - id: I1
                   quantity:
-                    count: 18
-                  fulfillment_id: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
-                  return_item: true
+                    count: 20
+                  fulfillment_id: f17f0045-f398-42c5-afe1-0da592b2bcd8
               billing:
                 name: Sharma Kirana Store
                 address:
@@ -4977,8 +4976,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:22.234Z
-                updated_at: 2026-06-15T08:14:22.234Z
+                created_at: 2026-06-16T15:25:31.033Z
+                updated_at: 2026-06-16T15:25:31.033Z
               quote:
                 price:
                   currency: INR
@@ -5039,9 +5038,9 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
-                      timestamp: 2026-06-15T08:14:22.234Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
+                      timestamp: 2026-06-16T15:25:31.033Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -5058,8 +5057,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -5079,17 +5078,17 @@ steps:
                   customer:
                     id: CUST-DEFAULT
                   time:
-                    timestamp: 2026-06-15T08:14:22.234Z
+                    timestamp: 2026-06-16T15:25:31.033Z
                 - type: Return
                   tags:
                     - code: return_request
                       list:
                         - code: id
-                          value: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                          value: f17f0045-f398-42c5-afe1-0da592b2bcd8
                         - code: item_id
                           value: I1
                         - code: item_quantity
-                          value: "18"
+                          value: "20"
                         - code: reason_id
                           value: "001"
                         - code: reason_desc
@@ -5109,8 +5108,8 @@ steps:
                         - code: currency
                           value: INR
                         - code: value
-                          value: "-936"
-                  id: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                          value: "-1040"
+                  id: f17f0045-f398-42c5-afe1-0da592b2bcd8
                   state:
                     descriptor:
                       code: Return_Picked
@@ -5133,7 +5132,7 @@ steps:
                       phone: "9876543210"
                       email: warehouse@abcdist.com
                     time:
-                      timestamp: 2026-06-15T08:14:22.234Z
+                      timestamp: 2026-06-16T15:25:31.033Z
                   end:
                     location:
                       id: L1
@@ -5146,14 +5145,14 @@ steps:
                         area_code: "560076"
                         state: KA
                     time:
-                      timestamp: 2026-06-15T08:14:22.234Z
+                      timestamp: 2026-06-16T15:25:31.033Z
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -5188,8 +5187,8 @@ steps:
                   list:
                     - code: tax_number
                       value: gst_number_of_buyerNP
-              created_at: 2026-06-15T08:14:22.234Z
-              updated_at: 2026-06-15T08:14:22.234Z
+              created_at: 2026-06-16T15:25:31.033Z
+              updated_at: 2026-06-16T15:25:31.033Z
         type: request
         description: return picked by seller with on_update_return_picked
   - api: update
@@ -5247,9 +5246,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: update
-            timestamp: 2026-06-15T08:14:22.249Z
+            timestamp: 2026-06-16T15:25:31.065Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: 511f3874-f5ca-465b-b3e9-7c1eb867c7ba
+            message_id: 1ca778b1-1851-4ef3-95d5-f137adc425bc
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5261,17 +5260,17 @@ steps:
           message:
             update_target: payment
             order:
-              id: "964795"
+              id: "995629"
               fulfillments:
-                - id: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                - id: f17f0045-f398-42c5-afe1-0da592b2bcd8
                   type: Return
               payments:
                 - "@ondc/org/settlement_details":
                     - settlement_counterparty: buyer
                       settlement_phase: refund
                       settlement_type: netbanking
-                      settlement_amount: "936"
-                      settlement_timestamp: 2026-06-15T08:14:22.251Z
+                      settlement_amount: "1040"
+                      settlement_timestamp: 2026-06-16T15:25:31.068Z
                   status: PAID
         type: request
         description: please add relevant description
@@ -5522,9 +5521,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_update
-            timestamp: 2026-06-15T08:14:22.273Z
+            timestamp: 2026-06-16T15:25:31.083Z
             transaction_id: 63145d80-a1c1-4a4a-bba0-c6097c43f696
-            message_id: 5d109594-c452-49df-b113-472d916cfec5
+            message_id: e5c5d520-db0e-4aa9-a80a-351c4b09fb66
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5535,7 +5534,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "964795"
+              id: "995629"
               state: Completed
               provider:
                 id: P1
@@ -5549,9 +5548,8 @@ steps:
                   fulfillment_id: F1
                 - id: I1
                   quantity:
-                    count: 18
-                  fulfillment_id: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
-                  return_item: true
+                    count: 20
+                  fulfillment_id: f17f0045-f398-42c5-afe1-0da592b2bcd8
               billing:
                 name: Sharma Kirana Store
                 address:
@@ -5565,8 +5563,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-15T08:14:21.962Z
-                updated_at: 2026-06-15T08:14:21.962Z
+                created_at: 2026-06-16T15:25:30.769Z
+                updated_at: 2026-06-16T15:25:30.769Z
               quote:
                 price:
                   currency: INR
@@ -5627,9 +5625,9 @@ steps:
                       email: warehouse@abcdist.com
                     time:
                       range:
-                        start: 2026-06-15T08:24:22.066Z
-                        end: 2026-06-15T08:34:22.066Z
-                      timestamp: 2026-06-15T08:14:22.234Z
+                        start: 2026-06-16T15:35:30.848Z
+                        end: 2026-06-16T15:45:30.848Z
+                      timestamp: 2026-06-16T15:25:31.033Z
                   end:
                     location:
                       gps: 12.4535,77.9283
@@ -5646,8 +5644,8 @@ steps:
                       email: sharma.kirana@email.com
                     time:
                       range:
-                        start: 2026-06-15T08:34:22.066Z
-                        end: 2026-06-17T08:24:22.066Z
+                        start: 2026-06-16T15:45:30.848Z
+                        end: 2026-06-18T15:35:30.848Z
                   tags:
                     - code: routing
                       list:
@@ -5667,17 +5665,17 @@ steps:
                   customer:
                     id: CUST-DEFAULT
                   time:
-                    timestamp: 2026-06-15T08:14:22.234Z
+                    timestamp: 2026-06-16T15:25:31.033Z
                 - type: Return
                   tags:
                     - code: return_request
                       list:
                         - code: id
-                          value: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                          value: f17f0045-f398-42c5-afe1-0da592b2bcd8
                         - code: item_id
                           value: I1
                         - code: item_quantity
-                          value: "18"
+                          value: "20"
                         - code: reason_id
                           value: "001"
                         - code: reason_desc
@@ -5697,8 +5695,8 @@ steps:
                         - code: currency
                           value: INR
                         - code: value
-                          value: "-936"
-                  id: e1c935d5-a508-4c38-b2c5-20a9d44cdc0e
+                          value: "-1040"
+                  id: f17f0045-f398-42c5-afe1-0da592b2bcd8
                   state:
                     descriptor:
                       code: Return_Delivered
@@ -5721,7 +5719,7 @@ steps:
                       phone: "9876543210"
                       email: warehouse@abcdist.com
                     time:
-                      timestamp: 2026-06-15T08:14:22.234Z
+                      timestamp: 2026-06-16T15:25:31.033Z
                   end:
                     location:
                       id: L1
@@ -5734,15 +5732,15 @@ steps:
                         area_code: "560076"
                         state: KA
                     time:
-                      timestamp: 2026-06-15T08:14:22.234Z
-                      timeStamp: 2026-06-15T08:14:22.275Z
+                      timestamp: 2026-06-16T15:25:31.033Z
+                      timeStamp: 2026-06-16T15:25:31.087Z
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "6993"
-                    amount: "936.00"
+                    transaction_id: "9146"
+                    amount: "1040.00"
                   status: PAID
                   type: ON-FULFILLMENT
                   collected_by: BPP
@@ -5761,8 +5759,8 @@ steps:
                       settlement_ifsc_code: XXXXXXXXX
                       bank_name: State Bank of India
                       branch_name: Jayanagar Branch
-              created_at: 2026-06-15T08:14:22.016Z
-              updated_at: 2026-06-15T08:14:22.275Z
+              created_at: 2026-06-16T15:25:30.810Z
+              updated_at: 2026-06-16T15:25:31.087Z
         type: request
         description: please add relevant description
 transaction_history: []
