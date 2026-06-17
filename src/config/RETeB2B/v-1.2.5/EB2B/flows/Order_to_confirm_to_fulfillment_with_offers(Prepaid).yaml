@@ -98,9 +98,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: search
-            timestamp: 2026-06-16T15:36:19.370Z
+            timestamp: 2026-06-17T09:30:15.650Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 6a62155a-8b20-44a6-90f5-94f6e1ba942a
+            message_id: ee4fffe2-7f86-4361-99b9-9a9d66b15ebc
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -124,7 +124,7 @@ steps:
                     - code: static_terms_new
                       value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: effective_date
-                      value: 2026-06-26T15:36:19.373Z
+                      value: 2026-06-27T09:30:15.666Z
                 - code: bap_features
                   list:
                     - code: 01A
@@ -428,6 +428,12 @@ steps:
                         list:
                           - code: item_count
                             value: "50"
+                      - code: benefit
+                        list:
+                          - code: item_count
+                            value: "5"
+                          - code: item_id
+                            value: I1
                       - code: meta
                         list:
                           - code: additive
@@ -1198,9 +1204,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_search
-            timestamp: 2026-06-16T15:36:19.389Z
+            timestamp: 2026-06-17T09:30:15.697Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 6a62155a-8b20-44a6-90f5-94f6e1ba942a
+            message_id: ee4fffe2-7f86-4361-99b9-9a9d66b15ebc
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1227,7 +1233,7 @@ steps:
                 - id: P10
                   time:
                     label: enable
-                    timestamp: 2026-06-16T15:36:19.389Z
+                    timestamp: 2026-06-17T09:30:15.697Z
                   descriptor:
                     name: ABC Manufacturer
                     code: distributor
@@ -1247,10 +1253,10 @@ steps:
                     - id: L1
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                         schedule:
                           holidays:
-                            - 2026-06-22
+                            - 2026-06-23
                       gps: 12.9675,77.7496
                       address:
                         locality: Jayanagar
@@ -1261,10 +1267,10 @@ steps:
                     - id: L2
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                         schedule:
                           holidays:
-                            - 2026-06-22
+                            - 2026-06-23
                       gps: 12.9352,77.6245
                       address:
                         locality: BTM Layout
@@ -1331,8 +1337,8 @@ steps:
                       time:
                         label: valid
                         range:
-                          start: 2026-06-16T00:00:00.000Z
-                          end: 2026-06-21T23:59:59.999Z
+                          start: 2026-06-17T00:00:00.000Z
+                          end: 2026-06-22T23:59:59.999Z
                       tags:
                         - code: qualifier
                           list:
@@ -1369,8 +1375,8 @@ steps:
                       time:
                         label: valid
                         range:
-                          start: 2026-06-16T00:00:00.000Z
-                          end: 2026-06-21T23:59:59.999Z
+                          start: 2026-06-17T00:00:00.000Z
+                          end: 2026-06-22T23:59:59.999Z
                       tags:
                         - code: qualifier
                           list:
@@ -1401,8 +1407,8 @@ steps:
                       time:
                         label: valid
                         range:
-                          start: 2026-06-16T00:00:00.000Z
-                          end: 2026-06-21T23:59:59.999Z
+                          start: 2026-06-17T00:00:00.000Z
+                          end: 2026-06-22T23:59:59.999Z
                       tags:
                         - code: qualifier
                           list:
@@ -1437,8 +1443,8 @@ steps:
                       time:
                         label: valid
                         range:
-                          start: 2026-06-16T00:00:00.000Z
-                          end: 2026-06-21T23:59:59.999Z
+                          start: 2026-06-17T00:00:00.000Z
+                          end: 2026-06-22T23:59:59.999Z
                       tags:
                         - code: qualifier
                           list:
@@ -1473,13 +1479,19 @@ steps:
                       time:
                         label: valid
                         range:
-                          start: 2026-06-16T00:00:00.000Z
-                          end: 2026-06-21T23:59:59.999Z
+                          start: 2026-06-17T00:00:00.000Z
+                          end: 2026-06-22T23:59:59.999Z
                       tags:
                         - code: qualifier
                           list:
                             - code: item_count
                               value: "50"
+                        - code: benefit
+                          list:
+                            - code: item_count
+                              value: "5"
+                            - code: item_id
+                              value: I1
                         - code: meta
                           list:
                             - code: additive
@@ -1500,8 +1512,8 @@ steps:
                       time:
                         label: valid
                         range:
-                          start: 2026-06-16T00:00:00.000Z
-                          end: 2026-06-21T23:59:59.999Z
+                          start: 2026-06-17T00:00:00.000Z
+                          end: 2026-06-22T23:59:59.999Z
                       tags:
                         - code: qualifier
                           list:
@@ -1525,7 +1537,7 @@ steps:
                     - id: I1
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                       parent_item_id: V1
                       descriptor:
                         name: Ashirwad Plain Atta 1kg
@@ -1602,7 +1614,7 @@ steps:
                     - id: I2
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                       parent_item_id: V1
                       descriptor:
                         name: Ashirwad Plain Atta 5kg
@@ -1671,7 +1683,7 @@ steps:
                     - id: I3
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                       parent_item_id: V1
                       descriptor:
                         name: Fortune Chakki Atta 1kg
@@ -1740,7 +1752,7 @@ steps:
                     - id: I4
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                       parent_item_id: V1
                       descriptor:
                         name: Fortune Chakki Atta 5kg
@@ -1809,7 +1821,7 @@ steps:
                     - id: I5
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                       parent_item_id: V2
                       descriptor:
                         name: Coca-Cola 300ml (Case of 24)
@@ -1873,7 +1885,7 @@ steps:
                     - id: I6
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                       parent_item_id: V2
                       descriptor:
                         name: Coca-Cola 2L (Pack of 6)
@@ -1937,7 +1949,7 @@ steps:
                     - id: I7
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                       parent_item_id: V2
                       descriptor:
                         name: Pepsi 300ml (Case of 24)
@@ -2000,7 +2012,7 @@ steps:
                     - id: I8
                       time:
                         label: enable
-                        timestamp: 2026-06-16T15:36:19.389Z
+                        timestamp: 2026-06-17T09:30:15.697Z
                       parent_item_id: V2
                       descriptor:
                         name: Pepsi 2L (Pack of 6)
@@ -2406,9 +2418,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: select
-            timestamp: 2026-06-16T15:36:35.277Z
+            timestamp: 2026-06-17T09:30:33.027Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: ff99ee45-2d7f-4b40-b205-3f2ba428c865
+            message_id: 6c974e35-dbc8-4fc1-922f-9789ab1857c3
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2427,7 +2439,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 19
+                    count: 17
                   fulfillment_id: F1
               offers:
                 - id: discp10
@@ -2441,8 +2453,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -2456,7 +2468,7 @@ steps:
     unsolicited: false
     description: On-select response to select
     mock:
-      generate: ZnVuY3Rpb24gY3JlYXRlUXVvdGUoc2VsZWN0ZWRJdGVtcywgc2Vzc2lvbkRhdGEsIGRlZmF1bHRQYXlsb2FkLCBmdWxmaWxsbWVudHMsIGNhbmNlbGxlZCA9IGZhbHNlKSB7CiAgICBsZXQgdG90YWxQcmljZSA9IDAsIGJyZWFrdXBPYmplY3QgPSBbXSwgYXBwbGllZE9mZmVySWRzID0gW107CiAgICAvKiAtLS0tLS0tLS0tLS0tLS0tIERFRVAgRVhUUkFDVElPTiBMT0dJQyAtLS0tLS0tLS0tLS0tLS0tICovCiAgICBjb25zdCBnZXRQcm92aWRlckRhdGEgPSAoc2Vzc2lvbkRhdGEpID0+IHsKICAgICAgICBjb25zdCBzb3VyY2VzID0gWwogICAgICAgICAgICB7IGxhYmVsOiAic2Vzc2lvbkRhdGEubGl2ZV9jYXRhbG9nIiwgZGF0YTogc2Vzc2lvbkRhdGE/LmxpdmVfY2F0YWxvZyB9LAogICAgICAgICAgICB7IGxhYmVsOiAiaW5wdXRzLmxpdmVfY2F0YWxvZyIsIGRhdGE6IHNlc3Npb25EYXRhPy5pbnB1dHM/LmxpdmVfY2F0YWxvZyB9LAogICAgICAgICAgICB7IGxhYmVsOiAic2Vzc2lvbkRhdGEuY2F0YWxvZyIsIGRhdGE6IHNlc3Npb25EYXRhPy5zZXNzaW9uX2NhdGFsb2cgfSwKICAgICAgICAgICAgeyBsYWJlbDogIkZhbGxiYWNrIiwgZGF0YTogdHlwZW9mIFJFVGVCMkJDYXRhbG9nICE9PSAidW5kZWZpbmVkIiA/IFJFVGVCMkJDYXRhbG9nIDogbnVsbCB9CiAgICAgICAgXTsKICAgICAgICBzb3VyY2VzLmZvckVhY2goc291cmNlID0+IHsKICAgICAgICAgICAgY29uc29sZS5sb2coYD09PT09ICR7c291cmNlLmxhYmVsfSA9PT09PWApOwogICAgICAgICAgICBjb25zb2xlLmxvZyhKU09OLnN0cmluZ2lmeShzb3VyY2UuZGF0YSwgbnVsbCwgMikpOwogICAgICAgIH0pOwogICAgICAgIGxldCBmb3VuZFByb3ZpZGVyID0gbnVsbDsKICAgICAgICBmb3IgKGNvbnN0IHMgb2Ygc291cmNlcykgewogICAgICAgICAgICBpZiAoIXMuZGF0YSkgY29udGludWU7CiAgICAgICAgICAgIGNvbnN0IHRhcmdldCA9IEFycmF5LmlzQXJyYXkocy5kYXRhKSA/IChzLmRhdGFbMF0gfHwge30pIDogcy5kYXRhOwogICAgICAgICAgICBsZXQgcHJvdmlkZXIgPSBudWxsOwogICAgICAgICAgICBpZiAodGFyZ2V0Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdPy5bMF0pIHByb3ZpZGVyID0gdGFyZ2V0Lm1lc3NhZ2UuY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdWzBdOwogICAgICAgICAgICBlbHNlIGlmICh0YXJnZXQuY2F0YWxvZz8uWyJicHAvcHJvdmlkZXJzIl0/LlswXSkgcHJvdmlkZXIgPSB0YXJnZXQuY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdWzBdOwogICAgICAgICAgICBlbHNlIGlmIChBcnJheS5pc0FycmF5KHRhcmdldFsiYnBwL3Byb3ZpZGVycyJdKSkgcHJvdmlkZXIgPSB0YXJnZXRbImJwcC9wcm92aWRlcnMiXVswXTsKICAgICAgICAgICAgZWxzZSBpZiAodGFyZ2V0Lml0ZW1zIHx8IHRhcmdldC5vZmZlcnMpIHByb3ZpZGVyID0gdGFyZ2V0OwogICAgICAgICAgICBpZiAocHJvdmlkZXIpIHsKICAgICAgICAgICAgICAgIGNvbnN0IGZsYXRPZmZlciA9IChwcm92aWRlci5vZmZlcnMgfHwgW10pLmZpbmQobyA9PiBvLmlkID09PSAiZmxhdDE1MCIpOwogICAgICAgICAgICAgICAgY29uc3QgdmFsID0gZmxhdE9mZmVyPy50YWdzPy5maW5kKHQgPT4gdC5jb2RlID09PSAiYmVuZWZpdCIpPy5saXN0Py5maW5kKGwgPT4gbC5jb2RlID09PSAidmFsdWUiKT8udmFsdWU7CiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhgW09mZmVyTG9naWNdIE9uU2VsZWN0OiBDaGVja2luZyAke3MubGFiZWx9LiBCZW5lZml0IFZhbHVlOiAke3ZhbH1gKTsKICAgICAgICAgICAgICAgIGlmICh2YWwgPT09ICItMjUwLjAwIiB8fCBzLmxhYmVsLmluY2x1ZGVzKCJsaXZlIikpIHsKICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhgW09mZmVyTG9naWNdIPCfmqggTUFUQ0ggRk9VTkQhIFVzaW5nICR7cy5sYWJlbH1gKTsKICAgICAgICAgICAgICAgICAgICByZXR1cm4gcHJvdmlkZXI7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBpZiAoIWZvdW5kUHJvdmlkZXIpIHsKICAgICAgICAgICAgICAgICAgICBmb3VuZFByb3ZpZGVyID0gcHJvdmlkZXI7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgcmV0dXJuIGZvdW5kUHJvdmlkZXIgfHwge307CiAgICB9OwogICAgIGlmIChzZXNzaW9uRGF0YT8ucHJvdmlkZXIpIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyID0gc2Vzc2lvbkRhdGEucHJvdmlkZXJbMF07Cgl9CiAgICBjb25zdCBwcm92aWRlciA9IGdldFByb3ZpZGVyRGF0YShzZXNzaW9uRGF0YSk7CiAgICBjb25zdCBjYXRhbG9nSXRlbXMgPSBwcm92aWRlci5pdGVtcyB8fCBbXTsKICAgIGNvbnN0IGNhdGFsb2dPZmZlcnMgPSBwcm92aWRlci5vZmZlcnMgfHwgW107CiAgICAvKiAtLS0tLS0tLS0tLS0tLS0tIElURU1TIC0tLS0tLS0tLS0tLS0tLS0gKi8KICAgIGZvciAoY29uc3Qgc2VsZWN0ZWRJdGVtIG9mIHNlbGVjdGVkSXRlbXMgPz8gW10pIHsKICAgICAgICBjb25zdCBjYXRhbG9nSXRlbSA9IGNhdGFsb2dJdGVtcy5maW5kKChpKSA9PiBpLmlkID09PSBzZWxlY3RlZEl0ZW0uaWQpOwogICAgICAgIGlmICghY2F0YWxvZ0l0ZW0pIGNvbnRpbnVlOwogICAgICAgIGNvbnN0IHF1YW50aXR5ID0gY2FuY2VsbGVkID8gMCA6IChzZWxlY3RlZEl0ZW0/LnF1YW50aXR5Py5jb3VudCA/PyAxKTsKICAgICAgICBjb25zdCBpdGVtUHJpY2UgPSBwYXJzZUZsb2F0KGNhdGFsb2dJdGVtLnByaWNlPy52YWx1ZSA/PyAiMCIpOwogICAgICAgIGNvbnN0IHRvdGFsSXRlbVByaWNlID0gaXRlbVByaWNlICogcXVhbnRpdHk7CiAgICAgICAgdG90YWxQcmljZSArPSB0b3RhbEl0ZW1QcmljZTsKICAgICAgICBicmVha3VwT2JqZWN0LnB1c2goewogICAgICAgICAgICAiQG9uZGMvb3JnL2l0ZW1faWQiOiBjYXRhbG9nSXRlbS5pZCwKICAgICAgICAgICAgIkBvbmRjL29yZy9pdGVtX3F1YW50aXR5IjogeyBjb3VudDogcXVhbnRpdHkgfSwKICAgICAgICAgICAgdGl0bGU6IGNhdGFsb2dJdGVtLmRlc2NyaXB0b3I/Lm5hbWUsCiAgICAgICAgICAgICJAb25kYy9vcmcvdGl0bGVfdHlwZSI6ICJpdGVtIiwKICAgICAgICAgICAgcHJpY2U6IHsgY3VycmVuY3k6ICJJTlIiLCB2YWx1ZTogdG90YWxJdGVtUHJpY2UudG9GaXhlZCgyKSB9LAogICAgICAgICAgICBpdGVtOiB7CiAgICAgICAgICAgICAgICBwcmljZTogeyBjdXJyZW5jeTogIklOUiIsIHZhbHVlOiBjYXRhbG9nSXRlbS5wcmljZT8udmFsdWUgfHwgIjAuMDAiIH0sCiAgICAgICAgICAgICAgICBxdWFudGl0eTogeyBhdmFpbGFibGU6IHsgY291bnQ6ICI5OSIgfSwgbWF4aW11bTogeyBjb3VudDogIjk5IiB9IH0KICAgICAgICAgICAgfQogICAgICAgIH0pOwogICAgfQogICAgLyogLS0tLS0tLS0tLS0tLS0tLSBPRkZFUlMgLS0tLS0tLS0tLS0tLS0tLSAqLwogICAgY29uc3Qgc2VsZWN0ZWRPZmZlcnMgPSBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfb2ZmZXJzIHx8IFtdOwogICAgc2VsZWN0ZWRPZmZlcnMuZm9yRWFjaCgob2ZmZXJPYmopID0+IHsKICAgICAgICBjb25zdCBvZmZlcklkID0gdHlwZW9mIG9mZmVyT2JqID09PSAic3RyaW5nIiA/IG9mZmVyT2JqIDogb2ZmZXJPYmouaWQgfHwgb2ZmZXJPYmoub2ZmZXJJZDsKICAgICAgICBjb25zdCBjYXRhbG9nT2ZmZXIgPSBjYXRhbG9nT2ZmZXJzLmZpbmQoKG8pID0+IG8uaWQgPT09IG9mZmVySWQpOwogICAgICAgIGlmICghY2F0YWxvZ09mZmVyKSByZXR1cm47CiAgICAgICAgbGV0IGRpc2NvdW50VmFsdWUgPSAwLCBtaW5WYWx1ZSA9IDAsIGFwcGxpY2FibGVJdGVtSWRzID0gY2F0YWxvZ09mZmVyLml0ZW1faWRzIHx8IFtdOwogICAgICAgIGlmIChhcHBsaWNhYmxlSXRlbUlkcy5sZW5ndGggPT09IDApIHsKICAgICAgICAgICAgY2F0YWxvZ0l0ZW1zLmZvckVhY2goaXRlbSA9PiB7CiAgICAgICAgICAgICAgICBpZiAoaXRlbS50YWdzPy5maW5kKHQgPT4gdC5jb2RlID09PSAib2ZmZXJzIik/Lmxpc3Q/LnNvbWUobCA9PiBsLnZhbHVlID09PSBvZmZlcklkKSkgYXBwbGljYWJsZUl0ZW1JZHMucHVzaChpdGVtLmlkKTsKICAgICAgICAgICAgfSk7CiAgICAgICAgfQogICAgICAgIGNhdGFsb2dPZmZlci50YWdzPy5mb3JFYWNoKCh0YWcpID0+IHsKICAgICAgICAgICAgaWYgKCh0YWcuY29kZSA9PT0gInF1YWxpZmllciIpICYmIHRhZy5saXN0KSB7CiAgICAgICAgICAgICAgICB0YWcubGlzdC5mb3JFYWNoKChsKSA9PiB7IGlmIChsLmNvZGUgPT09ICJtaW5fdmFsdWUiKSBtaW5WYWx1ZSA9IHBhcnNlRmxvYXQobC52YWx1ZSB8fCAiMCIpOyB9KTsKICAgICAgICAgICAgfQogICAgICAgIH0pOwogICAgICAgIGNvbnN0IGJlbmVmaXRUYWcgPSBjYXRhbG9nT2ZmZXIudGFncz8uZmluZCgodCkgPT4gdC5jb2RlID09PSAiYmVuZWZpdCIpOwogICAgICAgIGNvbnN0IHZhbFR5cGUgPSBiZW5lZml0VGFnPy5saXN0Py5maW5kKChsKSA9PiBsLmNvZGUgPT09ICJ2YWx1ZV90eXBlIik/LnZhbHVlOwogICAgICAgIGNvbnN0IHZhbEFtb3VudCA9IHBhcnNlRmxvYXQoYmVuZWZpdFRhZz8ubGlzdD8uZmluZCgobCkgPT4gbC5jb2RlID09PSAidmFsdWUiKT8udmFsdWUgfHwgIjAiKTsKICAgICAgICBjb25zdCBxdWFsaWZ5aW5nSXRlbXMgPSBzZWxlY3RlZEl0ZW1zLmZpbHRlcihpdGVtID0+IGFwcGxpY2FibGVJdGVtSWRzLmxlbmd0aCA9PT0gMCB8fCBhcHBsaWNhYmxlSXRlbUlkcy5pbmNsdWRlcyhpdGVtLmlkKSk7CiAgICAgICAgY29uc3QgaXRlbUNvdW50ID0gYmVuZWZpdFRhZz8ubGlzdD8uZmluZCgobCkgPT4gbC5jb2RlID09PSAiaXRlbV9jb3VudCIpPy52YWx1ZTsKICAgICAgICBjb25zdCBxdWFsaWZ5aW5nU3VidG90YWwgPSBxdWFsaWZ5aW5nSXRlbXMucmVkdWNlKChzdW0sIGl0ZW0pID0+IHsKICAgICAgICAgICAgY29uc3QgY2F0YWxvZ0l0ZW0gPSBjYXRhbG9nSXRlbXMuZmluZChjaSA9PiBjaS5pZCA9PT0gaXRlbS5pZCk7CiAgICAgICAgICAgIHJldHVybiBzdW0gKyAocGFyc2VGbG9hdChjYXRhbG9nSXRlbT8ucHJpY2U/LnZhbHVlIHx8ICIwIikgKiAoaXRlbS5xdWFudGl0eT8uY291bnQgfHwgMCkpOwogICAgICAgIH0sIDApOwogICAgICAgIGlmIChxdWFsaWZ5aW5nU3VidG90YWwgPCBtaW5WYWx1ZSkgcmV0dXJuOwogICAgICAgIGlmICh2YWxUeXBlID09PSAiYW1vdW50IikgZGlzY291bnRWYWx1ZSA9IE1hdGguYWJzKHZhbEFtb3VudCkgKiAtMTsKICAgICAgICBlbHNlIGlmICh2YWxUeXBlID09PSAicGVyY2VudCIpIGRpc2NvdW50VmFsdWUgPSBxdWFsaWZ5aW5nU3VidG90YWwgKiAoTWF0aC5hYnModmFsQW1vdW50KSAvIDEwMCkgKiAtMTsKICAgICAgICBpZiAoZGlzY291bnRWYWx1ZSA9PT0gMCAmJiB2YWxUeXBlICE9ICdmcmVlYmllJykgcmV0dXJuOwogICAgICAgIHRvdGFsUHJpY2UgKz0gZGlzY291bnRWYWx1ZTsKICAgICAgICAvLyBUaGlzIGFsaWducyB0aGUgb3V0cHV0IGV4YWN0bHkgd2l0aCB5b3VyIGB0YWdzYCBvYmplY3QgYW5kIG1hdGNoZXMgb2ZmZXIgcHJvcGVydGllcwogICAgICAgIGJyZWFrdXBPYmplY3QucHVzaCh7CiAgICAgICAgICAgICJAb25kYy9vcmcvaXRlbV9pZCI6IG9mZmVySWQsCiAgICAgICAgICAgIHRpdGxlOiBjYXRhbG9nT2ZmZXIuZGVzY3JpcHRvcj8uc2hvcnRfZGVzYyB8fCBgRGlzY291bnQgKCR7b2ZmZXJJZH0pYCwKICAgICAgICAgICAgIkBvbmRjL29yZy90aXRsZV90eXBlIjogIm9mZmVyIiwKICAgICAgICAgICAgLi4uKGl0ZW1Db3VudCA/IHsgIkBvbmRjL29yZy9pdGVtX3F1YW50aXR5IjogeyBjb3VudDogaXRlbUNvdW50IH0gfSA6IHt9KSwKICAgICAgICAgICAgcHJpY2U6IHsgY3VycmVuY3k6ICJJTlIiLCB2YWx1ZTogZGlzY291bnRWYWx1ZS50b0ZpeGVkKDIpIH0sCiAgICAgICAgICAgIGl0ZW06IHsKICAgICAgICAgICAgICAgIHRhZ3M6IFsKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIGNvZGU6ICJxdW90ZSIsCiAgICAgICAgICAgICAgICAgICAgICAgIGxpc3Q6IFt7IGNvZGU6ICJ0eXBlIiwgdmFsdWU6ICJvcmRlciIgfV0KICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgY29kZTogIm9mZmVyIiwKICAgICAgICAgICAgICAgICAgICAgICAgbGlzdDogWwogICAgICAgICAgICAgICAgICAgICAgICAgICAgeyBjb2RlOiAidHlwZSIsIHZhbHVlOiAiZGlzY291bnQiIH0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7IGNvZGU6ICJhZGRpdGl2ZSIsIHZhbHVlOiBjYXRhbG9nT2ZmZXIudGFncz8uZmluZCh0ID0+IHQuY29kZSA9PT0gIm1ldGEiKT8ubGlzdD8uZmluZChsID0+IGwuY29kZSA9PT0gImFkZGl0aXZlIik/LnZhbHVlIHx8ICJ5ZXMiIH0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7IGNvZGU6ICJhdXRvIiwgdmFsdWU6IGNhdGFsb2dPZmZlci50YWdzPy5maW5kKHQgPT4gdC5jb2RlID09PSAibWV0YSIpPy5saXN0Py5maW5kKGwgPT4gbC5jb2RlID09PSAiYXV0byIpPy52YWx1ZSB8fCAibm8iIH0KICAgICAgICAgICAgICAgICAgICAgICAgXQogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIF0KICAgICAgICAgICAgfQogICAgICAgIH0pOwogICAgICAgIGFwcGxpZWRPZmZlcklkcy5wdXNoKG9mZmVySWQpOwogICAgfSk7CiAgICAvKiAtLS0tLS0tLS0tLS0tLS0tIERFTElWRVJZIC0tLS0tLS0tLS0tLS0tLS0gKi8KICAgIGJyZWFrdXBPYmplY3QucHVzaCh7CiAgICAgICAgIkBvbmRjL29yZy9pdGVtX2lkIjogZnVsZmlsbG1lbnRzPy5bMF0/LmlkIHx8ICJGMSIsCiAgICAgICAgdGl0bGU6ICJEZWxpdmVyeSBjaGFyZ2VzIiwKICAgICAgICAiQG9uZGMvb3JnL3RpdGxlX3R5cGUiOiAiZGVsaXZlcnkiLAogICAgICAgIHByaWNlOiB7IGN1cnJlbmN5OiAiSU5SIiwgdmFsdWU6ICIwLjAwIiB9LAogICAgICAgIGl0ZW06IHsgcHJpY2U6IHsgY3VycmVuY3k6ICJJTlIiLCB2YWx1ZTogIjAuMDAiIH0gfQogICAgfSk7CiAgICByZXR1cm4geyBicmVha3VwOiBicmVha3VwT2JqZWN0LCBwcmljZTogeyBjdXJyZW5jeTogIklOUiIsIHZhbHVlOiBNYXRoLm1heCgwLCB0b3RhbFByaWNlKS50b0ZpeGVkKDIpIH0sIHR0bDogIlAxRCIsIGFwcGxpZWRPZmZlcklkcyB9Owp9CgoKZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgICBpZiAoIWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UpIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UgPSB7fTsKICAgIGlmICghZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlcikgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlciA9IHsgZnVsZmlsbG1lbnRzOiBbeyBpZDogIkYxIiB9XSB9OwogICAgaWYgKCFkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50cykgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHMgPSBbeyBpZDogIkYxIiB9XTsKICAgIGNvbnN0IGZ1bGZpbGxtZW50ID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF07CiAgICAvLyAxLiBDb250ZXh0IENpdHkgSW5qZWN0aW9uCiAgICBjb25zdCBwYXlsb2FkQ2l0eSA9IEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LnBheWxvYWRfY2l0eSkgPyBzZXNzaW9uRGF0YS5wYXlsb2FkX2NpdHlbMF0gOiBzZXNzaW9uRGF0YT8ucGF5bG9hZF9jaXR5OwogICAgaWYgKGRlZmF1bHRQYXlsb2FkLmNvbnRleHQgJiYgcGF5bG9hZENpdHkpIHsKICAgICAgICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSBwYXlsb2FkQ2l0eTsKICAgIH0KICAgIC8vIDIuIEN1c3RvbWVyIFByb2ZpbGUgRXh0cmFjdGlvbiBmcm9tIHNhdmVkX2Z1bGZpbGxtZW50cwogICAgaWYgKEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LnNhdmVkX2Z1bGZpbGxtZW50cykpIHsKICAgICAgICBjb25zdCBmbGF0RnVsZmlsbG1lbnRzID0gc2Vzc2lvbkRhdGEuc2F2ZWRfZnVsZmlsbG1lbnRzLmZsYXQoKTsKICAgICAgICBjb25zdCBmdWxmaWxsbWVudFdpdGhDdXN0b21lciA9IGZsYXRGdWxmaWxsbWVudHMuZmluZChmID0+IGYgJiYgZi5jdXN0b21lcik7CiAgICAgICAgaWYgKGZ1bGZpbGxtZW50V2l0aEN1c3RvbWVyICYmIGZ1bGZpbGxtZW50V2l0aEN1c3RvbWVyLmN1c3RvbWVyKSB7CiAgICAgICAgICAgIGZ1bGZpbGxtZW50LmN1c3RvbWVyID0gZnVsZmlsbG1lbnRXaXRoQ3VzdG9tZXIuY3VzdG9tZXI7CiAgICAgICAgfQogICAgfQogICAgLy8gMy4gUXVvdGVzICYgSXRlbXMgRXh0cmFjdGlvbgogICAgY29uc3Qgc2F2ZWRJdGVtcyA9IHNlc3Npb25EYXRhPy5zZWxlY3RlZF9pdGVtcyB8fCBbXTsKICAgIGNvbnN0IHF1b3RlSXRlbXMgPSAoc2F2ZWRJdGVtcyB8fCBbXSkubWFwKChpdGVtKSA9PiAoewogICAgICAgIGlkOiBpdGVtLmlkIHx8IGl0ZW0uaXRlbUlkLAogICAgICAgIGxvY2F0aW9uX2lkOiBpdGVtLmxvY2F0aW9uX2lkIHx8IGl0ZW0ubG9jYXRpb24gfHwgIkwxIiwKICAgICAgICBmdWxmaWxsbWVudF9pZDogaXRlbS5mdWxmaWxsbWVudF9pZCB8fCAiRjEiLAogICAgICAgIHF1YW50aXR5OiBpdGVtLnF1YW50aXR5IHx8IHsgY291bnQ6IDEgfQogICAgfSkpOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtcyA9IHF1b3RlSXRlbXM7CiAgICBjb25zdCBnZW5lcmF0ZWRRdW90ZSA9IGNyZWF0ZVF1b3RlKHF1b3RlSXRlbXMsIHNlc3Npb25EYXRhLCBkZWZhdWx0UGF5bG9hZCwgW3sgaWQ6ICJGMSIgfV0pOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5xdW90ZSA9IHsgYnJlYWt1cDogZ2VuZXJhdGVkUXVvdGUuYnJlYWt1cCwgcHJpY2U6IGdlbmVyYXRlZFF1b3RlLnByaWNlLCB0dGw6IGdlbmVyYXRlZFF1b3RlLnR0bCB9OwogICAgaWYgKGdlbmVyYXRlZFF1b3RlPy5hcHBsaWVkT2ZmZXJJZHM/Lmxlbmd0aCA+IDApIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIub2ZmZXJzID0gZ2VuZXJhdGVkUXVvdGUuYXBwbGllZE9mZmVySWRzLm1hcCgoaWQpID0+ICh7IGlkIH0pKTsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      generate: ZnVuY3Rpb24gY3JlYXRlUXVvdGUoc2VsZWN0ZWRJdGVtcywgc2Vzc2lvbkRhdGEsIGRlZmF1bHRQYXlsb2FkLCBmdWxmaWxsbWVudHMsIGNhbmNlbGxlZCA9IGZhbHNlKSB7CiAgICBsZXQgdG90YWxQcmljZSA9IDAsIGJyZWFrdXBPYmplY3QgPSBbXSwgYXBwbGllZE9mZmVySWRzID0gW107CiAgICAvKiAtLS0tLS0tLS0tLS0tLS0tIERFRVAgRVhUUkFDVElPTiBMT0dJQyAtLS0tLS0tLS0tLS0tLS0tICovCiAgICBjb25zdCBnZXRQcm92aWRlckRhdGEgPSAoc2Vzc2lvbkRhdGEpID0+IHsKICAgICAgICBjb25zdCBzb3VyY2VzID0gWwogICAgICAgICAgICB7IGxhYmVsOiAic2Vzc2lvbkRhdGEubGl2ZV9jYXRhbG9nIiwgZGF0YTogc2Vzc2lvbkRhdGE/LmxpdmVfY2F0YWxvZyB9LAogICAgICAgICAgICB7IGxhYmVsOiAiaW5wdXRzLmxpdmVfY2F0YWxvZyIsIGRhdGE6IHNlc3Npb25EYXRhPy5pbnB1dHM/LmxpdmVfY2F0YWxvZyB9LAogICAgICAgICAgICB7IGxhYmVsOiAic2Vzc2lvbkRhdGEuY2F0YWxvZyIsIGRhdGE6IHNlc3Npb25EYXRhPy5zZXNzaW9uX2NhdGFsb2cgfSwKICAgICAgICAgICAgeyBsYWJlbDogIkZhbGxiYWNrIiwgZGF0YTogdHlwZW9mIFJFVGVCMkJDYXRhbG9nICE9PSAidW5kZWZpbmVkIiA/IFJFVGVCMkJDYXRhbG9nIDogbnVsbCB9CiAgICAgICAgXTsKICAgICAgICBzb3VyY2VzLmZvckVhY2goc291cmNlID0+IHsKICAgICAgICAgICAgY29uc29sZS5sb2coYD09PT09ICR7c291cmNlLmxhYmVsfSA9PT09PWApOwogICAgICAgICAgICBjb25zb2xlLmxvZyhKU09OLnN0cmluZ2lmeShzb3VyY2UuZGF0YSwgbnVsbCwgMikpOwogICAgICAgIH0pOwogICAgICAgIGxldCBmb3VuZFByb3ZpZGVyID0gbnVsbDsKICAgICAgICBmb3IgKGNvbnN0IHMgb2Ygc291cmNlcykgewogICAgICAgICAgICBpZiAoIXMuZGF0YSkgY29udGludWU7CiAgICAgICAgICAgIGNvbnN0IHRhcmdldCA9IEFycmF5LmlzQXJyYXkocy5kYXRhKSA/IChzLmRhdGFbMF0gfHwge30pIDogcy5kYXRhOwogICAgICAgICAgICBsZXQgcHJvdmlkZXIgPSBudWxsOwogICAgICAgICAgICBpZiAodGFyZ2V0Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdPy5bMF0pIHByb3ZpZGVyID0gdGFyZ2V0Lm1lc3NhZ2UuY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdWzBdOwogICAgICAgICAgICBlbHNlIGlmICh0YXJnZXQuY2F0YWxvZz8uWyJicHAvcHJvdmlkZXJzIl0/LlswXSkgcHJvdmlkZXIgPSB0YXJnZXQuY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdWzBdOwogICAgICAgICAgICBlbHNlIGlmIChBcnJheS5pc0FycmF5KHRhcmdldFsiYnBwL3Byb3ZpZGVycyJdKSkgcHJvdmlkZXIgPSB0YXJnZXRbImJwcC9wcm92aWRlcnMiXVswXTsKICAgICAgICAgICAgZWxzZSBpZiAodGFyZ2V0Lml0ZW1zIHx8IHRhcmdldC5vZmZlcnMpIHByb3ZpZGVyID0gdGFyZ2V0OwogICAgICAgICAgICBpZiAocHJvdmlkZXIpIHsKICAgICAgICAgICAgICAgIGNvbnN0IGZsYXRPZmZlciA9IChwcm92aWRlci5vZmZlcnMgfHwgW10pLmZpbmQobyA9PiBvLmlkID09PSAiZmxhdDE1MCIpOwogICAgICAgICAgICAgICAgY29uc3QgdmFsID0gZmxhdE9mZmVyPy50YWdzPy5maW5kKHQgPT4gdC5jb2RlID09PSAiYmVuZWZpdCIpPy5saXN0Py5maW5kKGwgPT4gbC5jb2RlID09PSAidmFsdWUiKT8udmFsdWU7CiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhgW09mZmVyTG9naWNdIE9uU2VsZWN0OiBDaGVja2luZyAke3MubGFiZWx9LiBCZW5lZml0IFZhbHVlOiAke3ZhbH1gKTsKICAgICAgICAgICAgICAgIGlmICh2YWwgPT09ICItMjUwLjAwIiB8fCBzLmxhYmVsLmluY2x1ZGVzKCJsaXZlIikpIHsKICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhgW09mZmVyTG9naWNdIPCfmqggTUFUQ0ggRk9VTkQhIFVzaW5nICR7cy5sYWJlbH1gKTsKICAgICAgICAgICAgICAgICAgICByZXR1cm4gcHJvdmlkZXI7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBpZiAoIWZvdW5kUHJvdmlkZXIpIHsKICAgICAgICAgICAgICAgICAgICBmb3VuZFByb3ZpZGVyID0gcHJvdmlkZXI7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgcmV0dXJuIGZvdW5kUHJvdmlkZXIgfHwge307CiAgICB9OwogICAgIGlmIChzZXNzaW9uRGF0YT8ucHJvdmlkZXIpIHsKCQlkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyID0gc2Vzc2lvbkRhdGEucHJvdmlkZXJbMF07Cgl9CiAgICBjb25zdCBwcm92aWRlciA9IGdldFByb3ZpZGVyRGF0YShzZXNzaW9uRGF0YSk7CiAgICBjb25zdCBjYXRhbG9nSXRlbXMgPSBwcm92aWRlci5pdGVtcyB8fCBbXTsKICAgIGNvbnN0IGNhdGFsb2dPZmZlcnMgPSBwcm92aWRlci5vZmZlcnMgfHwgW107CiAgICAvKiAtLS0tLS0tLS0tLS0tLS0tIElURU1TIC0tLS0tLS0tLS0tLS0tLS0gKi8KICAgIGZvciAoY29uc3Qgc2VsZWN0ZWRJdGVtIG9mIHNlbGVjdGVkSXRlbXMgPz8gW10pIHsKICAgICAgICBjb25zdCBjYXRhbG9nSXRlbSA9IGNhdGFsb2dJdGVtcy5maW5kKChpKSA9PiBpLmlkID09PSBzZWxlY3RlZEl0ZW0uaWQpOwogICAgICAgIGlmICghY2F0YWxvZ0l0ZW0pIGNvbnRpbnVlOwogICAgICAgIGNvbnN0IHF1YW50aXR5ID0gY2FuY2VsbGVkID8gMCA6IChzZWxlY3RlZEl0ZW0/LnF1YW50aXR5Py5jb3VudCA/PyAxKTsKICAgICAgICBjb25zdCBpdGVtUHJpY2UgPSBwYXJzZUZsb2F0KGNhdGFsb2dJdGVtLnByaWNlPy52YWx1ZSA/PyAiMCIpOwogICAgICAgIGNvbnN0IHRvdGFsSXRlbVByaWNlID0gaXRlbVByaWNlICogcXVhbnRpdHk7CiAgICAgICAgdG90YWxQcmljZSArPSB0b3RhbEl0ZW1QcmljZTsKICAgICAgICBicmVha3VwT2JqZWN0LnB1c2goewogICAgICAgICAgICAiQG9uZGMvb3JnL2l0ZW1faWQiOiBjYXRhbG9nSXRlbS5pZCwKICAgICAgICAgICAgIkBvbmRjL29yZy9pdGVtX3F1YW50aXR5IjogeyBjb3VudDogcXVhbnRpdHkgfSwKICAgICAgICAgICAgdGl0bGU6IGNhdGFsb2dJdGVtLmRlc2NyaXB0b3I/Lm5hbWUsCiAgICAgICAgICAgICJAb25kYy9vcmcvdGl0bGVfdHlwZSI6ICJpdGVtIiwKICAgICAgICAgICAgcHJpY2U6IHsgY3VycmVuY3k6ICJJTlIiLCB2YWx1ZTogdG90YWxJdGVtUHJpY2UudG9GaXhlZCgyKSB9LAogICAgICAgICAgICBpdGVtOiB7CiAgICAgICAgICAgICAgICBwcmljZTogeyBjdXJyZW5jeTogIklOUiIsIHZhbHVlOiBjYXRhbG9nSXRlbS5wcmljZT8udmFsdWUgfHwgIjAuMDAiIH0sCiAgICAgICAgICAgICAgICBxdWFudGl0eTogeyBhdmFpbGFibGU6IHsgY291bnQ6ICI5OSIgfSwgbWF4aW11bTogeyBjb3VudDogIjk5IiB9IH0KICAgICAgICAgICAgfQogICAgICAgIH0pOwogICAgfQogICAgLyogLS0tLS0tLS0tLS0tLS0tLSBPRkZFUlMgLS0tLS0tLS0tLS0tLS0tLSAqLwogICAgY29uc3Qgc2VsZWN0ZWRPZmZlcnMgPSBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfb2ZmZXJzIHx8IFtdOwogICAgc2VsZWN0ZWRPZmZlcnMuZm9yRWFjaCgob2ZmZXJPYmopID0+IHsKICAgICAgICBjb25zdCBvZmZlcklkID0gdHlwZW9mIG9mZmVyT2JqID09PSAic3RyaW5nIiA/IG9mZmVyT2JqIDogb2ZmZXJPYmouaWQgfHwgb2ZmZXJPYmoub2ZmZXJJZDsKICAgICAgICBjb25zdCBjYXRhbG9nT2ZmZXIgPSBjYXRhbG9nT2ZmZXJzLmZpbmQoKG8pID0+IG8uaWQgPT09IG9mZmVySWQpOwogICAgICAgIGlmICghY2F0YWxvZ09mZmVyKSByZXR1cm47CiAgICAgICAgbGV0IGRpc2NvdW50VmFsdWUgPSAwLCBtaW5WYWx1ZSA9IDAsIGFwcGxpY2FibGVJdGVtSWRzID0gY2F0YWxvZ09mZmVyLml0ZW1faWRzIHx8IFtdOwogICAgICAgIGlmIChhcHBsaWNhYmxlSXRlbUlkcy5sZW5ndGggPT09IDApIHsKICAgICAgICAgICAgY2F0YWxvZ0l0ZW1zLmZvckVhY2goaXRlbSA9PiB7CiAgICAgICAgICAgICAgICBpZiAoaXRlbS50YWdzPy5maW5kKHQgPT4gdC5jb2RlID09PSAib2ZmZXJzIik/Lmxpc3Q/LnNvbWUobCA9PiBsLnZhbHVlID09PSBvZmZlcklkKSkgYXBwbGljYWJsZUl0ZW1JZHMucHVzaChpdGVtLmlkKTsKICAgICAgICAgICAgfSk7CiAgICAgICAgfQogICAgICAgIGNhdGFsb2dPZmZlci50YWdzPy5mb3JFYWNoKCh0YWcpID0+IHsKICAgICAgICAgICAgaWYgKCh0YWcuY29kZSA9PT0gInF1YWxpZmllciIpICYmIHRhZy5saXN0KSB7CiAgICAgICAgICAgICAgICB0YWcubGlzdC5mb3JFYWNoKChsKSA9PiB7IGlmIChsLmNvZGUgPT09ICJtaW5fdmFsdWUiKSBtaW5WYWx1ZSA9IHBhcnNlRmxvYXQobC52YWx1ZSB8fCAiMCIpOyB9KTsKICAgICAgICAgICAgfQogICAgICAgIH0pOwogICAgICAgIGNvbnN0IGJlbmVmaXRUYWcgPSBjYXRhbG9nT2ZmZXIudGFncz8uZmluZCgodCkgPT4gdC5jb2RlID09PSAiYmVuZWZpdCIpOwogICAgICAgIGNvbnN0IHZhbFR5cGUgPSBiZW5lZml0VGFnPy5saXN0Py5maW5kKChsKSA9PiBsLmNvZGUgPT09ICJ2YWx1ZV90eXBlIik/LnZhbHVlOwogICAgICAgIGNvbnN0IHZhbEFtb3VudCA9IHBhcnNlRmxvYXQoYmVuZWZpdFRhZz8ubGlzdD8uZmluZCgobCkgPT4gbC5jb2RlID09PSAidmFsdWUiKT8udmFsdWUgfHwgIjAiKTsKICAgICAgICBjb25zdCBpdGVtX2NvdW50ID0gYmVuZWZpdFRhZz8ubGlzdD8uZmluZCgobCkgPT4gbC5jb2RlID09PSAiaXRlbV9jb3VudCIpPy52YWx1ZTsKICAgICAgICBjb25zdCBpdGVtX2lkID0gYmVuZWZpdFRhZz8ubGlzdD8uZmluZCgobCkgPT4gbC5jb2RlID09PSAiaXRlbV9pZCIpPy52YWx1ZTsKICAgICAgICBjb25zdCBpdGVtX3ZhbHVlID0gYmVuZWZpdFRhZz8ubGlzdD8uZmluZCgobCkgPT4gbC5jb2RlID09PSAiaXRlbV92YWx1ZSIpPy52YWx1ZTsKICAgICAgICBjb25zdCBxdWFsaWZ5aW5nSXRlbXMgPSBzZWxlY3RlZEl0ZW1zLmZpbHRlcihpdGVtID0+IGFwcGxpY2FibGVJdGVtSWRzLmxlbmd0aCA9PT0gMCB8fCBhcHBsaWNhYmxlSXRlbUlkcy5pbmNsdWRlcyhpdGVtLmlkKSk7CiAgICAgICAgY29uc3QgaXRlbUNvdW50ID0gYmVuZWZpdFRhZz8ubGlzdD8uZmluZCgobCkgPT4gbC5jb2RlID09PSAiaXRlbV9jb3VudCIpPy52YWx1ZTsKICAgICAgICBjb25zdCBxdWFsaWZ5aW5nU3VidG90YWwgPSBxdWFsaWZ5aW5nSXRlbXMucmVkdWNlKChzdW0sIGl0ZW0pID0+IHsKICAgICAgICAgICAgY29uc3QgY2F0YWxvZ0l0ZW0gPSBjYXRhbG9nSXRlbXMuZmluZChjaSA9PiBjaS5pZCA9PT0gaXRlbS5pZCk7CiAgICAgICAgICAgIHJldHVybiBzdW0gKyAocGFyc2VGbG9hdChjYXRhbG9nSXRlbT8ucHJpY2U/LnZhbHVlIHx8ICIwIikgKiAoaXRlbS5xdWFudGl0eT8uY291bnQgfHwgMCkpOwogICAgICAgIH0sIDApOwogICAgICAgIGlmIChxdWFsaWZ5aW5nU3VidG90YWwgPCBtaW5WYWx1ZSkgcmV0dXJuOwogICAgICAgIGlmICh2YWxUeXBlID09PSAiYW1vdW50IikgZGlzY291bnRWYWx1ZSA9IE1hdGguYWJzKHZhbEFtb3VudCkgKiAtMTsKICAgICAgICBlbHNlIGlmICh2YWxUeXBlID09PSAicGVyY2VudCIpIGRpc2NvdW50VmFsdWUgPSBxdWFsaWZ5aW5nU3VidG90YWwgKiAoTWF0aC5hYnModmFsQW1vdW50KSAvIDEwMCkgKiAtMTsKICAgICAgICBpZiAoZGlzY291bnRWYWx1ZSA9PT0gMCAmJiB2YWxUeXBlICkgcmV0dXJuOwogICAgICAgIHRvdGFsUHJpY2UgKz0gZGlzY291bnRWYWx1ZTsKICAgICAgICAvLyBUaGlzIGFsaWducyB0aGUgb3V0cHV0IGV4YWN0bHkgd2l0aCB5b3VyIGB0YWdzYCBvYmplY3QgYW5kIG1hdGNoZXMgb2ZmZXIgcHJvcGVydGllcwogICAgICAgIGJyZWFrdXBPYmplY3QucHVzaCh7CiAgICAgICAgICAgICJAb25kYy9vcmcvaXRlbV9pZCI6IG9mZmVySWQsCiAgICAgICAgICAgIHRpdGxlOiBjYXRhbG9nT2ZmZXIuZGVzY3JpcHRvcj8uc2hvcnRfZGVzYyB8fCBgRGlzY291bnQgKCR7b2ZmZXJJZH0pYCwKICAgICAgICAgICAgIkBvbmRjL29yZy90aXRsZV90eXBlIjogIm9mZmVyIiwKICAgICAgICAgICAgLi4uKGl0ZW1Db3VudCA/IHsgIkBvbmRjL29yZy9pdGVtX3F1YW50aXR5IjogeyBjb3VudDogcGFyc2VGbG9hdChpdGVtQ291bnQgPz8gIjAiKSB9IH0gOiB7fSksCiAgICAgICAgICAgIHByaWNlOiB7IGN1cnJlbmN5OiAiSU5SIiwgdmFsdWU6IGRpc2NvdW50VmFsdWUudG9GaXhlZCgyKSB9LAogICAgICAgICAgICBpdGVtOiB7CiAgICAgICAgICAgICAgICB0YWdzOiBbCiAgICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAgICBjb2RlOiAicXVvdGUiLAogICAgICAgICAgICAgICAgICAgICAgICBsaXN0OiBbeyBjb2RlOiAidHlwZSIsIHZhbHVlOiAib3JkZXIiIH1dCiAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIGNvZGU6ICJvZmZlciIsCiAgICAgICAgICAgICAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHsgY29kZTogInR5cGUiLCB2YWx1ZTogImRpc2NvdW50IiB9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgeyBjb2RlOiAiYWRkaXRpdmUiLCB2YWx1ZTogY2F0YWxvZ09mZmVyLnRhZ3M/LmZpbmQodCA9PiB0LmNvZGUgPT09ICJtZXRhIik/Lmxpc3Q/LmZpbmQobCA9PiBsLmNvZGUgPT09ICJhZGRpdGl2ZSIpPy52YWx1ZSB8fCAieWVzIiB9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgeyBjb2RlOiAiYXV0byIsIHZhbHVlOiBjYXRhbG9nT2ZmZXIudGFncz8uZmluZCh0ID0+IHQuY29kZSA9PT0gIm1ldGEiKT8ubGlzdD8uZmluZChsID0+IGwuY29kZSA9PT0gImF1dG8iKT8udmFsdWUgfHwgIm5vIiB9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgLi4uKGl0ZW1fY291bnQgPyBbeyBjb2RlOiAiaXRlbV9jb3VudCIsIHZhbHVlOiBpdGVtX2NvdW50IH1dIDogW10pLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgLi4uKGl0ZW1faWQgPyBbeyBjb2RlOiAiaXRlbV9pZCIsIHZhbHVlOiBpdGVtX2lkIH1dIDogW10pLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgLi4uKGl0ZW1fdmFsdWUgPyBbeyBjb2RlOiAiaXRlbV92YWx1ZSIsIHZhbHVlOiBpdGVtX3ZhbHVlIH1dIDogW10pLAogICAgICAgICAgICAgICAgICAgICAgICBdCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgXQogICAgICAgICAgICB9CiAgICAgICAgfSk7CiAgICAgICAgYXBwbGllZE9mZmVySWRzLnB1c2gob2ZmZXJJZCk7CiAgICB9KTsKICAgIC8qIC0tLS0tLS0tLS0tLS0tLS0gREVMSVZFUlkgLS0tLS0tLS0tLS0tLS0tLSAqLwogICAgYnJlYWt1cE9iamVjdC5wdXNoKHsKICAgICAgICAiQG9uZGMvb3JnL2l0ZW1faWQiOiBmdWxmaWxsbWVudHM/LlswXT8uaWQgfHwgIkYxIiwKICAgICAgICB0aXRsZTogIkRlbGl2ZXJ5IGNoYXJnZXMiLAogICAgICAgICJAb25kYy9vcmcvdGl0bGVfdHlwZSI6ICJkZWxpdmVyeSIsCiAgICAgICAgcHJpY2U6IHsgY3VycmVuY3k6ICJJTlIiLCB2YWx1ZTogIjAuMDAiIH0sCiAgICAgICAgaXRlbTogeyBwcmljZTogeyBjdXJyZW5jeTogIklOUiIsIHZhbHVlOiAiMC4wMCIgfSB9CiAgICB9KTsKICAgIHJldHVybiB7IGJyZWFrdXA6IGJyZWFrdXBPYmplY3QsIHByaWNlOiB7IGN1cnJlbmN5OiAiSU5SIiwgdmFsdWU6IE1hdGgubWF4KDAsIHRvdGFsUHJpY2UpLnRvRml4ZWQoMikgfSwgdHRsOiAiUDFEIiwgYXBwbGllZE9mZmVySWRzIH07Cn0KCgoKZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgICBpZiAoIWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UpIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UgPSB7fTsKICAgIGlmICghZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlcikgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlciA9IHsgZnVsZmlsbG1lbnRzOiBbeyBpZDogIkYxIiB9XSB9OwogICAgaWYgKCFkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50cykgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHMgPSBbeyBpZDogIkYxIiB9XTsKICAgIGNvbnN0IGZ1bGZpbGxtZW50ID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF07CiAgICAvLyAxLiBDb250ZXh0IENpdHkgSW5qZWN0aW9uCiAgICBjb25zdCBwYXlsb2FkQ2l0eSA9IEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LnBheWxvYWRfY2l0eSkgPyBzZXNzaW9uRGF0YS5wYXlsb2FkX2NpdHlbMF0gOiBzZXNzaW9uRGF0YT8ucGF5bG9hZF9jaXR5OwogICAgaWYgKGRlZmF1bHRQYXlsb2FkLmNvbnRleHQgJiYgcGF5bG9hZENpdHkpIHsKICAgICAgICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSBwYXlsb2FkQ2l0eTsKICAgIH0KICAgIC8vIDIuIEN1c3RvbWVyIFByb2ZpbGUgRXh0cmFjdGlvbiBmcm9tIHNhdmVkX2Z1bGZpbGxtZW50cwogICAgaWYgKEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LnNhdmVkX2Z1bGZpbGxtZW50cykpIHsKICAgICAgICBjb25zdCBmbGF0RnVsZmlsbG1lbnRzID0gc2Vzc2lvbkRhdGEuc2F2ZWRfZnVsZmlsbG1lbnRzLmZsYXQoKTsKICAgICAgICBjb25zdCBmdWxmaWxsbWVudFdpdGhDdXN0b21lciA9IGZsYXRGdWxmaWxsbWVudHMuZmluZChmID0+IGYgJiYgZi5jdXN0b21lcik7CiAgICAgICAgaWYgKGZ1bGZpbGxtZW50V2l0aEN1c3RvbWVyICYmIGZ1bGZpbGxtZW50V2l0aEN1c3RvbWVyLmN1c3RvbWVyKSB7CiAgICAgICAgICAgIGZ1bGZpbGxtZW50LmN1c3RvbWVyID0gZnVsZmlsbG1lbnRXaXRoQ3VzdG9tZXIuY3VzdG9tZXI7CiAgICAgICAgfQogICAgfQogICAgLy8gMy4gUXVvdGVzICYgSXRlbXMgRXh0cmFjdGlvbgogICAgY29uc3Qgc2F2ZWRJdGVtcyA9IHNlc3Npb25EYXRhPy5zZWxlY3RlZF9pdGVtcyB8fCBbXTsKICAgIGNvbnN0IHF1b3RlSXRlbXMgPSAoc2F2ZWRJdGVtcyB8fCBbXSkubWFwKChpdGVtKSA9PiAoewogICAgICAgIGlkOiBpdGVtLmlkIHx8IGl0ZW0uaXRlbUlkLAogICAgICAgIGxvY2F0aW9uX2lkOiBpdGVtLmxvY2F0aW9uX2lkIHx8IGl0ZW0ubG9jYXRpb24gfHwgIkwxIiwKICAgICAgICBmdWxmaWxsbWVudF9pZDogaXRlbS5mdWxmaWxsbWVudF9pZCB8fCAiRjEiLAogICAgICAgIHF1YW50aXR5OiBpdGVtLnF1YW50aXR5IHx8IHsgY291bnQ6IDEgfQogICAgfSkpOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtcyA9IHF1b3RlSXRlbXM7CiAgICBjb25zdCBnZW5lcmF0ZWRRdW90ZSA9IGNyZWF0ZVF1b3RlKHF1b3RlSXRlbXMsIHNlc3Npb25EYXRhLCBkZWZhdWx0UGF5bG9hZCwgW3sgaWQ6ICJGMSIgfV0pOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5xdW90ZSA9IHsgYnJlYWt1cDogZ2VuZXJhdGVkUXVvdGUuYnJlYWt1cCwgcHJpY2U6IGdlbmVyYXRlZFF1b3RlLnByaWNlLCB0dGw6IGdlbmVyYXRlZFF1b3RlLnR0bCB9OwogICAgaWYgKGdlbmVyYXRlZFF1b3RlPy5hcHBsaWVkT2ZmZXJJZHM/Lmxlbmd0aCA+IDApIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIub2ZmZXJzID0gZ2VuZXJhdGVkUXVvdGUuYXBwbGllZE9mZmVySWRzLm1hcCgoaWQpID0+ICh7IGlkIH0pKTsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiBtZWV0c1JlcXVpcmVtZW50cyhzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCAgCiAgZGVzY3JpcHRpb246InBheWxvYWQgaXMgdmFsaWQiLAogIGNvZGU6IDIwMH07Cn0=
       defaultPayload:
@@ -2555,9 +2567,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_select
-            timestamp: 2026-06-16T15:36:35.298Z
+            timestamp: 2026-06-17T09:30:33.052Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: ff99ee45-2d7f-4b40-b205-3f2ba428c865
+            message_id: 6c974e35-dbc8-4fc1-922f-9789ab1857c3
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2586,8 +2598,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -2596,12 +2608,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -2616,7 +2628,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -2643,14 +2655,14 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               items:
                 - id: I1
                   location_id: L1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
               offers:
                 - id: discp10
         type: request
@@ -2747,9 +2759,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: init
-            timestamp: 2026-06-16T15:36:35.346Z
+            timestamp: 2026-06-17T09:30:33.109Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 13c2fd3b-dfc9-4e8b-9f5b-78e49b7351e3
+            message_id: b64cd835-de8c-4666-a255-bde5535ada65
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2768,7 +2780,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 19
+                    count: 17
                   fulfillment_id: F1
               offers:
                 - id: discp10
@@ -2785,8 +2797,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.346Z
-                updated_at: 2026-06-16T15:36:35.346Z
+                created_at: 2026-06-17T09:30:33.109Z
+                updated_at: 2026-06-17T09:30:33.109Z
               payments:
                 - type: ON-FULFILLMENT
                   collected_by: BPP
@@ -2810,8 +2822,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -2820,12 +2832,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -2840,7 +2852,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -2867,7 +2879,7 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
         type: request
         description: "Init "
@@ -3030,9 +3042,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_init
-            timestamp: 2026-06-16T15:36:35.373Z
+            timestamp: 2026-06-17T09:30:33.133Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 13c2fd3b-dfc9-4e8b-9f5b-78e49b7351e3
+            message_id: b64cd835-de8c-4666-a255-bde5535ada65
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3051,7 +3063,7 @@ steps:
                 - id: I1
                   location_id: L1
                   quantity:
-                    count: 19
+                    count: 17
                   fulfillment_id: F1
               billing:
                 name: Sharma Kirana Store
@@ -3066,8 +3078,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.373Z
-                updated_at: 2026-06-16T15:36:35.373Z
+                created_at: 2026-06-17T09:30:33.133Z
+                updated_at: 2026-06-17T09:30:33.133Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -3089,8 +3101,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -3099,12 +3111,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -3119,7 +3131,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -3146,7 +3158,7 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - type: ON-ORDER
@@ -3177,7 +3189,7 @@ steps:
                     - code: credit_limit
                       value: "25000.00"
                     - code: valid_till
-                      value: 2026-09-14T15:36:35.373Z
+                      value: 2026-09-15T09:30:33.133Z
               offers:
                 - id: discp10
         type: request
@@ -3360,9 +3372,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: confirm
-            timestamp: 2026-06-16T15:36:35.390Z
+            timestamp: 2026-06-17T09:30:33.159Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 446ffb81-81ef-4055-9b23-89d3e2fce041
+            message_id: ce4c23c7-e11f-4a89-8685-eb096a49b41a
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3373,7 +3385,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "557525"
+              id: "713280"
               state: Created
               provider:
                 id: P1
@@ -3383,7 +3395,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -3398,8 +3410,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.390Z
-                updated_at: 2026-06-16T15:36:35.390Z
+                created_at: 2026-06-17T09:30:33.159Z
+                updated_at: 2026-06-17T09:30:33.159Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -3423,8 +3435,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -3433,12 +3445,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -3453,7 +3465,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -3480,15 +3492,15 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "7306"
-                    amount: "889.20"
+                    transaction_id: "3343"
+                    amount: "795.60"
                   status: PAID
                   type: ON-ORDER
                   collected_by: BAP
@@ -3522,8 +3534,8 @@ steps:
                       value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: tax_number
                       value: gst_number_of_buyerNP
-              created_at: 2026-06-16T15:36:35.390Z
-              updated_at: 2026-06-16T15:36:35.390Z
+              created_at: 2026-06-17T09:30:33.159Z
+              updated_at: 2026-06-17T09:30:33.159Z
               offers:
                 - id: discp10
         type: request
@@ -3718,9 +3730,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_confirm
-            timestamp: 2026-06-16T15:36:35.407Z
+            timestamp: 2026-06-17T09:30:33.182Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 446ffb81-81ef-4055-9b23-89d3e2fce041
+            message_id: ce4c23c7-e11f-4a89-8685-eb096a49b41a
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3731,7 +3743,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "557525"
+              id: "713280"
               state: Accepted
               provider:
                 id: P1
@@ -3741,7 +3753,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -3756,8 +3768,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.407Z
-                updated_at: 2026-06-16T15:36:35.407Z
+                created_at: 2026-06-17T09:30:33.182Z
+                updated_at: 2026-06-17T09:30:33.182Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": ABC Distributors
@@ -3799,8 +3811,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -3809,12 +3821,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -3829,7 +3841,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -3856,15 +3868,15 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "7306"
-                    amount: "889.20"
+                    transaction_id: "3343"
+                    amount: "795.60"
                   status: PAID
                   type: ON-ORDER
                   collected_by: BAP
@@ -3898,8 +3910,8 @@ steps:
                       value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: tax_number
                       value: gst_number_of_buyerNP
-              created_at: 2026-06-16T15:36:35.407Z
-              updated_at: 2026-06-16T15:36:35.407Z
+              created_at: 2026-06-17T09:30:33.182Z
+              updated_at: 2026-06-17T09:30:33.182Z
               offers:
                 - id: discp10
         type: request
@@ -4091,9 +4103,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-16T15:36:35.426Z
+            timestamp: 2026-06-17T09:30:33.222Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 27dc7883-1a59-4f54-a243-bfab7e8b9e38
+            message_id: 29701db9-c747-4e7b-9c95-f9527ce913b7
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4104,7 +4116,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "557525"
+              id: "713280"
               state: Accepted
               provider:
                 id: P10
@@ -4114,7 +4126,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -4129,8 +4141,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.426Z
-                updated_at: 2026-06-16T15:36:35.426Z
+                created_at: 2026-06-17T09:30:33.222Z
+                updated_at: 2026-06-17T09:30:33.222Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": 24x7 Wellness Forever - ANDHERI FOUR BUNGLOW
@@ -4161,7 +4173,7 @@ steps:
                         locality: my street name
                         name: my house or door or floor
                     time:
-                      timestamp: 2026-06-16T15:36:35.426Z
+                      timestamp: 2026-06-17T09:30:33.222Z
                     contact:
                       phone: "9594663710"
                       email: nobody@nomail.com
@@ -4182,7 +4194,7 @@ steps:
                         locality: my street name
                         name: my house or door or floor
                     time:
-                      timestamp: 2026-06-16T15:36:35.426Z
+                      timestamp: 2026-06-17T09:30:33.222Z
                   tags:
                     - code: routing
                       list:
@@ -4200,8 +4212,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -4210,12 +4222,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -4230,7 +4242,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -4257,15 +4269,15 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "7306"
-                    amount: "889.20"
+                    transaction_id: "3343"
+                    amount: "795.60"
                   status: PAID
                   type: ON-ORDER
                   collected_by: BAP
@@ -4286,9 +4298,9 @@ steps:
                       branch_name: Jayanagar Branch
                       settlement_reference: SETT-2025-001
                       settlement_status: PAID
-                      settlement_timestamp: 2026-06-16T15:36:35.426Z
-              created_at: 2026-06-16T15:36:35.426Z
-              updated_at: 2026-06-16T15:36:35.426Z
+                      settlement_timestamp: 2026-06-17T09:30:33.220Z
+              created_at: 2026-06-17T09:30:33.222Z
+              updated_at: 2026-06-17T09:30:33.222Z
               offers:
                 - id: discp10
         type: request
@@ -4477,9 +4489,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-16T15:36:35.441Z
+            timestamp: 2026-06-17T09:30:33.253Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 1e954249-fc27-4d6f-80c3-a3d61d664a0b
+            message_id: 36d09961-6977-4a3c-b271-31b661e2113d
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4490,7 +4502,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "557525"
+              id: "713280"
               state: In-progress
               provider:
                 id: P10
@@ -4500,7 +4512,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -4515,8 +4527,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.441Z
-                updated_at: 2026-06-16T15:36:35.441Z
+                created_at: 2026-06-17T09:30:33.253Z
+                updated_at: 2026-06-17T09:30:33.253Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": 24x7 Wellness Forever - ANDHERI FOUR BUNGLOW
@@ -4548,8 +4560,8 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:46:35.441Z
-                        end: 2026-06-16T15:56:35.441Z
+                        start: 2026-06-17T09:40:33.253Z
+                        end: 2026-06-17T09:50:33.253Z
                     contact:
                       phone: "9594663710"
                       email: nobody@nomail.com
@@ -4571,8 +4583,8 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:56:35.441Z
-                        end: 2026-06-16T16:46:35.441Z
+                        start: 2026-06-17T09:50:33.253Z
+                        end: 2026-06-17T10:40:33.253Z
                   tags:
                     - code: routing
                       list:
@@ -4590,8 +4602,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -4600,12 +4612,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -4620,7 +4632,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -4647,15 +4659,15 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "7306"
-                    amount: "889.20"
+                    transaction_id: "3343"
+                    amount: "795.60"
                   status: PAID
                   type: ON-ORDER
                   collected_by: BAP
@@ -4676,9 +4688,9 @@ steps:
                       branch_name: Jayanagar Branch
                       settlement_reference: SETT-2025-001
                       settlement_status: PAID
-                      settlement_timestamp: 2026-06-16T15:36:35.426Z
-              created_at: 2026-06-16T15:36:35.441Z
-              updated_at: 2026-06-16T15:36:35.441Z
+                      settlement_timestamp: 2026-06-17T09:30:33.220Z
+              created_at: 2026-06-17T09:30:33.253Z
+              updated_at: 2026-06-17T09:30:33.253Z
               offers:
                 - id: discp10
         type: request
@@ -4869,9 +4881,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-16T15:36:35.459Z
+            timestamp: 2026-06-17T09:30:33.291Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: d15dd915-665a-4262-b463-f7f19bd660fe
+            message_id: da17c994-b7c6-4b6e-bfb8-e651f809d8e1
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4882,7 +4894,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "557525"
+              id: "713280"
               state: In-progress
               provider:
                 id: P10
@@ -4892,7 +4904,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -4907,8 +4919,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.459Z
-                updated_at: 2026-06-16T15:36:35.459Z
+                created_at: 2026-06-17T09:30:33.291Z
+                updated_at: 2026-06-17T09:30:33.291Z
               offers:
                 - id: discp10
               fulfillments:
@@ -4942,8 +4954,8 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:46:35.441Z
-                        end: 2026-06-16T15:56:35.441Z
+                        start: 2026-06-17T09:40:33.253Z
+                        end: 2026-06-17T09:50:33.253Z
                     contact:
                       phone: "9594663710"
                       email: nobody@nomail.com
@@ -4965,8 +4977,8 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:56:35.441Z
-                        end: 2026-06-16T16:46:35.441Z
+                        start: 2026-06-17T09:50:33.253Z
+                        end: 2026-06-17T10:40:33.253Z
                   tags:
                     - code: routing
                       list:
@@ -4984,8 +4996,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -4994,12 +5006,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -5014,7 +5026,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -5041,15 +5053,15 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "7306"
-                    amount: "889.20"
+                    transaction_id: "3343"
+                    amount: "795.60"
                   status: PAID
                   type: ON-ORDER
                   collected_by: BAP
@@ -5070,9 +5082,9 @@ steps:
                       branch_name: Jayanagar Branch
                       settlement_reference: SETT-2025-001
                       settlement_status: PAID
-                      settlement_timestamp: 2026-06-16T15:36:35.426Z
-              created_at: 2026-06-16T15:36:35.459Z
-              updated_at: 2026-06-16T15:36:35.459Z
+                      settlement_timestamp: 2026-06-17T09:30:33.220Z
+              created_at: 2026-06-17T09:30:33.291Z
+              updated_at: 2026-06-17T09:30:33.291Z
         type: request
         description: On-status call which is sent when an agent is assigned
   - api: on_status
@@ -5260,9 +5272,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-16T15:36:35.476Z
+            timestamp: 2026-06-17T09:30:33.314Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: adbf9722-d4df-481c-86d3-5055148f183b
+            message_id: a294dae2-263c-4d89-a45c-a13ceb88961a
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5273,7 +5285,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "557525"
+              id: "713280"
               state: In-progress
               provider:
                 id: P10
@@ -5283,7 +5295,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -5298,8 +5310,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.476Z
-                updated_at: 2026-06-16T15:36:35.476Z
+                created_at: 2026-06-17T09:30:33.314Z
+                updated_at: 2026-06-17T09:30:33.314Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": 24x7 Wellness Forever - ANDHERI FOUR BUNGLOW
@@ -5331,9 +5343,9 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:46:35.441Z
-                        end: 2026-06-16T15:56:35.441Z
-                      timestamp: 2026-06-16T15:36:35.476Z
+                        start: 2026-06-17T09:40:33.253Z
+                        end: 2026-06-17T09:50:33.253Z
+                      timestamp: 2026-06-17T09:30:33.314Z
                     contact:
                       phone: "9594663710"
                       email: nobody@nomail.com
@@ -5355,8 +5367,8 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:56:35.441Z
-                        end: 2026-06-16T16:46:35.441Z
+                        start: 2026-06-17T09:50:33.253Z
+                        end: 2026-06-17T10:40:33.253Z
                   tags:
                     - code: routing
                       list:
@@ -5374,8 +5386,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -5384,12 +5396,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -5404,7 +5416,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -5431,15 +5443,15 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "7306"
-                    amount: "889.20"
+                    transaction_id: "3343"
+                    amount: "795.60"
                   status: PAID
                   type: ON-ORDER
                   collected_by: BAP
@@ -5460,12 +5472,12 @@ steps:
                       branch_name: Jayanagar Branch
                       settlement_reference: SETT-2025-001
                       settlement_status: PAID
-                      settlement_timestamp: 2026-06-16T15:36:35.426Z
+                      settlement_timestamp: 2026-06-17T09:30:33.220Z
               documents:
                 - url: https://invoice_url
                   label: Invoice
-              created_at: 2026-06-16T15:36:35.476Z
-              updated_at: 2026-06-16T15:36:35.476Z
+              created_at: 2026-06-17T09:30:33.314Z
+              updated_at: 2026-06-17T09:30:33.314Z
               offers:
                 - id: discp10
         type: request
@@ -5513,9 +5525,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: track
-            timestamp: 2026-06-16T15:36:35.497Z
+            timestamp: 2026-06-17T09:30:33.356Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: d60dd66f-6f95-4748-9301-0a49c51f70c8
+            message_id: 9e8bb328-a6df-4dc7-b8c9-54fe93ff72c4
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5525,7 +5537,7 @@ steps:
             city: std:060
             core_version: 1.2.5
           message:
-            order_id: "557525"
+            order_id: "713280"
         type: request
         description: Track sent to track the order
   - api: on_track
@@ -5607,9 +5619,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_track
-            timestamp: 2026-06-16T15:36:35.515Z
+            timestamp: 2026-06-17T09:30:33.393Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: d60dd66f-6f95-4748-9301-0a49c51f70c8
+            message_id: 9e8bb328-a6df-4dc7-b8c9-54fe93ff72c4
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5624,15 +5636,15 @@ steps:
               location:
                 gps: 12.9740,77.6134
                 time:
-                  timestamp: 2026-06-16T15:36:35.515Z
-                updated_at: 2026-06-16T15:36:35.515Z
+                  timestamp: 2026-06-17T09:30:33.393Z
+                updated_at: 2026-06-17T09:30:33.393Z
               url: https://snp.com/ondc/tracking/F1
               status: active
               tags:
                 - code: order
                   list:
                     - code: id
-                      value: "557525"
+                      value: "713280"
                 - code: config
                   list:
                     - code: attr
@@ -5847,9 +5859,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-16T15:36:35.533Z
+            timestamp: 2026-06-17T09:30:33.413Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 58b69081-c0f6-4ce6-b044-9ad7c784d0b0
+            message_id: 3a69cce2-6140-441a-8d94-a0bfe040a7b3
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5860,7 +5872,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "557525"
+              id: "713280"
               state: In-progress
               provider:
                 id: P10
@@ -5870,7 +5882,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -5885,8 +5897,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.533Z
-                updated_at: 2026-06-16T15:36:35.533Z
+                created_at: 2026-06-17T09:30:33.413Z
+                updated_at: 2026-06-17T09:30:33.413Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": 24x7 Wellness Forever - ANDHERI FOUR BUNGLOW
@@ -5918,8 +5930,8 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:46:35.441Z
-                        end: 2026-06-16T15:56:35.441Z
+                        start: 2026-06-17T09:40:33.253Z
+                        end: 2026-06-17T09:50:33.253Z
                     contact:
                       phone: "9594663710"
                       email: nobody@nomail.com
@@ -5941,8 +5953,8 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:56:35.441Z
-                        end: 2026-06-16T16:46:35.441Z
+                        start: 2026-06-17T09:50:33.253Z
+                        end: 2026-06-17T10:40:33.253Z
                   tags:
                     - code: routing
                       list:
@@ -5960,8 +5972,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -5970,12 +5982,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -5990,7 +6002,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -6017,15 +6029,15 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "7306"
-                    amount: "889.20"
+                    transaction_id: "3343"
+                    amount: "795.60"
                   status: PAID
                   type: ON-ORDER
                   collected_by: BAP
@@ -6046,12 +6058,12 @@ steps:
                       branch_name: Jayanagar Branch
                       settlement_reference: SETT-2025-001
                       settlement_status: PAID
-                      settlement_timestamp: 2026-06-16T15:36:35.426Z
+                      settlement_timestamp: 2026-06-17T09:30:33.220Z
               documents:
                 - url: https://invoice_url
                   label: Invoice
-              created_at: 2026-06-16T15:36:35.533Z
-              updated_at: 2026-06-16T15:36:35.533Z
+              created_at: 2026-06-17T09:30:33.413Z
+              updated_at: 2026-06-17T09:30:33.413Z
               offers:
                 - id: discp10
         type: request
@@ -6245,9 +6257,9 @@ steps:
           context:
             domain: ONDC:RETeB2B
             action: on_status
-            timestamp: 2026-06-16T15:36:35.557Z
+            timestamp: 2026-06-17T09:30:33.450Z
             transaction_id: 3cd7243a-eef8-42e1-8d12-9c76eab6fcea
-            message_id: 4fd683b6-bd25-4ff7-b38d-7c71c34ae201
+            message_id: 9698b22a-b95e-4b7f-b2bc-24ff863d0897
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -6258,7 +6270,7 @@ steps:
             core_version: 1.2.5
           message:
             order:
-              id: "557525"
+              id: "713280"
               state: Completed
               provider:
                 id: P10
@@ -6268,7 +6280,7 @@ steps:
                 - id: I1
                   fulfillment_id: F1
                   quantity:
-                    count: 19
+                    count: 17
                   location_id: L1
               billing:
                 name: Sharma Kirana Store
@@ -6283,8 +6295,8 @@ steps:
                 tax_number: 29AABCU9603R1ZM
                 email: sharma.kirana@email.com
                 phone: "9876543210"
-                created_at: 2026-06-16T15:36:35.557Z
-                updated_at: 2026-06-16T15:36:35.557Z
+                created_at: 2026-06-17T09:30:33.450Z
+                updated_at: 2026-06-17T09:30:33.450Z
               fulfillments:
                 - id: F1
                   "@ondc/org/provider_name": 24x7 Wellness Forever - ANDHERI FOUR BUNGLOW
@@ -6316,8 +6328,8 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:46:35.441Z
-                        end: 2026-06-16T15:56:35.441Z
+                        start: 2026-06-17T09:40:33.253Z
+                        end: 2026-06-17T09:50:33.253Z
                     contact:
                       phone: "9594663710"
                       email: nobody@nomail.com
@@ -6339,9 +6351,9 @@ steps:
                         name: my house or door or floor
                     time:
                       range:
-                        start: 2026-06-16T15:56:35.441Z
-                        end: 2026-06-16T16:46:35.441Z
-                      timestamp: 2026-06-16T15:36:35.557Z
+                        start: 2026-06-17T09:50:33.253Z
+                        end: 2026-06-17T10:40:33.253Z
+                      timestamp: 2026-06-17T09:30:33.450Z
                   tags:
                     - code: routing
                       list:
@@ -6359,8 +6371,8 @@ steps:
                     id: CUST-2024-0015421
                     organization:
                       descriptor:
-                        name: kriana store
-                      address: chandni chowk
+                        name: kajriwal store
+                      address: 123, MG Road, Koramangala
                       city:
                         code: std:060
                       state:
@@ -6369,12 +6381,12 @@ steps:
                 breakup:
                   - "@ondc/org/item_id": I1
                     "@ondc/org/item_quantity":
-                      count: 19
+                      count: 17
                     title: Ashirwad Plain Atta 1kg
                     "@ondc/org/title_type": item
                     price:
                       currency: INR
-                      value: "988.00"
+                      value: "884.00"
                     item:
                       price:
                         currency: INR
@@ -6389,7 +6401,7 @@ steps:
                     "@ondc/org/title_type": offer
                     price:
                       currency: INR
-                      value: "-98.80"
+                      value: "-88.40"
                     item:
                       tags:
                         - code: quote
@@ -6416,15 +6428,15 @@ steps:
                         value: "0.00"
                 price:
                   currency: INR
-                  value: "889.20"
+                  value: "795.60"
                 ttl: P1D
               payments:
                 - uri: https://ondc.transaction.com/payment
                   tl_method: http/get
                   params:
                     currency: INR
-                    transaction_id: "7306"
-                    amount: "889.20"
+                    transaction_id: "3343"
+                    amount: "795.60"
                   status: PAID
                   type: ON-ORDER
                   collected_by: BAP
@@ -6445,12 +6457,12 @@ steps:
                       branch_name: Jayanagar Branch
                       settlement_reference: SETT-2025-001
                       settlement_status: PAID
-                      settlement_timestamp: 2026-06-16T15:36:35.426Z
+                      settlement_timestamp: 2026-06-17T09:30:33.220Z
               documents:
                 - url: https://invoice_url
                   label: Invoice
-              created_at: 2026-06-16T15:36:35.557Z
-              updated_at: 2026-06-16T15:36:35.557Z
+              created_at: 2026-06-17T09:30:33.450Z
+              updated_at: 2026-06-17T09:30:33.450Z
               offers:
                 - id: discp10
         type: request
