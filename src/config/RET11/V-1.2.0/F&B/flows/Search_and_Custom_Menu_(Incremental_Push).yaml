@@ -59,9 +59,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: search
-            timestamp: 2026-06-23T11:56:10.520Z
+            timestamp: 2026-06-23T13:12:26.336Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 82ad191e-851a-462d-a35f-d6ec088a87de
+            message_id: ad6d7ccf-39e1-4fa1-b8bf-65e7f1b4c67f
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -159,9 +159,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: on_search
-            timestamp: 2026-06-23T11:56:10.537Z
+            timestamp: 2026-06-23T13:12:26.346Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 82ad191e-851a-462d-a35f-d6ec088a87de
+            message_id: ad6d7ccf-39e1-4fa1-b8bf-65e7f1b4c67f
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -178,10 +178,10 @@ steps:
                     - id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       time:
                         label: close
-                        timestamp: 2026-06-23T11:56:10.537Z
+                        timestamp: 2026-06-23T13:12:26.346Z
                         range:
-                          start: 2026-06-23T11:56:10.537Z
-                          end: 2026-06-23T12:41:10.537Z
+                          start: 2026-06-23T13:12:26.346Z
+                          end: 2026-06-23T13:57:26.346Z
                 - id: EFP01
                   locations:
                     - id: LOC01
@@ -278,9 +278,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: on_search
-            timestamp: 2026-06-23T11:56:10.562Z
+            timestamp: 2026-06-23T13:12:26.371Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 0cd6a6b2-1790-485a-8e46-e65e1df35aaa
+            message_id: 8f243c5b-3f84-4458-add6-aaad8c406cd0
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -297,7 +297,7 @@ steps:
                     - id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       time:
                         label: open
-                        timestamp: 2026-06-23T11:56:10.562Z
+                        timestamp: 2026-06-23T13:12:26.371Z
                 - id: EFP01
                   locations:
                     - id: LOC01
@@ -707,7 +707,7 @@ steps:
                               value: "229.00"
                     category_id: F&B
                     category_ids:
-                      - 5:2
+                      - "302"
                     location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                     fulfillment_id: "1"
                     "@ondc/org/returnable": true
@@ -1137,7 +1137,7 @@ steps:
                               value: "269.00"
                     category_id: F&B
                     category_ids:
-                      - 5:1
+                      - "301"
                     location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                     fulfillment_id: "1"
                     "@ondc/org/returnable": true
@@ -2296,8 +2296,8 @@ steps:
                       days: 1,2,3,4,5,6,7
                       schedule:
                         holidays:
-                          - 2025-12-22
-                          - 2025-12-01
+                          - 2025-12-22T00:00:00.000Z
+                          - 2025-12-01T00:00:00.000Z
                       range:
                         start: "1000"
                         end: "2100"
@@ -2836,8 +2836,8 @@ steps:
                       days: 1,2,3,4,5,6,7
                       schedule:
                         holidays:
-                          - 2025-03-02
-                          - 2025-03-16
+                          - 2025-03-02T00:00:00.000Z
+                          - 2025-03-16T00:00:00.000Z
                       range:
                         start: "1000"
                         end: "2100"
@@ -3278,9 +3278,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: on_search
-            timestamp: 2026-06-23T11:56:10.585Z
+            timestamp: 2026-06-23T13:12:26.398Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 5e0c5838-d84a-4f52-acb3-2b70bd4fbf6e
+            message_id: 71596463-cd8f-41cd-b71e-a7a791188628
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3653,7 +3653,7 @@ steps:
                                 value: "229.00"
                       category_id: F&B
                       category_ids:
-                        - 5:2
+                        - "302"
                       location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       fulfillment_id: "1"
                       "@ondc/org/returnable": true
@@ -4083,7 +4083,7 @@ steps:
                                 value: "269.00"
                       category_id: F&B
                       category_ids:
-                        - 5:1
+                        - "301"
                       location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       fulfillment_id: "1"
                       "@ondc/org/returnable": true
@@ -5243,8 +5243,8 @@ steps:
                         days: 1,2,3,4,5,6,7
                         schedule:
                           holidays:
-                            - 2025-12-22
-                            - 2025-12-01
+                            - 2025-12-22T00:00:00.000Z
+                            - 2025-12-01T00:00:00.000Z
                         range:
                           start: "1000"
                           end: "2100"
@@ -5783,8 +5783,8 @@ steps:
                         days: 1,2,3,4,5,6,7
                         schedule:
                           holidays:
-                            - 2025-03-02
-                            - 2025-03-16
+                            - 2025-03-02T00:00:00.000Z
+                            - 2025-03-16T00:00:00.000Z
                         range:
                           start: "1000"
                           end: "2100"
@@ -6260,9 +6260,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: search
-            timestamp: 2026-06-23T11:56:10.611Z
+            timestamp: 2026-06-23T13:12:26.431Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 1ed0ea9c-632a-48de-881b-fd0c876ff9bc
+            message_id: 12390144-d610-4bff-8f3c-7570c9cfe157
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
