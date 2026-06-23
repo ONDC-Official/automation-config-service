@@ -37,7 +37,7 @@ apiProperties:
     transaction_partner: ["init"]
   confirm:
     async_predecessor: null
-    transaction_partner: ["on_init"]
+    transaction_partner: []
   on_confirm:
     async_predecessor: "confirm"
     transaction_partner: ["confirm"]
