@@ -59,9 +59,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: search
-            timestamp: 2026-06-23T13:12:26.336Z
+            timestamp: 2026-06-23T14:01:33.765Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: ad6d7ccf-39e1-4fa1-b8bf-65e7f1b4c67f
+            message_id: 3476edda-fba0-4f25-9e67-af87bda25ff9
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -159,9 +159,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: on_search
-            timestamp: 2026-06-23T13:12:26.346Z
+            timestamp: 2026-06-23T14:01:33.772Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: ad6d7ccf-39e1-4fa1-b8bf-65e7f1b4c67f
+            message_id: 3476edda-fba0-4f25-9e67-af87bda25ff9
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -178,10 +178,10 @@ steps:
                     - id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       time:
                         label: close
-                        timestamp: 2026-06-23T13:12:26.346Z
+                        timestamp: 2026-06-23T14:01:33.772Z
                         range:
-                          start: 2026-06-23T13:12:26.346Z
-                          end: 2026-06-23T13:57:26.346Z
+                          start: 2026-06-23T14:01:33.772Z
+                          end: 2026-06-23T14:46:33.772Z
                 - id: EFP01
                   locations:
                     - id: LOC01
@@ -278,9 +278,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: on_search
-            timestamp: 2026-06-23T13:12:26.371Z
+            timestamp: 2026-06-23T14:01:33.778Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 8f243c5b-3f84-4458-add6-aaad8c406cd0
+            message_id: 6b287b56-b3d2-4173-adbd-892c42844099
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -297,7 +297,7 @@ steps:
                     - id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       time:
                         label: open
-                        timestamp: 2026-06-23T13:12:26.371Z
+                        timestamp: 2026-06-23T14:01:33.778Z
                 - id: EFP01
                   locations:
                     - id: LOC01
@@ -707,7 +707,7 @@ steps:
                               value: "229.00"
                     category_id: F&B
                     category_ids:
-                      - "302"
+                      - 5:2
                     location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                     fulfillment_id: "1"
                     "@ondc/org/returnable": true
@@ -1137,7 +1137,7 @@ steps:
                               value: "269.00"
                     category_id: F&B
                     category_ids:
-                      - "301"
+                      - 5:1
                     location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                     fulfillment_id: "1"
                     "@ondc/org/returnable": true
@@ -1827,7 +1827,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1885,7 +1884,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1940,7 +1938,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1993,7 +1990,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -2046,7 +2042,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -2089,7 +2084,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -2132,7 +2126,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -2295,9 +2288,7 @@ steps:
                       timestamp: 2024-10-11T00:00:00.000Z
                       days: 1,2,3,4,5,6,7
                       schedule:
-                        holidays:
-                          - 2025-12-22T00:00:00.000Z
-                          - 2025-12-01T00:00:00.000Z
+                        holidays: []
                       range:
                         start: "1000"
                         end: "2100"
@@ -2835,9 +2826,7 @@ steps:
                       timestamp: 2024-10-11T00:00:00.000Z
                       days: 1,2,3,4,5,6,7
                       schedule:
-                        holidays:
-                          - 2025-03-02T00:00:00.000Z
-                          - 2025-03-16T00:00:00.000Z
+                        holidays: []
                       range:
                         start: "1000"
                         end: "2100"
@@ -3278,9 +3267,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: on_search
-            timestamp: 2026-06-23T13:12:26.398Z
+            timestamp: 2026-06-23T14:01:33.783Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 71596463-cd8f-41cd-b71e-a7a791188628
+            message_id: 3f491d85-9762-4723-b07a-a377d68c83d1
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3653,7 +3642,7 @@ steps:
                                 value: "229.00"
                       category_id: F&B
                       category_ids:
-                        - "302"
+                        - 5:2
                       location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       fulfillment_id: "1"
                       "@ondc/org/returnable": true
@@ -4083,7 +4072,7 @@ steps:
                                 value: "269.00"
                       category_id: F&B
                       category_ids:
-                        - "301"
+                        - 5:1
                       location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       fulfillment_id: "1"
                       "@ondc/org/returnable": true
@@ -4774,7 +4763,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4832,7 +4820,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4887,7 +4874,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4940,7 +4926,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4993,7 +4978,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -5036,7 +5020,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -5079,7 +5062,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -5242,9 +5224,7 @@ steps:
                         timestamp: 2024-10-11T00:00:00.000Z
                         days: 1,2,3,4,5,6,7
                         schedule:
-                          holidays:
-                            - 2025-12-22T00:00:00.000Z
-                            - 2025-12-01T00:00:00.000Z
+                          holidays: []
                         range:
                           start: "1000"
                           end: "2100"
@@ -5782,9 +5762,7 @@ steps:
                         timestamp: 2024-10-11T00:00:00.000Z
                         days: 1,2,3,4,5,6,7
                         schedule:
-                          holidays:
-                            - 2025-03-02T00:00:00.000Z
-                            - 2025-03-16T00:00:00.000Z
+                          holidays: []
                         range:
                           start: "1000"
                           end: "2100"
@@ -6260,9 +6238,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: search
-            timestamp: 2026-06-23T13:12:26.431Z
+            timestamp: 2026-06-23T14:01:33.793Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 12390144-d610-4bff-8f3c-7570c9cfe157
+            message_id: 303624d0-ddd0-4e18-a2b4-5f5fc4cedda4
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
