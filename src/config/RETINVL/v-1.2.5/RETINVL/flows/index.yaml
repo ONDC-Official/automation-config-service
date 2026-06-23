@@ -1,25 +1,43 @@
 flows:
-  - type: playground
-    id: RETINVL_DISCOVERY_FLOW
-    tags: ["WORKBENCH","PRAMAAN", "MANDATORY", "REPORTABLE"]
-    description: Discovery Flow for Inventory Less (Buy now journey and find best price)
-    config:
-      $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/RETINVL_DISCOVERY_FLOW.yaml"
-  - type: playground
-    id: ORDER_FLOW_BASELINE
-    tags: ["WORKBENCH","PRAMAAN", "MANDATORY", "REPORTABLE"]
-    description: Order Flow Baseline for Inventory Less (Buy now journey and find best price)
-    config:
-      $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/ORDER_FLOW_BASELINE.yaml"
-  - type: playground
-    id: ORDER_FLOW_BASELINE_ILBP
-    tags: ["WORKBENCH","PRAMAAN", "MANDATORY", "REPORTABLE"]
-    description: Order Flow Baseline for Inventory Less (find best price)
-    config:
-      $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/ORDER_FLOW_BASELINE_ILBP.yaml"
-  - type: playground
-    id: BUYER_SIDE_ORDER_CANCELLATION
-    tags: ["WORKBENCH","PRAMAAN", "MANDATORY", "REPORTABLE"]
-    description: Buyer Side Order Cancellation Flow
-    config:
-      $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/BUYER_SIDE_ORDER_CANCELLATION.yaml"
+- type: playground
+  id: RETINVL_DISCOVERY_FLOW
+  tags: [ "WORKBENCH", "PRAMAAN", "MANDATORY", "REPORTABLE" ]
+  description: Discovery Flow for Inventory Less (Buy now journey and find best price)
+  config:
+    $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/RETINVL_DISCOVERY_FLOW.yaml"
+- type: playground
+  id: ORDER_FLOW_BASELINE
+  tags: [ "WORKBENCH", "PRAMAAN", "MANDATORY", "REPORTABLE" ]
+  description: Order Flow Baseline for Inventory Less (Buy now journey and find best price)
+  config:
+    $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/ORDER_FLOW_BASELINE.yaml"
+- type: playground
+  id: ORDER_FLOW_BASELINE_ILBP
+  tags: [ "WORKBENCH", "PRAMAAN", "MANDATORY", "REPORTABLE" ]
+  description: Order Flow Baseline for Inventory Less (find best price)
+  config:
+    $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/ORDER_FLOW_BASELINE_ILBP.yaml"
+- type: playground
+  id: BUYER_SIDE_ORDER_CANCELLATION
+  tags: [ "WORKBENCH", "PRAMAAN", "MANDATORY", "REPORTABLE" ]
+  description: Buyer Side Order Cancellation Flow
+  config:
+    $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/BUYER_SIDE_ORDER_CANCELLATION.yaml"
+- type: playground
+  id: IMEI_NUMBER_VERIFICATION_FLOW
+  tags: [ "WORKBENCH", "PRAMAAN", "MANDATORY", "REPORTABLE" ]
+  description: IMEI verification flow for accepted device orders
+  config:
+    $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/IMEI_NUMBER_VERIFICATION_FLOW.yaml"
+- type: playground
+  id: OTP_FLOW_DELIVERY_AUTH
+  tags: [ "WORKBENCH", "PRAMAAN", "MANDATORY", "REPORTABLE" ]
+  description: Delivery authentication flow using DCC or dynamic OTP
+  config:
+    $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/OTP_FLOW_DELIVERY_AUTH.yaml"
+- type: playground
+  id: COMMERCIAL_MODEL_FOR_BNP_SNP_FLOW
+  tags: [ "WORKBENCH", "PRAMAAN", "MANDATORY", "REPORTABLE" ]
+  description: Commercial model flow with SNP channel margin selection
+  config:
+    $ref: "src/config/RETINVL/v-1.2.5/RETINVL/flows/COMMERCIAL_MODEL_FOR_BNP_SNP_FLOW.yaml"
