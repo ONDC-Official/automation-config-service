@@ -6,6 +6,7 @@ on:
     branches:
       - release-*
       - draft-*
+      - main
 
 permissions:
   contents: write
