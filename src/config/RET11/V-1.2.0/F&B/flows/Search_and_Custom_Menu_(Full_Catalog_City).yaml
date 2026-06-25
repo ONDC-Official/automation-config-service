@@ -76,9 +76,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: search
-            timestamp: 2026-06-23T11:41:12.175Z
+            timestamp: 2026-06-23T14:03:52.689Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 1481a683-f641-40b2-900e-94c3d8beb53b
+            message_id: e04d4a64-3ba1-4188-8824-29629f4f6aeb
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -98,7 +98,7 @@ steps:
                     - code: static_terms_new
                       value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: effective_date
-                      value: 2026-07-03T11:41:12.176Z
+                      value: 2026-07-03T14:03:52.690Z
         type: request
         description: BAP sends the search request
   - api: on_search
@@ -504,7 +504,8 @@ steps:
                               value: "229.00"
                     category_id: F&B
                     category_ids:
-                      - 5:2
+                      - "302"
+                    related: false
                     location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                     fulfillment_id: "1"
                     "@ondc/org/returnable": true
@@ -934,7 +935,8 @@ steps:
                               value: "269.00"
                     category_id: F&B
                     category_ids:
-                      - 5:1
+                      - "301"
+                    related: false
                     location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                     fulfillment_id: "1"
                     "@ondc/org/returnable": true
@@ -1624,7 +1626,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1682,7 +1683,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1737,7 +1737,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1790,7 +1789,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1843,7 +1841,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1886,7 +1883,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -1929,7 +1925,6 @@ steps:
                     location_id: LOC01
                     fulfillment_id: EFS100
                     "@ondc/org/returnable": true
-                    "@ondc/org/refundable": false
                     "@ondc/org/cancellable": true
                     "@ondc/org/return_window": PT40M
                     "@ondc/org/seller_pickup_return": false
@@ -2092,9 +2087,7 @@ steps:
                       timestamp: 2024-10-11T00:00:00.000Z
                       days: 1,2,3,4,5,6,7
                       schedule:
-                        holidays:
-                          - 2025-12-22
-                          - 2025-12-01
+                        holidays: []
                       range:
                         start: "1000"
                         end: "2100"
@@ -2219,6 +2212,7 @@ steps:
                       value: "0"
                       maximum_value: "0"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2255,6 +2249,7 @@ steps:
                       value: "0"
                       maximum_value: "0"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2291,6 +2286,7 @@ steps:
                       value: "0"
                       maximum_value: "0"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2327,6 +2323,7 @@ steps:
                       value: "25"
                       maximum_value: "25"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2363,6 +2360,7 @@ steps:
                       value: "50"
                       maximum_value: "50"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2399,6 +2397,7 @@ steps:
                       value: "35"
                       maximum_value: "35"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2431,6 +2430,7 @@ steps:
                       value: "35"
                       maximum_value: "35"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2463,6 +2463,7 @@ steps:
                       value: "95"
                       maximum_value: "95"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2632,9 +2633,7 @@ steps:
                       timestamp: 2024-10-11T00:00:00.000Z
                       days: 1,2,3,4,5,6,7
                       schedule:
-                        holidays:
-                          - 2025-03-02
-                          - 2025-03-16
+                        holidays: []
                       range:
                         start: "1000"
                         end: "2100"
@@ -2759,6 +2758,7 @@ steps:
                       value: "0"
                       maximum_value: "0"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2795,6 +2795,7 @@ steps:
                       value: "0"
                       maximum_value: "0"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2831,6 +2832,7 @@ steps:
                       value: "0"
                       maximum_value: "0"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2867,6 +2869,7 @@ steps:
                       value: "25"
                       maximum_value: "25"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2903,6 +2906,7 @@ steps:
                       value: "50"
                       maximum_value: "50"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2939,6 +2943,7 @@ steps:
                       value: "35"
                       maximum_value: "35"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -2971,6 +2976,7 @@ steps:
                       value: "35"
                       maximum_value: "35"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -3003,6 +3009,7 @@ steps:
                       value: "95"
                       maximum_value: "95"
                     category_id: F&B
+                    related: false
                     tags:
                       - code: veg_nonveg
                         list:
@@ -3088,9 +3095,9 @@ steps:
           context:
             domain: ONDC:RET11
             action: on_search
-            timestamp: 2026-06-23T11:41:13.806Z
+            timestamp: 2026-06-23T14:03:53.970Z
             transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-            message_id: 1481a683-f641-40b2-900e-94c3d8beb53b
+            message_id: e04d4a64-3ba1-4188-8824-29629f4f6aeb
             bap_id: sample-bap-id
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3479,7 +3486,8 @@ steps:
                                 value: "229.00"
                       category_id: F&B
                       category_ids:
-                        - 5:2
+                        - "302"
+                      related: false
                       location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       fulfillment_id: "1"
                       "@ondc/org/returnable": true
@@ -3909,7 +3917,8 @@ steps:
                                 value: "269.00"
                       category_id: F&B
                       category_ids:
-                        - 5:1
+                        - "301"
+                      related: false
                       location_id: a48b0756-c7fe-469a-bf52-946529b5b2ba
                       fulfillment_id: "1"
                       "@ondc/org/returnable": true
@@ -4600,7 +4609,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4658,7 +4666,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4713,7 +4720,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4766,7 +4772,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4819,7 +4824,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4862,7 +4866,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -4905,7 +4908,6 @@ steps:
                       location_id: LOC01
                       fulfillment_id: EFS100
                       "@ondc/org/returnable": true
-                      "@ondc/org/refundable": false
                       "@ondc/org/cancellable": true
                       "@ondc/org/return_window": PT40M
                       "@ondc/org/seller_pickup_return": false
@@ -5068,9 +5070,7 @@ steps:
                         timestamp: 2024-10-11T00:00:00.000Z
                         days: 1,2,3,4,5,6,7
                         schedule:
-                          holidays:
-                            - 2025-12-22
-                            - 2025-12-01
+                          holidays: []
                         range:
                           start: "1000"
                           end: "2100"
@@ -5195,6 +5195,7 @@ steps:
                         value: "0"
                         maximum_value: "0"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5231,6 +5232,7 @@ steps:
                         value: "0"
                         maximum_value: "0"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5267,6 +5269,7 @@ steps:
                         value: "0"
                         maximum_value: "0"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5303,6 +5306,7 @@ steps:
                         value: "25"
                         maximum_value: "25"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5339,6 +5343,7 @@ steps:
                         value: "50"
                         maximum_value: "50"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5375,6 +5380,7 @@ steps:
                         value: "35"
                         maximum_value: "35"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5407,6 +5413,7 @@ steps:
                         value: "35"
                         maximum_value: "35"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5439,6 +5446,7 @@ steps:
                         value: "95"
                         maximum_value: "95"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5608,9 +5616,7 @@ steps:
                         timestamp: 2024-10-11T00:00:00.000Z
                         days: 1,2,3,4,5,6,7
                         schedule:
-                          holidays:
-                            - 2025-03-02
-                            - 2025-03-16
+                          holidays: []
                         range:
                           start: "1000"
                           end: "2100"
@@ -5735,6 +5741,7 @@ steps:
                         value: "0"
                         maximum_value: "0"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5771,6 +5778,7 @@ steps:
                         value: "0"
                         maximum_value: "0"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5807,6 +5815,7 @@ steps:
                         value: "0"
                         maximum_value: "0"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5843,6 +5852,7 @@ steps:
                         value: "25"
                         maximum_value: "25"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5879,6 +5889,7 @@ steps:
                         value: "50"
                         maximum_value: "50"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5915,6 +5926,7 @@ steps:
                         value: "35"
                         maximum_value: "35"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5947,6 +5959,7 @@ steps:
                         value: "35"
                         maximum_value: "35"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
@@ -5979,6 +5992,7 @@ steps:
                         value: "95"
                         maximum_value: "95"
                       category_id: F&B
+                      related: false
                       tags:
                         - code: veg_nonveg
                           list:
