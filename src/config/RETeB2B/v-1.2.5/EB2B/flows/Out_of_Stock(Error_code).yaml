@@ -595,6 +595,22 @@ steps:
               type: string
               title: State Code
               default: KA
+            provider_id:
+              type: string
+              title: Provider ID
+              default: P10
+            provider_name:
+              type: string
+              title: Provider Name
+              default: ABC Manufacturer
+            provider_code:
+              type: string
+              title: Provider Code
+              default: distributor
+            provider_short_desc:
+              type: string
+              title: Provider Short Description
+              default: FMCG Wholesale Distributor
           required:
             - type
             - city_code
