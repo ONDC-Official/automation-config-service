@@ -474,7 +474,7 @@ steps:
               created_at: 2025-01-08T09:00:00.000Z
               updated_at: 2025-01-08T09:00:00.000Z
             payments:
-              - type: ON-FULFILLMENT
+              - type: ON-ORDER
                 collected_by: BPP
             fulfillments:
               - id: F1
@@ -553,7 +553,7 @@ steps:
                 created_at: 2026-05-11T11:04:05.580Z
                 updated_at: 2026-05-11T11:04:05.580Z
               payments:
-                - type: ON-FULFILLMENT
+                - type: ON-ORDER
                   collected_by: BPP
               fulfillments:
                 - id: F1
@@ -1017,7 +1017,7 @@ steps:
                   transaction_id: "3937"
                   amount: "1150"
                 status: NOT-PAID
-                type: ON-FULFILLMENT
+                type: ON-ORDER
                 collected_by: BPP
                 "@ondc/org/buyer_app_finder_fee_type": percent
                 "@ondc/org/buyer_app_finder_fee_amount": "3.54"
@@ -1178,7 +1178,7 @@ steps:
                     transaction_id: "2199"
                     amount: "52.00"
                   status: PAID
-                  type: ON-FULFILLMENT
+                  type: ON-ORDER
                   collected_by: BPP
                   "@ondc/org/buyer_app_finder_fee_type": percent
                   "@ondc/org/buyer_app_finder_fee_amount": "3.54"
@@ -1349,7 +1349,7 @@ steps:
               ttl: P1D
             payments:
               - status: NOT-PAID
-                type: ON-FULFILLMENT
+                type: ON-ORDER
                 collected_by: BPP
                 params:
                   currency: INR
@@ -1529,7 +1529,7 @@ steps:
                     transaction_id: "2199"
                     amount: "52.00"
                   status: PAID
-                  type: ON-FULFILLMENT
+                  type: ON-ORDER
                   collected_by: BPP
                   "@ondc/org/buyer_app_finder_fee_type": percent
                   "@ondc/org/buyer_app_finder_fee_amount": "3.54"
@@ -1904,7 +1904,7 @@ steps:
                     transaction_id: "2199"
                     amount: "52.00"
                   status: PAID
-                  type: ON-FULFILLMENT
+                  type: ON-ORDER
                   collected_by: BPP
                   "@ondc/org/buyer_app_finder_fee_type": percent
                   "@ondc/org/buyer_app_finder_fee_amount": "3.54"
@@ -2266,7 +2266,7 @@ steps:
                     transaction_id: "2199"
                     amount: "52.00"
                   status: PAID
-                  type: ON-FULFILLMENT
+                  type: ON-ORDER
                   collected_by: BPP
                   "@ondc/org/buyer_app_finder_fee_type": percent
                   "@ondc/org/buyer_app_finder_fee_amount": "3.54"
@@ -2632,7 +2632,7 @@ steps:
                     transaction_id: "2199"
                     amount: "52.00"
                   status: PAID
-                  type: ON-FULFILLMENT
+                  type: ON-ORDER
                   collected_by: BPP
                   "@ondc/org/buyer_app_finder_fee_type": percent
                   "@ondc/org/buyer_app_finder_fee_amount": "3.54"
@@ -2996,7 +2996,7 @@ steps:
                     transaction_id: "2199"
                     amount: "52.00"
                   status: PAID
-                  type: ON-FULFILLMENT
+                  type: ON-ORDER
                   collected_by: BPP
                   "@ondc/org/buyer_app_finder_fee_type": percent
                   "@ondc/org/buyer_app_finder_fee_amount": "3.54"
@@ -3554,7 +3554,7 @@ steps:
                     transaction_id: "2199"
                     amount: "52.00"
                   status: PAID
-                  type: ON-FULFILLMENT
+                  type: ON-ORDER
                   collected_by: BPP
                   "@ondc/org/buyer_app_finder_fee_type": percent
                   "@ondc/org/buyer_app_finder_fee_amount": "3.54"
@@ -3925,7 +3925,7 @@ steps:
                     transaction_id: "2199"
                     amount: "52.00"
                   status: PAID
-                  type: ON-FULFILLMENT
+                  type: ON-ORDER
                   collected_by: BPP
                   "@ondc/org/buyer_app_finder_fee_type": percent
                   "@ondc/org/buyer_app_finder_fee_amount": "3.54"
