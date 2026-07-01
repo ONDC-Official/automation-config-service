@@ -5900,7 +5900,7 @@ steps:
         order_state: $.message.order.state
       inputs: {}
   - api: update
-    action_id: update_settlement_part_cancel
+    action_id: update_settlement_part_cancel_1
     owner: BAP
     responseFor: null
     unsolicited: false
