@@ -12982,6 +12982,38 @@ transaction_history:
               id: "002"
     action: on_cancel
     saved_info: {}
+  - action_id: update_settlement_part_cancel_1
+    payload:
+      context:
+        domain: ONDC:RET11
+        action: update
+        timestamp: 2026-03-27T07:42:59.463Z
+        transaction_id: 70023cc5-3fe9-4b68-9205-aa2ae40f7d96
+        message_id: fc74bff3-421b-4461-b320-f3edb2c495c8
+        bap_id: sample-bap-id
+        bap_uri: https://bap.example.com
+        ttl: PT30S
+        bpp_id: sample-bpp-id
+        bpp_uri: https://bpp.example.com
+        country: IND
+        city: std:023
+        core_version: 1.2.0
+      message:
+        update_target: payment
+        order:
+          id: "217062"
+          fulfillments:
+            - id: C1
+              type: Cancel
+          payment:
+            "@ondc/org/settlement_details":
+              - settlement_counterparty: buyer
+                settlement_phase: refund
+                settlement_type: upi
+                settlement_amount: "654"
+                settlement_timestamp: 2026-03-27T07:42:59.463Z
+    action: update
+    saved_info: {}
   - action_id: on_status_rto_disposed
     payload:
       context:
